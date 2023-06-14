@@ -824,14 +824,14 @@ hljs.configure({
                <code class="command">registercloudguest</code>, but you can register instances with
                the SUSE Customer Center first, install the necessary packages and then register with the
                SUSE-operated update infrastructure in the cloud framework region. Refer
-               to <a class="xref" href="#sec-admin-registercloudguest" title="3.1.1. Register with registercloudguest">Section 3.1.1, “Register with <code class="command">registercloudguest</code>”</a> for instructions.
+               to <a class="xref" href="#pro-admin-registercloudguest" title="Switching from SUSEConnect to registercloudguest">Procedure 3.1, “Switching from <code class="command">SUSEConnect</code> to <code class="command">registercloudguest</code>”</a> for instructions.
              </p></li><li class="listitem"><p>
-               SUSE Linux Enterprise Micro (<code class="literal">sle-micro</code>) uses a read-only root file system
-               with <span class="emphasis"><em>transactional</em></span> updates. SLE Micro images do not
-               contain <code class="command">registercloudguest</code>. To register an instance,
-               use the command <code class="command">transactional-update register</code>. Refer to
-               the <a class="link" href="https://documentation.suse.com/sle-micro/html/SLE-Micro-all/sec-transactional-udate.html#sec-register-command" target="_blank"><em class="citetitle">SUSE Linux Enterprise Micro Administration Guide</em></a>
-               for more information.
+               SUSE Linux Enterprise Micro (<code class="literal">sle-micro</code>) 5.1 and 5.2 images do not contain
+               <code class="command">registercloudguest</code>. To register an instance, use the command
+               <code class="command">transactional-update register</code>. Refer to the <a class="link" href="https://documentation.suse.com/sle-micro/html/SLE-Micro-all/sec-transactional-udate.html#sec-register-command" target="_blank"><em class="citetitle">SUSE Linux Enterprise Micro Administration Guide</em></a>
+               for more information. Images of SLE Micro 5.3 and later versions include
+               <code class="command">registercloudguest</code> and can be registered as described in
+               <a class="xref" href="#sec-admin-registercloudguest" title="3.1.1. Register with registercloudguest">Section 3.1.1, “Register with <code class="command">registercloudguest</code>”</a>.
              </p></li><li class="listitem"><p>
                SUSE Manager (<code class="literal">suse-manager</code>) can only be registered with
                the SUSE Customer Center.
@@ -852,7 +852,7 @@ hljs.configure({
       <code class="literal">20220103</code> or <span class="emphasis"><em>later</em></span> contain all
       required packages. For BYOS instances created from images with a date stamp
       <span class="emphasis"><em>prior</em></span> to <code class="literal">20220103</code>, perform the following steps:
-     </p><div class="procedure"><div class="procedure-contents"><ol class="procedure" type="1"><li class="step"><p>
+     </p><div class="procedure" id="pro-admin-registercloudguest" data-id-title="Switching from SUSEConnect to registercloudguest"><div class="title-container"><div class="procedure-title-wrap"><div class="procedure-title"><span class="title-number-name"><span class="title-number">Procedure 3.1: </span><span class="title-name">Switching from <code class="command">SUSEConnect</code> to <code class="command">registercloudguest</code> </span></span><a title="Permalink" class="permalink" href="#pro-admin-registercloudguest">#</a></div></div><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_administration.xml" title="Edit source document"> </a></div></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step"><p>
            Check if the <span class="package">cloud-regionsrv-client</span> package is
            installed:
          </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">rpm</code> -q cloud-regionsrv-client</pre></div><p>
@@ -902,7 +902,7 @@ hljs.configure({
    </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">SUSEConnect</code> -r <em class="replaceable">REGISTRATION_CODE</em> -e <em class="replaceable">EMAIL_ADDRESS</em> --url <em class="replaceable">URL</em></pre></div><p>
       If the instance was already registered with <code class="command">registercloudguest</code>, perform the
       following steps:
-    </p><div class="procedure" id="pro-admin-suseconnect"><div class="procedure-contents"><ol class="procedure" type="1"><li class="step"><p>
+    </p><div class="procedure" id="pro-admin-suseconnect" data-id-title="Switching from registercloudguest to SUSEConnect"><div class="title-container"><div class="procedure-title-wrap"><div class="procedure-title"><span class="title-number-name"><span class="title-number">Procedure 3.2: </span><span class="title-name">Switching from <code class="command">registercloudguest</code> to <code class="command">SUSEConnect</code> </span></span><a title="Permalink" class="permalink" href="#pro-admin-suseconnect">#</a></div></div><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_administration.xml" title="Edit source document"> </a></div></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step"><p>
            Disconnect your instance from the SUSE-operated update infrastructure in the cloud
            framework:
          </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">registercloudguest</code> --clean</pre></div></li><li class="step"><p>
