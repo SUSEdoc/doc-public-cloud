@@ -113,8 +113,17 @@ hljs.configure({
            installed:
          </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">rpm</code> -q cloud-regionsrv-client</pre></div><p>
            If the package is not installed or older than version 9.3.0, install or
-           update it. You will need some additional packages, depending on your cloud
-           framework.
+           update it.
+         </p><p>
+           For instances created from images with a date stamp prior to <code class="literal">20220103</code>,
+           you first have to enable the <code class="literal">Public Cloud Module</code>. For SUSE Linux Enterprise 15 SP4,
+           run:
+         </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">SUSEConnect</code> -p sle-module-public-cloud/15.4/x86_64</pre></div><p>
+           For other versions or a complete list of modules and their product
+           identifiers, run <code class="command">SUSEConnect --list-extensions</code>.
+         </p><p>
+           Install <span class="package">cloud-regionsrv-client</span>. Depending on your cloud framework,
+           you will need some additional packages.
          </p><ol type="a" class="substeps"><li class="step"><p>
                For Amazon EC2 run:
              </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">zypper</code> in cloud-regionsrv-client cloud-regionsrv-client-plugin-ec2 \
@@ -138,14 +147,6 @@ hljs.configure({
            For instances created from images with a datestamp later than
            <code class="literal">20220103</code>, it will also set up the repositories for the
            <code class="literal">Public Cloud Module</code>.
-         </p></li><li class="step"><p>
-           For instances created from images with a date stamp prior to
-           <code class="literal">20220103</code> it is strongly recommended to also add the
-           <code class="literal">Public Cloud Module</code> repositories. For SUSE Linux Enterprise 15 SP4,
-           run:
-         </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">SUSEConnect</code> -p sle-module-public-cloud/15.4/x86_64</pre></div><p>
-           For other versions or a complete list of modules and their product
-           identifiers, run <code class="command">SUSEConnect --list-extensions</code>.
          </p></li></ol></div></div></section><section class="sect2" id="sec-admin-suseconnect" data-id-title="Register with SUSEConnect"><div class="titlepage"><div><div><div class="title-container"><h3 class="title"><span class="title-number-name"><span class="title-number">3.1.2 </span><span class="title-name">Register with <code class="command">SUSEConnect</code></span></span> <a title="Permalink" class="permalink" href="cha-admin.html#sec-admin-suseconnect">#</a></h3><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_administration.xml" title="Edit source document"> </a></div></div></div></div></div><p>
     To register a BYOS instance with <code class="command">SUSEConnect</code>, run:
    </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">SUSEConnect</code> -r <em class="replaceable">REGISTRATION_CODE</em> -e <em class="replaceable">EMAIL_ADDRESS</em></pre></div><p>
