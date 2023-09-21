@@ -36,8 +36,8 @@ hljs.configure({
 </script><meta name="edit-url" content="https://github.com/SUSE/doc-public-cloud/edit/main/xml/MAIN.public-cloud.xml"/></head><body class="draft single normal offline js-off" onload="$('#betawarn-button-wrap').toggle();if (document.cookie.length > 0) {if (document.cookie.indexOf('betawarn=closed') != -1){$('#betawarn').toggle()}};"><div id="betawarn" style="position:fixed;bottom:0;z-index:9025;background-color:#FDE8E8;padding:1em;margin-left:10%;margin-right:10%;display:block;border-top:.75em solid #E11;width:80%"><p style="color:#333;margin:1em 0;padding:0;">This is a draft document that was built and uploaded automatically. It may document beta software and be incomplete or even incorrect. <strong>Use this document at your own risk.</strong></p> <div id="betawarn-button-wrap" style="display:none;margin:0;padding:0;"><a href="#" onclick="$('#betawarn').toggle();var d=new Date();d.setTime(d.getTime()+(0.5*24*60*60*1000));document.cookie='betawarn=closed; expires='+d.toUTCString()+'; path=/'; return false;" style="color:#333;text-decoration:underline;float:left;margin-top:.5em;padding:1em;display:block;background-color:#FABEBE;">I understand this is a draft</a></div></div><div class="bypass-block"><a href="#_content">Jump to content</a></div><header id="_mainnav"><div class="growth-inhibitor"><img src="static/images/logo.svg" alt="Logo" class="logo"/></div></header><div class="crumbs"><div class="growth-inhibitor"><a class="crumb" href="#public-cloud">Public Cloud Guide</a></div></div><main id="_content"><nav class="side-toc placebo" id="_side-toc-overall"> </nav><article class="documentation"><button id="_unfold-side-toc-page">On this page</button><section xml:lang="en" class="book" id="public-cloud" data-id-title="Public Cloud Guide"><div class="titlepage"><div><div class="big-version-info"><span class="productname">SUSE Linux Enterprise</span></div><div class="title-container"><h1 class="title">Public Cloud Guide</h1><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/MAIN.public-cloud.xml" title="Edit source document"> </a></div></div><div class="abstract"><p>
      This guide explains how to use SUSE Linux Enterprise in
  public clouds.
-    </p></div><div class="authorgroup"><div><span class="imprint-label">Authors: </span><span class="firstname">Christoph</span> <span class="surname">Wickert</span> and <span class="firstname">Robert</span> <span class="surname">Schweikert</span></div></div><div class="date"><span class="imprint-label">Publication Date: </span>August 15, 2023
-</div></div></div><div class="toc"><ul><li><span class="preface"><a href="#pre-example"><span class="title-name">About this guide</span></a></span><ul><li><span class="sect1"><a href="#id-1.2.6"><span class="title-name">Available documentation</span></a></span></li><li><span class="sect1"><a href="#id-1.2.7"><span class="title-name">Improving the documentation</span></a></span></li><li><span class="sect1"><a href="#id-1.2.8"><span class="title-name">Documentation conventions</span></a></span></li></ul></li><li><span class="chapter"><a href="#cha-intro"><span class="title-number">1 </span><span class="title-name">Getting started</span></a></span><ul><li><span class="sect1"><a href="#sec-intro-products"><span class="title-number">1.1 </span><span class="title-name">Products</span></a></span></li><li><span class="sect1"><a href="#sec-intro-providers"><span class="title-number">1.2 </span><span class="title-name">Cloud service providers</span></a></span></li><li><span class="sect1"><a href="#sec-intro-plans"><span class="title-number">1.3 </span><span class="title-name">Plans</span></a></span></li><li><span class="sect1"><a href="#sec-intro-instance-types"><span class="title-number">1.4 </span><span class="title-name">Supported instance types</span></a></span></li><li><span class="sect1"><a href="#sec-intro-support"><span class="title-number">1.5 </span><span class="title-name">Support</span></a></span></li></ul></li><li><span class="chapter"><a href="#cha-images"><span class="title-number">2 </span><span class="title-name">Public cloud images</span></a></span><ul><li><span class="sect1"><a href="#sec-image-lifecycle"><span class="title-number">2.1 </span><span class="title-name">Image lifecycle</span></a></span></li><li><span class="sect1"><a href="#sec-image-naming"><span class="title-number">2.2 </span><span class="title-name">Naming scheme</span></a></span></li><li><span class="sect1"><a href="#sec-image-pint"><span class="title-number">2.3 </span><span class="title-name">Public Cloud Information Tracker</span></a></span></li><li><span class="sect1"><a href="#sec-image-changeinfo"><span class="title-number">2.4 </span><span class="title-name">Change information</span></a></span></li><li><span class="sect1"><a href="#sec-images-hardened"><span class="title-number">2.5 </span><span class="title-name">Hardened Images</span></a></span></li></ul></li><li><span class="chapter"><a href="#cha-admin"><span class="title-number">3 </span><span class="title-name">Managing cloud instances</span></a></span><ul><li><span class="sect1"><a href="#sec-admin-register"><span class="title-number">3.1 </span><span class="title-name">Registering instances</span></a></span></li><li><span class="sect1"><a href="#sec-admin-deregister"><span class="title-number">3.2 </span><span class="title-name">Deregister instances</span></a></span></li></ul></li><li><span class="appendix"><a href="#app-public-cloud-support"><span class="title-number">A </span><span class="title-name">Support</span></a></span><ul><li><span class="sect1"><a href="#id-1.6.4"><span class="title-number">A.1 </span><span class="title-name">Support statement for SUSE Linux Enterprise</span></a></span></li><li><span class="sect1"><a href="#id-1.6.5"><span class="title-number">A.2 </span><span class="title-name">Technology previews</span></a></span></li></ul></li><li><span class="appendix"><a href="#id-1.7"><span class="title-number">B </span><span class="title-name">GNU licenses</span></a></span><ul><li><span class="sect1"><a href="#id-1.7.4"><span class="title-number">B.1 </span><span class="title-name">GNU Free Documentation License</span></a></span></li></ul></li></ul></div><div class="list-of-figures"><div class="toc-title">List of Figures</div><ul><li><span class="figure"><a href="#fig-pint-images"><span class="number">2.1 </span><span class="name">Overview of SUSE Public Cloud Information Tracker (PINT)</span></a></span></li></ul></div><div class="list-of-tables"><div class="toc-title">List of Tables</div><ul><li><span class="table"><a href="#id-1.3.5.5"><span class="number">1.1 </span><span class="name">Feature comparison</span></a></span></li></ul></div><div><div xml:lang="en" class="legalnotice" id="id-1.1.5"><p>
+    </p></div><div class="authorgroup"><div><span class="imprint-label">Authors: </span><span class="firstname">Christoph</span> <span class="surname">Wickert</span> and <span class="firstname">Robert</span> <span class="surname">Schweikert</span></div></div><div class="date"><span class="imprint-label">Publication Date: </span>September 21, 2023
+</div></div></div><div class="toc"><ul><li><span class="preface"><a href="#pre-example"><span class="title-name">About this guide</span></a></span><ul><li><span class="sect1"><a href="#id-1.2.6"><span class="title-name">Available documentation</span></a></span></li><li><span class="sect1"><a href="#id-1.2.7"><span class="title-name">Improving the documentation</span></a></span></li><li><span class="sect1"><a href="#id-1.2.8"><span class="title-name">Documentation conventions</span></a></span></li></ul></li><li><span class="chapter"><a href="#cha-intro"><span class="title-number">1 </span><span class="title-name">Getting started</span></a></span><ul><li><span class="sect1"><a href="#sec-intro-products"><span class="title-number">1.1 </span><span class="title-name">Products</span></a></span></li><li><span class="sect1"><a href="#sec-intro-providers"><span class="title-number">1.2 </span><span class="title-name">Cloud service providers</span></a></span></li><li><span class="sect1"><a href="#sec-intro-plans"><span class="title-number">1.3 </span><span class="title-name">Plans</span></a></span></li><li><span class="sect1"><a href="#sec-intro-support"><span class="title-number">1.4 </span><span class="title-name">Support</span></a></span></li><li><span class="sect1"><a href="#sec-intro-instance-types"><span class="title-number">1.5 </span><span class="title-name">Supported instance types</span></a></span></li></ul></li><li><span class="chapter"><a href="#cha-images"><span class="title-number">2 </span><span class="title-name">Public cloud images</span></a></span><ul><li><span class="sect1"><a href="#sec-image-lifecycle"><span class="title-number">2.1 </span><span class="title-name">Image lifecycle</span></a></span></li><li><span class="sect1"><a href="#sec-image-naming"><span class="title-number">2.2 </span><span class="title-name">Naming scheme</span></a></span></li><li><span class="sect1"><a href="#sec-image-pint"><span class="title-number">2.3 </span><span class="title-name">Public Cloud Information Tracker</span></a></span></li><li><span class="sect1"><a href="#sec-image-changeinfo"><span class="title-number">2.4 </span><span class="title-name">Change information</span></a></span></li><li><span class="sect1"><a href="#sec-images-hardened"><span class="title-number">2.5 </span><span class="title-name">Hardened Images</span></a></span></li></ul></li><li><span class="chapter"><a href="#cha-admin"><span class="title-number">3 </span><span class="title-name">Managing cloud instances</span></a></span><ul><li><span class="sect1"><a href="#sec-admin-register"><span class="title-number">3.1 </span><span class="title-name">Registering instances</span></a></span></li><li><span class="sect1"><a href="#sec-admin-deregister"><span class="title-number">3.2 </span><span class="title-name">Deregister instances</span></a></span></li><li><span class="sect1"><a href="#hardening"><span class="title-number">3.3 </span><span class="title-name">Hardening instances</span></a></span></li></ul></li><li><span class="appendix"><a href="#app-public-cloud-support"><span class="title-number">A </span><span class="title-name">Support</span></a></span><ul><li><span class="sect1"><a href="#id-1.6.4"><span class="title-number">A.1 </span><span class="title-name">Support statement for SUSE Linux Enterprise</span></a></span></li><li><span class="sect1"><a href="#id-1.6.5"><span class="title-number">A.2 </span><span class="title-name">Technology previews</span></a></span></li></ul></li><li><span class="appendix"><a href="#countrylist"><span class="title-number">B </span><span class="title-name">Geographical availability</span></a></span><ul><li><span class="sect1"><a href="#availability-aws"><span class="title-number">B.1 </span><span class="title-name">Amazon Web Services</span></a></span></li><li><span class="sect1"><a href="#availability-azure"><span class="title-number">B.2 </span><span class="title-name">Microsoft Azure</span></a></span></li></ul></li><li><span class="appendix"><a href="#id-1.8"><span class="title-number">C </span><span class="title-name">GNU licenses</span></a></span><ul><li><span class="sect1"><a href="#id-1.8.4"><span class="title-number">C.1 </span><span class="title-name">GNU Free Documentation License</span></a></span></li></ul></li></ul></div><div class="list-of-figures"><div class="toc-title">List of Figures</div><ul><li><span class="figure"><a href="#fig-pint-images"><span class="number">2.1 </span><span class="name">Overview of SUSE Public Cloud Information Tracker (PINT)</span></a></span></li></ul></div><div class="list-of-tables"><div class="toc-title">List of Tables</div><ul><li><span class="table"><a href="#id-1.3.5.5"><span class="number">1.1 </span><span class="name">Feature comparison</span></a></span></li></ul></div><div><div xml:lang="en" class="legalnotice" id="id-1.1.5"><p>
   Copyright © 2021–2023
 
   SUSE LLC and contributors. All rights reserved.
@@ -243,23 +243,7 @@ hljs.configure({
    different plans to cater to a variety of use cases. While details differ
    depending on the cloud framework, usually there are two types of
    subscriptions.
-  </p><div class="variablelist"><dl class="variablelist"><dt id="id-1.3.5.3.1"><span class="term">Pay as you go (PAYG)</span></dt><dd><p>
-      <code class="literal">Pay as you go</code> (PAYG) images are used to create
-      on-demand instances. When an instance is first booted, it automatically
-      registers with a local update server. Once the system finishes booting,
-      it is ready to use.
-     </p><p>
-      Create an instance when you need it and delete it when you are
-      done. While in use, you have access to updates from SUSE through the
-      automatically configured repositories. You only pay for the resources
-      you use. Upcharges over the basic cloud prices may apply, depending on
-      the image and framework.
-     </p><p>
-      PAYG instances include support through the cloud service provider which in turn is
-      supported by SUSE. Microsoft Azure also offers a basic PAYG image that only
-      includes updates. Instances created from this image are not eligible for
-      support.
-    </p></dd><dt id="id-1.3.5.3.2"><span class="term">Bring your own subscription (BYOS)</span></dt><dd><p>
+  </p><div class="variablelist"><dl class="variablelist"><dt id="id-1.3.5.3.1"><span class="term">Bring your own subscription (BYOS)</span></dt><dd><p>
       <code class="literal">Bring your own subscription</code> (BYOS) images are useful if
       you already have a support contract with SUSE and want to move your
       workloads to the public cloud. An instance launched from a BYOS image is
@@ -275,21 +259,36 @@ hljs.configure({
       BYOS instances make it easier to manage extensions such as LTSS or kernel
       live-patching. Extensions for PAYG instances can only be used in
       conjunction with SUSE Manager.
-     </p></dd></dl></div><p>
+     </p></dd><dt id="id-1.3.5.3.2"><span class="term">Pay as you go (PAYG)</span></dt><dd><p>
+      <code class="literal">Pay as you go</code> (PAYG) images are used to create
+      on-demand instances. When an instance is first booted, it automatically
+      registers with a local update server. Once the system finishes booting,
+      it is ready to use.
+     </p><p>
+      Create an instance when you need it and delete it when you are
+      done. While in use, you have access to updates from SUSE through the
+      automatically configured repositories. You only pay for the resources
+      you use. Upcharges over the basic cloud prices may apply, depending on
+      the image and framework.
+     </p><p>
+      PAYG instances include support through the cloud service provider. For some PAYG versions, you
+      can also purchase SUSE Priority Support. For details, refer to
+      <a class="xref" href="#sec-intro-support" title="1.4. Support">Section 1.4, “Support”</a>.
+    </p></dd></dl></div><p>
    In summary, if you already have a direct relationship with SUSE you
    generally want to start out with BYOS. You can still use PAYG for on-demand
    excess capacity.
-  </p><div class="table" id="id-1.3.5.5" data-id-title="Feature comparison"><div class="title-container"><div class="table-title-wrap"><div class="table-title"><span class="title-number-name"><span class="title-number">Table 1.1: </span><span class="title-name">Feature comparison </span></span><a title="Permalink" class="permalink" href="#id-1.3.5.5">#</a></div></div><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_introduction.xml" title="Edit source document"> </a></div></div><div class="table-contents"><table style="border-collapse: collapse; border-top: 1px solid ; border-bottom: 1px solid ; border-left: 1px solid ; border-right: 1px solid ; "><colgroup><col class="feature"/><col class="payg"/><col class="byos"/></colgroup><thead><tr><th style="border-right: 1px solid ; border-bottom: 1px solid ; ">
+  </p><div class="table" id="id-1.3.5.5" data-id-title="Feature comparison"><div class="title-container"><div class="table-title-wrap"><div class="table-title"><span class="title-number-name"><span class="title-number">Table 1.1: </span><span class="title-name">Feature comparison </span></span><a title="Permalink" class="permalink" href="#id-1.3.5.5">#</a></div></div><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_introduction.xml" title="Edit source document"> </a></div></div><div class="table-contents"><table style="border-collapse: collapse; border-top: 1px solid ; border-bottom: 1px solid ; border-left: 1px solid ; border-right: 1px solid ; "><colgroup><col class="feature"/><col class="byos"/><col class="payg"/></colgroup><thead><tr><th style="border-right: 1px solid ; border-bottom: 1px solid ; ">
        <p>
         Plan
        </p>
       </th><th style="border-right: 1px solid ; border-bottom: 1px solid ; ">
        <p>
-        Pay as you go (PAYG)
+        Bring your own subscription (BYOS)
        </p>
       </th><th style="border-bottom: 1px solid ; ">
        <p>
-        Bring your own subscription (BYOS)
+        Pay as you go (PAYG)
        </p>
       </th></tr></thead><tbody><tr><td style="border-right: 1px solid ; border-bottom: 1px solid ; ">
        <p>
@@ -297,11 +296,11 @@ hljs.configure({
        </p>
       </td><td style="border-right: 1px solid ; border-bottom: 1px solid ; ">
        <p>
-        with CSP
+        with CSP and SUSE
        </p>
       </td><td style="border-bottom: 1px solid ; ">
        <p>
-        with CSP and SUSE
+        with CSP
        </p>
       </td></tr><tr><td style="border-right: 1px solid ; border-bottom: 1px solid ; ">
        <p>
@@ -309,11 +308,11 @@ hljs.configure({
        </p>
       </td><td style="border-right: 1px solid ; border-bottom: 1px solid ; ">
        <p>
-        per use
+        per instance and license
        </p>
       </td><td style="border-bottom: 1px solid ; ">
        <p>
-        per instance and license
+        per use
        </p>
       </td></tr><tr><td style="border-right: 1px solid ; border-bottom: 1px solid ; ">
        <p>
@@ -321,104 +320,126 @@ hljs.configure({
        </p>
       </td><td style="border-right: 1px solid ; border-bottom: 1px solid ; ">
        <p>
-        with a local update server upon instance creation
+        with your RMT or SUSE Manager infrastructure or directly with the SUSE Customer Center
        </p>
       </td><td style="border-bottom: 1px solid ; ">
        <p>
-        with your RMT or SUSE Manager infrastructure or directly with the SUSE Customer Center
+        with a local update server upon instance creation
        </p>
       </td></tr><tr><td style="border-right: 1px solid ; border-bottom: 1px solid ; ">
       <p>Support</p>
       </td><td style="border-right: 1px solid ; border-bottom: 1px solid ; ">
        <p>
-        through cloud service provider; CSP will work with SUSE for L3 support as required.
+        full support by SUSE
        </p>
       </td><td style="border-bottom: 1px solid ; ">
        <p>
-        Full support by SUSE directly
+        through CSP, they will work with SUSE for L3 support as required.
        </p>
       </td></tr><tr><td style="border-right: 1px solid ; border-bottom: 1px solid ; ">
        <p>
-        Extended ESPOS<sup>1</sup> or
-        LTSS<sup>2</sup> or support
+        Extended ESPOS<sup>1</sup> or LTSS<sup>2</sup> support
        </p>
       </td><td style="border-right: 1px solid ; border-bottom: 1px solid ; ">
        <p>
-        only if included in image base product
+        available
        </p>
       </td><td style="border-bottom: 1px solid ; ">
        <p>
-        available
+        only if included in image base product
        </p>
       </td></tr><tr><td style="border-right: 1px solid ; ">
        <p>Extensions</p>
       </td><td style="border-right: 1px solid ; ">
        <p>
-        only with SUSE Manager
+        no limitations
        </p>
       </td><td>
        <p>
-        no limitations
+        only with SUSE Manager
        </p>
       </td></tr></tbody></table></div></div><table style="border: 0; " class="simplelist"><tr><td>
     <sup>1</sup> ESPOS: <a class="link" href="https://www.suse.com/support/policy-products/#hpc" target="_blank">Extended Service Pack Overlay Support</a>
    </td></tr><tr><td>
     <sup>2</sup> LTSS: <a class="link" href="https://www.suse.com/products/long-term-service-pack-support/" target="_blank">Long-Term Service Pack Support</a>
-   </td></tr></table><div id="id-1.3.5.7" data-id-title="Duplicate listings on market places" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.svg"/><div class="admon-title">Note: Duplicate listings on market places</div><p>
-    You may see two different listings for some PAYG images in the cloud
-    provider's market places: The EU listing (<code class="literal">EU and UK only</code>)
-    is for customers in the European Union and the United Kingdom, the Non-EU
-    listing (<code class="literal">non-EU and non-UK only</code>) is for customers in
-    North America and other countries listed in the <code class="literal">FAQ</code> of
-    the respective listing. Two listings are needed as there are different
-    regulations to comply with, but the images and the support offering are
-    identical.
-   </p><p>
-    Select the correct listing depending on your organization's geographical
-    location. For a complete list of countries that are eligible to purchase
-    SUSE PAYG images, refer to the <code class="literal">FAQ</code> of the respective
-    listing.
-   </p></div><div id="id-1.3.5.8" data-id-title="Switching plans" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.svg"/><div class="admon-title">Important: Switching plans</div><p>
-    Switching from PAYG to BYOS or vice-versa is only possible on Microsoft Azure
+   </td></tr></table><div id="id-1.3.5.7" data-id-title="Switching plans" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.svg"/><div class="admon-title">Important: Switching plans</div><p>
+    Switching from BYOS to PAYG or vice-versa is only possible on Microsoft Azure
     through the <code class="literal">Hybrid Benefit</code> program. For all other cloud
     providers, you remain on the plan you initially selected for as long as the
     instance is running. The only way to switch plans is to start with the
     other image and rebuild your system.
-   </p></div><div id="id-1.3.5.9" data-id-title="Do not register PAYG instances with the SUSE Customer Center" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.svg"/><div class="admon-title">Important: Do not register PAYG instances with the SUSE Customer Center</div><p>
+   </p><p>
+    For more information on the Microsoft Azure Hybrid Benefit program, refer to
+    <a class="link" href="https://azure.microsoft.com/pricing/hybrid-benefit/" target="_blank">https://azure.microsoft.com/pricing/hybrid-benefit/</a>.
+   </p></div><div id="id-1.3.5.8" data-id-title="Do not register PAYG instances with the SUSE Customer Center" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.svg"/><div class="admon-title">Important: Do not register PAYG instances with the SUSE Customer Center</div><p>
     Registering PAYG instances with the SUSE Customer Center or your own RMT server will
     create conflicts that are not easily solved. Only register BYOS instances.
     PAYG instances are automatically registered against the correct update
     server.
-   </p></div></section><section class="sect1" id="sec-intro-instance-types" data-id-title="Supported instance types"><div class="titlepage"><div><div><div class="title-container"><h2 class="title"><span class="title-number-name"><span class="title-number">1.4 </span><span class="title-name">Supported instance types</span></span> <a title="Permalink" class="permalink" href="#sec-intro-instance-types">#</a></h2><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_introduction.xml" title="Edit source document"> </a></div></div></div></div></div><p>
-   To find out what types of instances are supported by each provider, refer to
-   the <a class="link" href="https://www.suse.com/support/public-cloud-support/" target="_blank">SUSE
-    Public Cloud Instance Support Matrix</a>. Select your SUSE Linux Enterprise product and
-   your cloud provider to see a list of supported instance types.
-  </p></section><section class="sect1" id="sec-intro-support" data-id-title="Support"><div class="titlepage"><div><div><div class="title-container"><h2 class="title"><span class="title-number-name"><span class="title-number">1.5 </span><span class="title-name">Support</span></span> <a title="Permalink" class="permalink" href="#sec-intro-support">#</a></h2><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_introduction.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+   </p></div></section><section class="sect1" id="sec-intro-support" data-id-title="Support"><div class="titlepage"><div><div><div class="title-container"><h2 class="title"><span class="title-number-name"><span class="title-number">1.4 </span><span class="title-name">Support</span></span> <a title="Permalink" class="permalink" href="#sec-intro-support">#</a></h2><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_introduction.xml" title="Edit source document"> </a></div></div></div></div></div><p>
    Regardless of the public cloud you use and the plan you choose, SUSE has
    you covered with support. Support is dependent on whether you "bring
    your own subscription" (BYOS) or you use SUSE Linux Enterprise "on-demand"
    (PAYG). For more information about BYOS and PAYG, refer to
    <a class="xref" href="#sec-intro-plans" title="1.3. Plans">Section 1.3, “Plans”</a>.
-  </p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
-     PAYG instances include support through the cloud service provider which
-     in turn is supported by SUSE. If you have a problem, <span class="emphasis"><em>always contact
-      your CSP for assistance</em></span>. They provide 1st and 2nd level support, and will
-     work with SUSE for L3 support as required.
-    </p><div id="id-1.3.7.3.1.2" data-id-title="Microsoft Azure basic images" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.svg"/><div class="admon-title">Important: Microsoft Azure basic images</div><p>
-      Microsoft Azure also offers a basic PAYG image that only includes updates.
-      Instances created from this image are <span class="emphasis"><em>not eligible for support</em></span>.
-     </p></div></li><li class="listitem"><p>
-     BYOS instances are supported by SUSE under the terms of your SUSE
-     subscription. For an overview of SUSE's support subscriptions, refer to
-     <a class="link" href="https://www.suse.com/support/" target="_blank">https://www.suse.com/support/</a>.
-    </p></li></ul></div><p>
+  </p><div class="variablelist"><dl class="variablelist"><dt id="id-1.3.6.3.1"><span class="term">BYOS</span></dt><dd><p>
+      BYOS instances are supported by SUSE under the terms of your SUSE
+      subscription. For an overview of SUSE's support subscriptions, refer to
+      <a class="link" href="https://www.suse.com/support/" target="_blank">https://www.suse.com/support/</a>.
+     </p></dd><dt id="id-1.3.6.3.2"><span class="term">PAYG</span></dt><dd><p>
+      Regular PAYG instances include support through the cloud service provider which
+      in turn is supported by SUSE. If you have a problem, <span class="emphasis"><em>always contact
+       your CSP for assistance</em></span>. They provide 1st and 2nd level support, and will
+      work with SUSE for L3 support as required.
+     </p><div id="id-1.3.6.3.2.2.2" data-id-title="Microsoft Azure basic images" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.svg"/><div class="admon-title">Important: Microsoft Azure basic images</div><p>
+       Microsoft Azure also offers a basic PAYG image that only includes updates.
+       Instances created from this image are <span class="emphasis"><em>not eligible for support</em></span>.
+      </p></div></dd><dt id="id-1.3.6.3.3"><span class="term">PAYG with SUSE Priority Support</span></dt><dd><p>
+      SUSE offers 24x7 priority support for the PAYG versions of the following products:
+     </p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
+        SUSE Linux Enterprise Micro 5
+      </p></li><li class="listitem"><p>
+        SUSE Rancher Priority Support
+      </p></li><li class="listitem"><p>
+        NeuVector Prime
+      </p></li></ul></div><p>
+      You can transact priority support through the Amazon Web Services and Microsoft Azure marketplaces, where you
+      will see two different listings: <code class="literal">EU and UK only</code> and <code class="literal">non-EU and
+      non-UK only</code>. Two listings are needed as there are different regulations to comply
+      with, but the images and the support offering are identical. Select the correct listing for
+      your organization's CSP account:
+     </p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
+        For Amazon Web Services, it depends on the <code class="literal">tax address</code> of the account, see
+        <a class="link" href="https://aws.amazon.com/tax-help/location" target="_blank">https://aws.amazon.com/tax-help/location</a>.
+       </p></li><li class="listitem"><p>
+        For Microsoft Azure, it depends on the <code class="literal">sold to</code> address of the account, see
+        <a class="link" href="https://learn.microsoft.com/azure/cost-management-billing/manage/change-azure-account-profile" target="_blank">https://learn.microsoft.com/azure/cost-management-billing/manage/change-azure-account-profile</a>.
+       </p></li><li class="listitem"><p>
+        For Google Cloud, it depends on the <code class="literal">billing country</code> of the account, see
+        <a class="link" href="https://support.google.com/cloudidentity/answer/3530790" target="_blank">https://support.google.com/cloudidentity/answer/3530790</a>.
+       </p></li></ul></div><p>
+      For a complete list of countries that are eligble to transact priority support through the
+      CSP's marketplaces, and the correct listing for each country, refer to
+      <a class="xref" href="#countrylist" title="Appendix B. Geographical availability">Appendix B, <em>Geographical availability</em></a>.
+     </p><div id="id-1.3.6.3.3.2.6" data-id-title="Other countries" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.svg"/><div class="admon-title">Important: Other countries</div><p>
+       If the billing or tax address of your organization's CSP account is located in a country not
+       listed below, you currently cannot transact priority support through the CSP's marketplaces.
+      </p><p>
+       SUSE is committed to making priority support available in more countries. In the meantime,
+       you can still use SUSE PAYG products with regular support from the CSP. If you want support
+       by SUSE, use a BYOS version.
+      </p></div></dd></dl></div><p>
    For more information, refer to the <a class="link" href="https://www.suse.com/support/policy/" target="_blank">SUSE Technical Support
     Policy</a> and the support statement for SUSE Linux Enterprise in <a class="xref" href="#app-public-cloud-support" title="Appendix A. Support">Appendix A, <em>Support</em></a>.
   </p><p>
    For information on how to contact the SUSE support team and report
    problems, refer to the <a class="link" href="https://www.suse.com/support/handbook/" target="_blank">SUSE Technical Support
     Guide</a>.
+  </p></section><section class="sect1" id="sec-intro-instance-types" data-id-title="Supported instance types"><div class="titlepage"><div><div><div class="title-container"><h2 class="title"><span class="title-number-name"><span class="title-number">1.5 </span><span class="title-name">Supported instance types</span></span> <a title="Permalink" class="permalink" href="#sec-intro-instance-types">#</a></h2><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_introduction.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+   To find out what types of instances are supported by each provider, refer to
+   the <a class="link" href="https://www.suse.com/support/public-cloud-support/" target="_blank">SUSE
+    Public Cloud Instance Support Matrix</a>. Select your SUSE Linux Enterprise product and
+   your cloud provider to see a list of supported instance types.
   </p></section></section><section xml:lang="en" class="chapter" id="cha-images" data-id-title="Public cloud images"><div class="titlepage"><div><div><div class="title-container"><h1 class="title"><span class="title-number-name"><span class="title-number">2 </span><span class="title-name">Public cloud images</span></span> <a title="Permalink" class="permalink" href="#cha-images">#</a></h1><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_images.xml" title="Edit source document"> </a></div></div></div><div><div class="abstract"><p>
     SUSE offers a variety of different product
  images for different use cases in partner cloud provider frameworks. Learn how
@@ -472,7 +493,7 @@ hljs.configure({
    indicating the release date of the image, and more. The general naming
    scheme for SUSE's public cloud images is as follows:
   </p><p>
-   <code class="literal"><em class="replaceable">PRODUCT</em></code>-<code class="literal"><em class="replaceable">FLAVOR</em></code>-<code class="literal">v<em class="replaceable">VERSION</em></code>-<code class="literal"><em class="replaceable">VIRTUALIZATION</em></code>-<code class="literal"><em class="replaceable">STORAGE</em></code>-<code class="literal"><em class="replaceable">ARCHITECTURE</em></code>-<code class="literal"><em class="replaceable">GEN</em></code>
+    <code class="literal"><em class="replaceable">PRODUCT</em></code>-<code class="literal"><em class="replaceable">FLAVOR</em></code>-<code class="literal">v<em class="replaceable">VERSION</em></code>-<code class="literal"><em class="replaceable">VIRTUALIZATION</em></code>-<code class="literal"><em class="replaceable">STORAGE</em></code>-<code class="literal"><em class="replaceable">ARCHITECTURE</em></code>-<code class="literal"><em class="replaceable">TAXID</em></code>-<code class="literal"><em class="replaceable">GEN</em></code>
   </p><p>
    Not all components of this naming scheme are used in all frameworks.
   </p><div class="variablelist"><div class="title-container"><div class="variablelist-title-wrap"><div class="variablelist-title"><span class="title-number-name"><span class="title-name">SUSE public cloud image naming scheme </span></span><a title="Permalink" class="permalink" href="#id-1.4.4.5">#</a></div></div><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_images.xml" title="Edit source document"> </a></div></div><dl class="variablelist"><dt id="id-1.4.4.5.2"><span class="term"><code class="literal">PRODUCT</code></span></dt><dd><p>
@@ -534,7 +555,10 @@ hljs.configure({
       SUSE no longer supports or publishes 32 bit <code class="literal">x86</code>
       images. Images with the <code class="literal">i386</code> identifier are visible
       in Public Cloud Information Tracker data.
-     </p></dd><dt id="id-1.4.4.5.8"><span class="term"><code class="literal">GENERATION</code> (Microsoft Azure-only)</span></dt><dd><p>
+     </p></dd><dt id="id-1.4.4.5.8"><span class="term"><code class="literal">TAXID</code></span></dt><dd><p>
+          Either <code class="literal">llc</code> or <code class="literal">ltd</code>. Only for images with SUSE
+          priority support. For more information, refer to <a class="xref" href="#sec-intro-support" title="1.4. Support">Section 1.4, “Support”</a>
+        </p></dd><dt id="id-1.4.4.5.9"><span class="term"><code class="literal">GENERATION</code> (Microsoft Azure-only)</span></dt><dd><p>
       appended as <code class="literal">gen2</code> for 2nd Generation VMs.
      </p></dd></dl></div></section><section class="sect1" id="sec-image-pint" data-id-title="Public Cloud Information Tracker"><div class="titlepage"><div><div><div class="title-container"><h2 class="title"><span class="title-number-name"><span class="title-number">2.3 </span><span class="title-name">Public Cloud Information Tracker</span></span> <a title="Permalink" class="permalink" href="#sec-image-pint">#</a></h2><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_images.xml" title="Edit source document"> </a></div></div></div></div></div><p>
    The Public Cloud Information Tracker (PINT) provides information about the images SUSE publishes
@@ -665,132 +689,11 @@ hljs.configure({
    To improve overall security, SUSE provides hardened images of some
    products. The images are hardened using <span class="product">OpenSCAP</span>, a collection of open source tools that
    implement the <code class="systemitem">Security Content Automation
-    Protocol (SCAP)</code> maintained by the <span class="orgname">National Institute
-    of Standards and Technology (NIST)</span>. <span class="product">OpenSCAP</span> supports automated configuration,
-   vulnerability and patch checking, technical control compliance activities,
-   and security measurement.
-  </p><section class="sect2" id="id-1.4.7.3" data-id-title="Pre-hardening"><div class="titlepage"><div><div><div class="title-container"><h3 class="title"><span class="title-number-name"><span class="title-number">2.5.1 </span><span class="title-name">Pre-hardening</span></span> <a title="Permalink" class="permalink" href="#id-1.4.7.3">#</a></h3><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_images.xml" title="Edit source document"> </a></div></div></div></div></div><p>
-    All images are pre-hardened to the extent they can safely be hardened
-    without causing problems in public cloud frameworks. Certain rules can only
-    be applied after instance creation, for example:
-   </p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
-      Rules that require having passwords set up. Passwords would have to be
-      public if configured during the image build. This would defeat the purpose of
-      a secret password.
-     </p></li><li class="listitem"><p>
-      Rules that affect the network configuration. Networking is set up during
-      instance creation, therefore it is not possible to limit access during
-      image build.
-     </p></li><li class="listitem"><p>
-      Rules for custom partitioning. SUSE's public cloud images are
-      partitioned to meet the requirements of the framework in which they are
-      released. If your system needs to meet standards that require separate
-      file systems for given directories, we recommend that you build your own
-      images and use LVM or move those directories onto attached disks to get
-      the strictest data separation possible.
-     </p></li><li class="listitem"><p>
-      Rules to remove packages. SUSE's public cloud images cater to a wide range
-      of use cases. Even if the number of packages is limited, it is impossible
-      to determine what packages an instance requires.
-     </p></li></ul></div></section><section class="sect2" id="id-1.4.7.4" data-id-title="Avialable OpenSCAP profiles"><div class="titlepage"><div><div><div class="title-container"><h3 class="title"><span class="title-number-name"><span class="title-number">2.5.2 </span><span class="title-name">Avialable <span class="product">OpenSCAP</span> profiles </span></span> <a title="Permalink" class="permalink" href="#id-1.4.7.4">#</a></h3><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_images.xml" title="Edit source document"> </a></div></div></div></div></div><p>
-    After instance creation, you can use the installed
-    <span class="package">openscap</span> packages to complete the hardening process using
-    any of the following profiles:
-   </p><div class="variablelist"><dl class="variablelist"><dt id="id-1.4.7.4.3.1"><span class="term">Standard (<a class="link" href="https://github.com/ComplianceAsCode/content/blob/master/products/sle15/profiles/standard.profile" target="_blank"><code class="filename">standard.profile</code></a>)</span></dt><dd><p>
-       Basic <span class="product">OpenSCAP</span> system security
-       standard.
-      </p></dd><dt id="id-1.4.7.4.3.2"><span class="term">CIS Server Level 2 (<a class="link" href="https://github.com/ComplianceAsCode/content/blob/master/products/sle15/profiles/cis.profile" target="_blank"><code class="filename">cis.profile</code></a>)</span></dt><dd><p>
-       The <code class="systemitem">Center for Internet Security Server Level 2</code> profile is considered
-       to be <span class="quote">“<span class="quote">defense in depth</span>”</span> and is intended for environments
-       where security is paramount. The recommendations associated with this
-       profile can have an adverse effect on your organization if not
-       implemented appropriately or without due care. For more information,
-       refer to <a class="link" href="https://www.cisecurity.org" target="_blank">https://www.cisecurity.org</a>.
-      </p></dd><dt id="id-1.4.7.4.3.3"><span class="term">Department of Defense STIG (<a class="link" href="https://github.com/ComplianceAsCode/content/blob/master/products/sle15/profiles/stig.profile" target="_blank"><code class="filename">stig.profile</code></a>)</span></dt><dd><p>
-       The <span class="orgname">Defense Information Systems Agency</span> publishes <em class="citetitle">Security Technical Implementation Guides
-        (STIGs)</em> for the <span class="orgname">Department of Defense</span>.
-       The STIG profile replaces the previous CIS Level 3 profile and
-       provides all recommendations that are STIG-specific. Overlap of
-       recommendations from other profiles, i.e. CIS Level 1 and Level 2,
-       are present in the STIG profile as applicable. For more information,
-       refer to <a class="link" href="https://public.cyber.mil/stigs/" target="_blank">https://public.cyber.mil/stigs/</a>.
-      </p></dd><dt id="id-1.4.7.4.3.4"><span class="term">HIPAA Security Rule (<a class="link" href="https://github.com/ComplianceAsCode/content/blob/master/products/sle15/profiles/hipaa.profile" target="_blank"><code class="filename">hipaa.profile</code></a>)</span></dt><dd><p>
-       In response to the <em class="citetitle">Health Insurance Portability and Accountability Act (HIPAA)</em> of 1996, the
-       <span class="orgname">U.S. Department of Health and Human Services</span> developed
-       <em class="citetitle">Security Standards for the Protection of Electronic Protected
-        Health Information</em>, commonly known as the <code class="systemitem">HIPAA
-        Security Rule</code>. It establishes national standards to protect
-       individuals' electronic personal health information (e-PHI) that is
-       created, received, used, or maintained by a covered entity. For more
-       information, refer to <a class="link" href="https://www.hhs.gov/hipaa/for-professionals/security/index.html" target="_blank">https://www.hhs.gov/hipaa/for-professionals/security/index.html</a>.
-      </p></dd><dt id="id-1.4.7.4.3.5"><span class="term">Payment Card Industry Data Security Standard (<a class="link" href="https://github.com/ComplianceAsCode/content/blob/master/products/sle15/profiles/pci-dss.profile" target="_blank"><code class="filename">pci-dss.profile</code></a>)</span></dt><dd><p>
-       The <em class="citetitle">Payment Card Industry Data Security Standard (PCI DSS)</em> is a set of requirements
-       to guide merchants to protect cardholder data. It is  maintained by the
-       <span class="orgname">PCI Security Standards Council (SSC)</span> that was founded
-       by all five major credit card brands Visa, MasterCard, American Express,
-       Discover, and JCB. For more information, refer to <a class="link" href="https://www.pcisecuritystandards.org/document_library" target="_blank">https://www.pcisecuritystandards.org/document_library</a>.
-      </p></dd></dl></div><p>
-    All profile files are available in the <a class="link" href="https://github.com/ComplianceAsCode/content/tree/master/products/sle15/profiles" target="_blank">ComplianceAsCode</a>
-    repository.
-   </p><p>
-    For a complete list of rules that have been applied during pre-hardening,
-    refer to <a class="link" href="https://github.com/ComplianceAsCode/content/blob/master/products/sle15/profiles/pcs-hardening.profile" target="_blank"><code class="filename">pcs-hardening.profile</code></a>.
-    This profile is a combination of the <code class="literal">STIG</code> and
-    <code class="literal">CIS</code> profiles minus rules that can only be applied
-    after instance creation.
-   </p><p>
-    Images of SUSE Linux Enterprise Server for SAP Applications are hardened using a modified version of the profile
-    called <a class="link" href="https://github.com/ComplianceAsCode/content/blob/master/products/sle15/profiles/pcs-hardening-sap.profile" target="_blank"><code class="filename">pcs-hardening-sap.profile</code></a>.
-    Users may need to make additional modifications to the system configuration
-    depending on individual application needs.
-   </p><div id="id-1.4.7.4.7" data-id-title="Recommended profiles" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.svg"/><div class="admon-title">Important: Recommended profiles</div><p>
-     SUSE recommends using either the <code class="literal">CIS</code> or the
-     <code class="literal">STIG</code> profile. You can use other profiles at your own
-     discretion.
-    </p></div></section><section class="sect2" id="id-1.4.7.5" data-id-title="Hardening instances with OpenSCAP"><div class="titlepage"><div><div><div class="title-container"><h3 class="title"><span class="title-number-name"><span class="title-number">2.5.3 </span><span class="title-name">Hardening instances with <span class="product">OpenSCAP</span></span></span> <a title="Permalink" class="permalink" href="#id-1.4.7.5">#</a></h3><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_images.xml" title="Edit source document"> </a></div></div></div></div></div><p>
-    To evaluate an instance, you can run:
-   </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">&gt; </code><code class="command">sudo</code> <code class="command">oscap</code> xccdf eval \
- --profile <em class="replaceable">stig</em><span class="callout" id="co-eval-profile">1</span> \
- --results <em class="replaceable">/tmp/results.xml</em><span class="callout" id="co-eval-results">2</span> \
- --report <em class="replaceable">/tmp/report.html</em><span class="callout" id="co-eval-report">3</span> \
- --stig-viewer <em class="replaceable">/tmp/stigviewer.xml</em><span class="callout" id="co-eval-viewer">4</span> \
- <em class="replaceable">/usr/share/xml/scap/ssg/content/ssg-sle15-ds-1.2.xml</em><span class="callout" id="co-eval-ssg">5</span></pre></div><div class="calloutlist"><table style="border: 0; "><tr><td style="width: 5%; vertical-align: top; text-align: left; "><p><a href="#co-eval-profile"><span class="callout">1</span></a> </p></td><td style="vertical-align: top; text-align: left; "><p>
-      Specifies the profile to use, e.g. <code class="literal">stig</code> or
-      <code class="literal">cis</code>.
-     </p></td></tr><tr><td style="width: 5%; vertical-align: top; text-align: left; "><p><a href="#co-eval-results"><span class="callout">2</span></a> </p></td><td style="vertical-align: top; text-align: left; "><p>
-      Saves the results of the evaluation to <code class="filename">/tmp/results.xml</code>
-     </p></td></tr><tr><td style="width: 5%; vertical-align: top; text-align: left; "><p><a href="#co-eval-report"><span class="callout">3</span></a> </p></td><td style="vertical-align: top; text-align: left; "><p>
-      Generates a HTML report called <code class="filename">/tmp/report.html</code> in
-      addition to the results in XML.
-     </p></td></tr><tr><td style="width: 5%; vertical-align: top; text-align: left; "><p><a href="#co-eval-viewer"><span class="callout">4</span></a> </p></td><td style="vertical-align: top; text-align: left; "><p>
-      Saves the results to <code class="filename">/tmp/stigviewer.xml</code>, which can
-      be imported into the <code class="literal">DISA STIG Viewer</code>. Refer to <a class="link" href="https://pub-lic.cyber.mil/stigs/srg-stig-tools/" target="_blank">https://pub-lic.cyber.mil/stigs/srg-stig-tools/</a> for
-      information about DISA STIG Viewer.
-     </p></td></tr><tr><td style="width: 5%; vertical-align: top; text-align: left; "><p><a href="#co-eval-ssg"><span class="callout">5</span></a> </p></td><td style="vertical-align: top; text-align: left; "><p>
-      <code class="literal">Scap Security Guide</code> (SSG) policy file in the
-      <code class="literal">datastream</code> (ds) format. Make sure to select the correct
-      version for your instance. To list all available policies, run:
-      <code class="command">ls -1 /usr/share/xml/scap/ssg/content/ssg-*-ds.xml</code>.For
-      more information about a particular policy, run
-      <code class="command">oscap info</code> on the file.
-     </p></td></tr></table></div><p>
-    The evaluation process usually takes a few minutes, depending on the number
-    of selected rules.
-   </p><p>
-    To remediate an instance, add the <em class="parameter">--remediate</em>
-    parameter:
-   </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">&gt; </code><code class="command">sudo</code> <code class="command">oscap</code> xccdf eval --remediate\
- --profile <em class="replaceable">stig</em> \
- --results <em class="replaceable">/tmp/results.xml</em> \
- --report <em class="replaceable">/tmp/report.html</em> \
- --stig-viewer <em class="replaceable">/tmp/stigviewer.xml</em> \
- <em class="replaceable">/usr/share/xml/scap/ssg/content/ssg-sle15-ds-1.2.xml</em></pre></div></section><section class="sect2" id="id-1.4.7.6" data-id-title="More information"><div class="titlepage"><div><div><div class="title-container"><h3 class="title"><span class="title-number-name"><span class="title-number">2.5.4 </span><span class="title-name">More information</span></span> <a title="Permalink" class="permalink" href="#id-1.4.7.6">#</a></h3><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_images.xml" title="Edit source document"> </a></div></div></div></div></div><p>
-    For more information on how to harden your SUSE Linux Enterprise system with <span class="product">OpenSCAP</span>, refer to the article
-    <a class="link" href="https://documentation.suse.com/compliance/all/html/SLES-openscap/article-openscap.html" target="_blank"><em class="citetitle">Hardening
-     SUSE Linux Enterprise with OpenSCAP</em></a>. For general
-    information on <span class="product">OpenSCAP</span>, refer to the <a class="link" href="https://www.open-scap.org/security-policies/scap-security-guide/" target="_blank"><em class="citetitle">SCAP
-      Security Guide</em></a>.
-   </p></section></section></section><section xml:lang="en" class="chapter" id="cha-admin" data-id-title="Managing cloud instances"><div class="titlepage"><div><div><div class="title-container"><h1 class="title"><span class="title-number-name"><span class="title-number">3 </span><span class="title-name">Managing cloud instances</span></span> <a title="Permalink" class="permalink" href="#cha-admin">#</a></h1><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_administration.xml" title="Edit source document"> </a></div></div></div><div><div class="abstract"><p>
+    Protocol (SCAP)</code>.
+  </p><p>
+   For more information and instructions on how to harden instances with OpenSCAP, refer to
+   <a class="xref" href="#hardening" title="3.3. Hardening instances">Section 3.3, “Hardening instances”</a>.
+  </p></section></section><section xml:lang="en" class="chapter" id="cha-admin" data-id-title="Managing cloud instances"><div class="titlepage"><div><div><div class="title-container"><h1 class="title"><span class="title-number-name"><span class="title-number">3 </span><span class="title-name">Managing cloud instances</span></span> <a title="Permalink" class="permalink" href="#cha-admin">#</a></h1><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_administration.xml" title="Edit source document"> </a></div></div></div><div><div class="abstract"><p>
     SUSE Linux Enterprise in public clouds is managed almost like on
  bare metal or in virtual environments. Learn about what is different in the
  cloud.
@@ -950,7 +853,136 @@ hljs.configure({
        If this does not work, make sure the package
        <span class="package">cloud-regionsrv-client</span> is not installed. It may have
        been installed after the system was registered.
-      </p></li></ol></li></ol></div></div></section></section><section xml:lang="en" class="appendix" id="app-public-cloud-support" data-id-title="Support"><div class="titlepage"><div><div><div class="title-container"><h1 class="title"><span class="title-number-name"><span class="title-number">A </span><span class="title-name">Support</span></span> <a title="Permalink" class="permalink" href="#app-public-cloud-support">#</a></h1><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/common_support.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+      </p></li></ol></li></ol></div></div></section><section class="sect1" id="hardening" data-id-title="Hardening instances"><div class="titlepage"><div><div><div class="title-container"><h2 class="title"><span class="title-number-name"><span class="title-number">3.3 </span><span class="title-name">Hardening instances</span></span> <a title="Permalink" class="permalink" href="#hardening">#</a></h2><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_administration.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+   To improve overall security, SUSE provides hardened images of some
+   products. The images are hardened using <span class="product">OpenSCAP</span>, a collection of open source tools that
+   implement the <code class="systemitem">Security Content Automation
+    Protocol (SCAP)</code> maintained by the <span class="orgname">National Institute
+     of Standards and Technology (NIST)</span>. <span class="product">OpenSCAP</span> supports automated configuration,
+   vulnerability and patch checking, technical control compliance activities,
+   and security measurement.
+  </p><section class="sect2" id="id-1.5.5.3" data-id-title="Pre-hardening"><div class="titlepage"><div><div><div class="title-container"><h3 class="title"><span class="title-number-name"><span class="title-number">3.3.1 </span><span class="title-name">Pre-hardening</span></span> <a title="Permalink" class="permalink" href="#id-1.5.5.3">#</a></h3><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_administration.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+    Hardened images are pre-hardened to the extent they can safely be hardened
+    without causing problems in public cloud frameworks. Certain rules can only
+    be applied after instance creation, for example:
+   </p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
+      Rules that require having passwords set up. Passwords would have to be
+      public if configured during the image build. This would defeat the purpose of
+      a secret password.
+     </p></li><li class="listitem"><p>
+      Rules that affect the network configuration. Networking is set up during
+      instance creation, therefore it is not possible to limit access during
+      image build.
+     </p></li><li class="listitem"><p>
+      Rules for custom partitioning. SUSE's public cloud images are
+      partitioned to meet the requirements of the framework in which they are
+      released. If your system needs to meet standards that require separate
+      file systems for given directories, we recommend that you build your own
+      images and use LVM or move those directories onto attached disks to get
+      the strictest data separation possible.
+     </p></li><li class="listitem"><p>
+      Rules to remove packages. SUSE's public cloud images cater to a wide range
+      of use cases. Even if the number of packages is limited, it is impossible
+      to determine what packages an instance requires.
+     </p></li></ul></div></section><section class="sect2" id="id-1.5.5.4" data-id-title="Avialable OpenSCAP profiles"><div class="titlepage"><div><div><div class="title-container"><h3 class="title"><span class="title-number-name"><span class="title-number">3.3.2 </span><span class="title-name">Avialable <span class="product">OpenSCAP</span> profiles </span></span> <a title="Permalink" class="permalink" href="#id-1.5.5.4">#</a></h3><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_administration.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+    After instance creation, you can use the installed
+    <span class="package">openscap</span> packages to complete the hardening process using
+    any of the following profiles:
+   </p><div class="variablelist"><dl class="variablelist"><dt id="id-1.5.5.4.3.1"><span class="term">Standard (<a class="link" href="https://github.com/ComplianceAsCode/content/blob/master/products/sle15/profiles/standard.profile" target="_blank"><code class="filename">standard.profile</code></a>)</span></dt><dd><p>
+       Basic <span class="product">OpenSCAP</span> system security
+       standard.
+      </p></dd><dt id="id-1.5.5.4.3.2"><span class="term">CIS Server Level 2 (<a class="link" href="https://github.com/ComplianceAsCode/content/blob/master/products/sle15/profiles/cis.profile" target="_blank"><code class="filename">cis.profile</code></a>)</span></dt><dd><p>
+       The <code class="systemitem">Center for Internet Security Server Level 2</code> profile is considered
+       to be <span class="quote">“<span class="quote">defense in depth</span>”</span> and is intended for environments
+       where security is paramount. The recommendations associated with this
+       profile can have an adverse effect on your organization if not
+       implemented appropriately or without due care. For more information,
+       refer to <a class="link" href="https://www.cisecurity.org" target="_blank">https://www.cisecurity.org</a>.
+      </p></dd><dt id="id-1.5.5.4.3.3"><span class="term">Department of Defense STIG (<a class="link" href="https://github.com/ComplianceAsCode/content/blob/master/products/sle15/profiles/stig.profile" target="_blank"><code class="filename">stig.profile</code></a>)</span></dt><dd><p>
+       The <span class="orgname">Defense Information Systems Agency</span> publishes <em class="citetitle">Security Technical Implementation Guides
+        (STIGs)</em> for the <span class="orgname">Department of Defense</span>.
+       The STIG profile replaces the previous CIS Level 3 profile and
+       provides all recommendations that are STIG-specific. Overlap of
+       recommendations from other profiles, i.e. CIS Level 1 and Level 2,
+       are present in the STIG profile as applicable. For more information,
+       refer to <a class="link" href="https://public.cyber.mil/stigs/" target="_blank">https://public.cyber.mil/stigs/</a>.
+      </p></dd><dt id="id-1.5.5.4.3.4"><span class="term">HIPAA Security Rule (<a class="link" href="https://github.com/ComplianceAsCode/content/blob/master/products/sle15/profiles/hipaa.profile" target="_blank"><code class="filename">hipaa.profile</code></a>)</span></dt><dd><p>
+       In response to the <em class="citetitle">Health Insurance Portability and Accountability Act (HIPAA)</em> of 1996, the
+       <span class="orgname">U.S. Department of Health and Human Services</span> developed
+       <em class="citetitle">Security Standards for the Protection of Electronic Protected
+        Health Information</em>, commonly known as the <code class="systemitem">HIPAA
+         Security Rule</code>. It establishes national standards to protect
+       individuals' electronic personal health information (e-PHI) that is
+       created, received, used, or maintained by a covered entity. For more
+       information, refer to <a class="link" href="https://www.hhs.gov/hipaa/for-professionals/security/index.html" target="_blank">https://www.hhs.gov/hipaa/for-professionals/security/index.html</a>.
+      </p></dd><dt id="id-1.5.5.4.3.5"><span class="term">Payment Card Industry Data Security Standard (<a class="link" href="https://github.com/ComplianceAsCode/content/blob/master/products/sle15/profiles/pci-dss.profile" target="_blank"><code class="filename">pci-dss.profile</code></a>)</span></dt><dd><p>
+       The <em class="citetitle">Payment Card Industry Data Security Standard (PCI DSS)</em> is a set of requirements
+       to guide merchants to protect cardholder data. It is  maintained by the
+       <span class="orgname">PCI Security Standards Council (SSC)</span> that was founded
+       by all five major credit card brands Visa, MasterCard, American Express,
+       Discover, and JCB. For more information, refer to <a class="link" href="https://www.pcisecuritystandards.org/document_library" target="_blank">https://www.pcisecuritystandards.org/document_library</a>.
+      </p></dd></dl></div><p>
+    All profile files are available in the <a class="link" href="https://github.com/ComplianceAsCode/content/tree/master/products/sle15/profiles" target="_blank">ComplianceAsCode</a>
+    repository.
+   </p><p>
+    For a complete list of rules that have been applied during pre-hardening,
+    refer to <a class="link" href="https://github.com/ComplianceAsCode/content/blob/master/products/sle15/profiles/pcs-hardening.profile" target="_blank"><code class="filename">pcs-hardening.profile</code></a>.
+    This profile is a combination of the <code class="literal">STIG</code> and
+    <code class="literal">CIS</code> profiles minus rules that can only be applied
+    after instance creation.
+   </p><p>
+    Images of SUSE Linux Enterprise Server for SAP Applications are hardened using a modified version of the profile
+    called <a class="link" href="https://github.com/ComplianceAsCode/content/blob/master/products/sle15/profiles/pcs-hardening-sap.profile" target="_blank"><code class="filename">pcs-hardening-sap.profile</code></a>.
+    Users may need to make additional modifications to the system configuration
+    depending on individual application needs.
+   </p><div id="id-1.5.5.4.7" data-id-title="Recommended profiles" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.svg"/><div class="admon-title">Important: Recommended profiles</div><p>
+     SUSE recommends using either the <code class="literal">CIS</code> or the
+     <code class="literal">STIG</code> profile. You can use other profiles at your own
+     discretion.
+    </p></div></section><section class="sect2" id="id-1.5.5.5" data-id-title="Hardening instances with OpenSCAP"><div class="titlepage"><div><div><div class="title-container"><h3 class="title"><span class="title-number-name"><span class="title-number">3.3.3 </span><span class="title-name">Hardening instances with <span class="product">OpenSCAP</span></span></span> <a title="Permalink" class="permalink" href="#id-1.5.5.5">#</a></h3><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_administration.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+    To evaluate an instance, you can run:
+   </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">&gt; </code><code class="command">sudo</code> <code class="command">oscap</code> xccdf eval \
+    --profile <em class="replaceable">stig</em><span class="callout" id="co-eval-profile">1</span> \
+    --results <em class="replaceable">/tmp/results.xml</em><span class="callout" id="co-eval-results">2</span> \
+    --report <em class="replaceable">/tmp/report.html</em><span class="callout" id="co-eval-report">3</span> \
+    --stig-viewer <em class="replaceable">/tmp/stigviewer.xml</em><span class="callout" id="co-eval-viewer">4</span> \
+    <em class="replaceable">/usr/share/xml/scap/ssg/content/ssg-sle15-ds-1.2.xml</em><span class="callout" id="co-eval-ssg">5</span></pre></div><div class="calloutlist"><table style="border: 0; "><tr><td style="width: 5%; vertical-align: top; text-align: left; "><p><a href="#co-eval-profile"><span class="callout">1</span></a> </p></td><td style="vertical-align: top; text-align: left; "><p>
+      Specifies the profile to use, e.g. <code class="literal">stig</code> or
+      <code class="literal">cis</code>.
+     </p></td></tr><tr><td style="width: 5%; vertical-align: top; text-align: left; "><p><a href="#co-eval-results"><span class="callout">2</span></a> </p></td><td style="vertical-align: top; text-align: left; "><p>
+      Saves the results of the evaluation to <code class="filename">/tmp/results.xml</code>
+     </p></td></tr><tr><td style="width: 5%; vertical-align: top; text-align: left; "><p><a href="#co-eval-report"><span class="callout">3</span></a> </p></td><td style="vertical-align: top; text-align: left; "><p>
+      Generates a HTML report called <code class="filename">/tmp/report.html</code> in
+      addition to the results in XML.
+     </p></td></tr><tr><td style="width: 5%; vertical-align: top; text-align: left; "><p><a href="#co-eval-viewer"><span class="callout">4</span></a> </p></td><td style="vertical-align: top; text-align: left; "><p>
+      Saves the results to <code class="filename">/tmp/stigviewer.xml</code>, which can
+      be imported into the <code class="literal">DISA STIG Viewer</code>. Refer to <a class="link" href="https://pub-lic.cyber.mil/stigs/srg-stig-tools/" target="_blank">https://pub-lic.cyber.mil/stigs/srg-stig-tools/</a> for
+      information about DISA STIG Viewer.
+     </p></td></tr><tr><td style="width: 5%; vertical-align: top; text-align: left; "><p><a href="#co-eval-ssg"><span class="callout">5</span></a> </p></td><td style="vertical-align: top; text-align: left; "><p>
+      <code class="literal">Scap Security Guide</code> (SSG) policy file in the
+      <code class="literal">datastream</code> (ds) format. Make sure to select the correct
+      version for your instance. To list all available policies, run:
+      <code class="command">ls -1 /usr/share/xml/scap/ssg/content/ssg-*-ds.xml</code>.For
+      more information about a particular policy, run
+      <code class="command">oscap info</code> on the file.
+     </p></td></tr></table></div><p>
+    The evaluation process usually takes a few minutes, depending on the number
+    of selected rules.
+   </p><p>
+    To remediate an instance, add the <em class="parameter">--remediate</em>
+    parameter:
+   </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">&gt; </code><code class="command">sudo</code> <code class="command">oscap</code> xccdf eval --remediate\
+    --profile <em class="replaceable">stig</em> \
+    --results <em class="replaceable">/tmp/results.xml</em> \
+    --report <em class="replaceable">/tmp/report.html</em> \
+    --stig-viewer <em class="replaceable">/tmp/stigviewer.xml</em> \
+    <em class="replaceable">/usr/share/xml/scap/ssg/content/ssg-sle15-ds-1.2.xml</em></pre></div></section><section class="sect2" id="id-1.5.5.6" data-id-title="More information"><div class="titlepage"><div><div><div class="title-container"><h3 class="title"><span class="title-number-name"><span class="title-number">3.3.4 </span><span class="title-name">More information</span></span> <a title="Permalink" class="permalink" href="#id-1.5.5.6">#</a></h3><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_administration.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+    For more information on how to harden your SUSE Linux Enterprise system with <span class="product">OpenSCAP</span>, refer to the article
+    <a class="link" href="https://documentation.suse.com/compliance/all/html/SLES-openscap/article-openscap.html" target="_blank"><em class="citetitle">Hardening
+     SUSE Linux Enterprise with OpenSCAP</em></a>. For general
+    information on <span class="product">OpenSCAP</span>, refer to the <a class="link" href="https://www.open-scap.org/security-policies/scap-security-guide/" target="_blank"><em class="citetitle">SCAP
+      Security Guide</em></a>.
+   </p></section></section></section><section xml:lang="en" class="appendix" id="app-public-cloud-support" data-id-title="Support"><div class="titlepage"><div><div><div class="title-container"><h1 class="title"><span class="title-number-name"><span class="title-number">A </span><span class="title-name">Support</span></span> <a title="Permalink" class="permalink" href="#app-public-cloud-support">#</a></h1><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/common_support.xml" title="Edit source document"> </a></div></div></div></div></div><p>
   Find the support statement for SUSE Linux Enterprise and general information about
   technology previews below.
   For details about the product lifecycle, see
@@ -1029,16 +1061,172 @@ hljs.configure({
     </p></li></ul></div><p>
    For an overview of technology previews shipped with your product, see the
    release notes at <a class="link" href="https://www.suse.com/releasenotes/x86_64/public-cloud" target="_blank">https://www.suse.com/releasenotes/x86_64/public-cloud</a>.
-  </p></section></section><div class="legal-section"><section class="appendix" id="id-1.7" data-id-title="GNU licenses"><div class="titlepage"><div><div><div class="title-container"><h1 class="title"><span class="title-number-name"><span class="title-number">B </span><span class="title-name">GNU licenses</span></span> <a title="Permalink" class="permalink" href="#id-1.7">#</a></h1><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/common_legal.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+  </p></section></section><section xml:lang="en" class="appendix" id="countrylist" data-id-title="Geographical availability"><div class="titlepage"><div><div><div class="title-container"><h1 class="title"><span class="title-number-name"><span class="title-number">B </span><span class="title-name">Geographical availability</span></span> <a title="Permalink" class="permalink" href="#countrylist">#</a></h1><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/app_countrylist.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+    SUSE offers 24x7 priority support for the PAYG versions of the following products:
+  </p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
+        SUSE Linux Enterprise Micro 5
+      </p></li><li class="listitem"><p>
+        SUSE Rancher Priority Support
+      </p></li><li class="listitem"><p>
+        NeuVector Prime
+      </p></li></ul></div><p>
+    You can transact priority support through the Amazon Web Services and Microsoft Azure marketplaces, where you
+    will see two different listings: <code class="literal">EU and UK only</code> and <code class="literal">non-EU and
+    non-UK only</code>. Two listings are needed as there are different regulations to comply
+    with, but the images and the support offering are identical. Select the correct listing for
+    your organization's CSP account.
+  </p><div id="id-1.7.5" data-id-title="Other countries" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.svg"/><div class="admon-title">Important: Other countries</div><p>
+      If the billing or tax address of your organization's CSP account is located in a country not
+      listed below, you currently cannot transact priority support through the CSP's marketplaces.
+    </p><p>
+      SUSE is committed to making priority support available in more countries. In the meantime,
+      you can still use SUSE PAYG products with regular support from the CSP. If you want support
+      by SUSE, use a BYOS version.
+    </p></div><section class="sect1" id="availability-aws" data-id-title="Amazon Web Services"><div class="titlepage"><div><div><div class="title-container"><h2 class="title"><span class="title-number-name"><span class="title-number">B.1 </span><span class="title-name">Amazon Web Services</span></span> <a title="Permalink" class="permalink" href="#availability-aws">#</a></h2><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/app_countrylist.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+      To select the correct listing, check the <code class="literal">tax address</code> of your organization's
+      AWS account. For more information, refer to <a class="link" href="https://aws.amazon.com/tax-help/location" target="_blank">https://aws.amazon.com/tax-help/location</a>.
+    </p><div class="itemizedlist"><div class="title-container"><div class="itemizedlist-title-wrap"><div class="itemizedlist-title"><span class="title-number-name"><span class="title-name">Countries that can transact SUSE Priority Support through the AWS Marketplace </span></span><a title="Permalink" class="permalink" href="#id-1.7.6.3">#</a></div></div><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/app_countrylist.xml" title="Edit source document"> </a></div></div><ul class="itemizedlist"><li class="listitem"><p>
+          Australia (AU): non-EU and non-UK
+        </p></li><li class="listitem"><p>
+          Austria (AT): EU and UK
+        </p></li><li class="listitem"><p>
+          Bangladesh (BD): non-EU and non-UK
+        </p></li><li class="listitem"><p>
+          Belgium (BE): EU and UK
+        </p></li><li class="listitem"><p>
+          Bulgaria (BG): EU and UK
+        </p></li><li class="listitem"><p>
+          Canada (CA): non-EU and non-UK
+        </p></li><li class="listitem"><p>
+          Chile (CL): non-EU and non-UK
+        </p></li><li class="listitem"><p>
+          Croatia (HR): EU and UK
+        </p></li><li class="listitem"><p>
+          Cyprus (CY): EU and UK
+        </p></li><li class="listitem"><p>
+          Czech Republic (CZ): EU and UK
+        </p></li><li class="listitem"><p>
+          Denmark (DK): EU and UK
+        </p></li><li class="listitem"><p>
+          Estonia (EE): EU and UK
+        </p></li><li class="listitem"><p>
+          Finland (FI): EU and UK
+        </p></li><li class="listitem"><p>
+          France (FR): EU and UK
+        </p></li><li class="listitem"><p>
+          Germany (DE): EU and UK
+        </p></li><li class="listitem"><p>
+          Greece (GR): EU and UK
+        </p></li><li class="listitem"><p>
+          Hungary (HU): EU and UK
+        </p></li><li class="listitem"><p>
+          India (IN): non-EU and non-UK
+        </p></li><li class="listitem"><p>
+          Indonesia (ID): non-EU and non-UK
+        </p></li><li class="listitem"><p>
+          Ireland (IE): EU and UK
+        </p></li><li class="listitem"><p>
+          Isle of Man (IM): EU and UK
+        </p></li><li class="listitem"><p>
+          Italy (IT): EU and UK
+        </p></li><li class="listitem"><p>
+          Korea, Republic of (KR): non-EU and non-UK
+        </p></li><li class="listitem"><p>
+          Latvia (LV): EU and UK
+        </p></li><li class="listitem"><p>
+          Lithuania (LT): EU and UK
+        </p></li><li class="listitem"><p>
+          Luxembourg (LU): EU and UK
+        </p></li><li class="listitem"><p>
+          Malaysia (MY): non-EU and non-UK
+        </p></li><li class="listitem"><p>
+          Malta (MT): EU and UK
+        </p></li><li class="listitem"><p>
+          Netherlands (NL): EU and UK
+        </p></li><li class="listitem"><p>
+          New Zealand (NZ): non-EU and non-UK
+        </p></li><li class="listitem"><p>
+          Norway (NO): EU and UK
+        </p></li><li class="listitem"><p>
+          Poland (PL): EU and UK
+        </p></li><li class="listitem"><p>
+          Portugal (PT): EU and UK
+        </p></li><li class="listitem"><p>
+          Romania (RO): EU and UK
+        </p></li><li class="listitem"><p>
+          Russian Federation (RU): non-EU and non-UK
+        </p></li><li class="listitem"><p>
+          Saudi Arabia, Kingdom of (SA): non-EU and non-UK
+        </p></li><li class="listitem"><p>
+          Singapore (SG): non-EU and non-UK
+        </p></li><li class="listitem"><p>
+          Slovakia (SK): EU and UK
+        </p></li><li class="listitem"><p>
+          Slovenia (SI): EU and UK
+        </p></li><li class="listitem"><p>
+          South Africa (ZA): non-EU and non-UK
+        </p></li><li class="listitem"><p>
+          Spain (ES): EU and UK
+        </p></li><li class="listitem"><p>
+          Sweden (SE): EU and UK
+        </p></li><li class="listitem"><p>
+          Taiwan, Province of China (TW): non-EU and non-UK
+        </p></li><li class="listitem"><p>
+          Thailand (TH): non-EU and non-UK
+        </p></li><li class="listitem"><p>
+          Turkey (TR): non-EU and non-UK
+        </p></li><li class="listitem"><p>
+          United Kingdom (GB): EU and UK
+        </p></li><li class="listitem"><p>
+          United States (US): non-EU and non-UK
+        </p></li></ul></div></section><section class="sect1" id="availability-azure" data-id-title="Microsoft Azure"><div class="titlepage"><div><div><div class="title-container"><h2 class="title"><span class="title-number-name"><span class="title-number">B.2 </span><span class="title-name">Microsoft Azure</span></span> <a title="Permalink" class="permalink" href="#availability-azure">#</a></h2><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/app_countrylist.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+     To select the correct listing, check the <code class="literal">sold to</code> address of your
+     organization's Microsoft Azure account. For more information, refer to <a class="link" href="https://learn.microsoft.com/azure/cost-management-billing/manage/change-azure-account-profile" target="_blank">https://learn.microsoft.com/azure/cost-management-billing/manage/change-azure-account-profile</a>.
+    </p><div id="id-1.7.7.3" data-id-title="EU and UK" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.svg"/><div class="admon-title">Note: EU and UK</div><p>
+        SUSE is currently working on making priority support available in the European Union and
+        the United Kingdom.
+      </p></div><div class="itemizedlist"><div class="title-container"><div class="itemizedlist-title-wrap"><div class="itemizedlist-title"><span class="title-number-name"><span class="title-name">Countries that can transact SUSE Priority Support through the Microsoft Azure Marketplace </span></span><a title="Permalink" class="permalink" href="#id-1.7.7.4">#</a></div></div><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/app_countrylist.xml" title="Edit source document"> </a></div></div><ul class="itemizedlist"><li class="listitem"><p>
+          Australia (AU): non-EU and non-UK
+        </p></li><li class="listitem"><p>
+          Canada (CA): non-EU and non-UK
+        </p></li><li class="listitem"><p>
+          Chile (CL): non-EU and non-UK
+        </p></li><li class="listitem"><p>
+          India (IN): non-EU and non-UK
+        </p></li><li class="listitem"><p>
+          Indonesia (ID): non-EU and non-UK
+        </p></li><li class="listitem"><p>
+          Korea, Republic of (KR): non-EU and non-UK
+        </p></li><li class="listitem"><p>
+          Malaysia (MY): non-EU and non-UK
+        </p></li><li class="listitem"><p>
+          New Zealand (NZ): non-EU and non-UK
+        </p></li><li class="listitem"><p>
+          Russian Federation (RU): non-EU and non-UK
+        </p></li><li class="listitem"><p>
+          Saudi Arabia, Kingdom of (SA): non-EU and non-UK
+        </p></li><li class="listitem"><p>
+          Singapore (SG): non-EU and non-UK
+        </p></li><li class="listitem"><p>
+          South Africa (ZA): non-EU and non-UK
+        </p></li><li class="listitem"><p>
+          Taiwan, Province of China (TW): non-EU and non-UK
+        </p></li><li class="listitem"><p>
+          Thailand (TH): non-EU and non-UK
+        </p></li><li class="listitem"><p>
+          Turkey (TR): non-EU and non-UK
+        </p></li><li class="listitem"><p>
+          United States (US): non-EU and non-UK
+        </p></li></ul></div></section></section><div class="legal-section"><section class="appendix" id="id-1.8" data-id-title="GNU licenses"><div class="titlepage"><div><div><div class="title-container"><h1 class="title"><span class="title-number-name"><span class="title-number">C </span><span class="title-name">GNU licenses</span></span> <a title="Permalink" class="permalink" href="#id-1.8">#</a></h1><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/common_legal.xml" title="Edit source document"> </a></div></div></div></div></div><p>
   This appendix contains the GNU Free Documentation License version 1.2.
- </p><section class="sect1" id="id-1.7.4" data-id-title="GNU Free Documentation License"><div class="titlepage"><div><div><div class="title-container"><h2 class="title legal"><span class="title-number-name"><span class="title-name">GNU Free Documentation License</span></span> <a title="Permalink" class="permalink" href="#id-1.7.4">#</a></h2><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/common_license_gfdl1.2.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+ </p><section class="sect1" id="id-1.8.4" data-id-title="GNU Free Documentation License"><div class="titlepage"><div><div><div class="title-container"><h2 class="title legal"><span class="title-number-name"><span class="title-name">GNU Free Documentation License</span></span> <a title="Permalink" class="permalink" href="#id-1.8.4">#</a></h2><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/common_license_gfdl1.2.xml" title="Edit source document"> </a></div></div></div></div></div><p>
   Copyright (C) 2000, 2001, 2002 Free Software Foundation, Inc. 51 Franklin St,
   Fifth Floor, Boston, MA 02110-1301 USA. Everyone is permitted to copy and
   distribute verbatim copies of this license document, but changing it is not
   allowed.
- </p><div class="sect4 bridgehead"><h5 class="title legal" id="id-1.7.4.4"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="id-1.8.4.4"><span class="name">
     0. PREAMBLE
-  </span><a title="Permalink" class="permalink" href="#id-1.7.4.4">#</a></h5></div><p>
+  </span><a title="Permalink" class="permalink" href="#id-1.8.4.4">#</a></h5></div><p>
   The purpose of this License is to make a manual, textbook, or other
   functional and useful document "free" in the sense of freedom: to assure
   everyone the effective freedom to copy and redistribute it, with or without
@@ -1059,9 +1247,9 @@ hljs.configure({
   work, regardless of subject matter or whether it is published as a printed
   book. We recommend this License principally for works whose purpose is
   instruction or reference.
- </p><div class="sect4 bridgehead"><h5 class="title legal" id="id-1.7.4.8"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="id-1.8.4.8"><span class="name">
     1. APPLICABILITY AND DEFINITIONS
-  </span><a title="Permalink" class="permalink" href="#id-1.7.4.8">#</a></h5></div><p>
+  </span><a title="Permalink" class="permalink" href="#id-1.8.4.8">#</a></h5></div><p>
   This License applies to any manual or other work, in any medium, that
   contains a notice placed by the copyright holder saying it can be distributed
   under the terms of this License. Such a notice grants a world-wide,
@@ -1140,9 +1328,9 @@ hljs.configure({
   considered to be included by reference in this License, but only as regards
   disclaiming warranties: any other implication that these Warranty Disclaimers
   may have is void and has no effect on the meaning of this License.
- </p><div class="sect4 bridgehead"><h5 class="title legal" id="id-1.7.4.19"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="id-1.8.4.19"><span class="name">
     2. VERBATIM COPYING
-  </span><a title="Permalink" class="permalink" href="#id-1.7.4.19">#</a></h5></div><p>
+  </span><a title="Permalink" class="permalink" href="#id-1.8.4.19">#</a></h5></div><p>
   You may copy and distribute the Document in any medium, either commercially
   or non-commercially, provided that this License, the copyright notices, and
   the license notice saying this License applies to the Document are reproduced
@@ -1154,9 +1342,9 @@ hljs.configure({
  </p><p>
   You may also lend copies, under the same conditions stated above, and you may
   publicly display copies.
- </p><div class="sect4 bridgehead"><h5 class="title legal" id="id-1.7.4.22"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="id-1.8.4.22"><span class="name">
     3. COPYING IN QUANTITY
-  </span><a title="Permalink" class="permalink" href="#id-1.7.4.22">#</a></h5></div><p>
+  </span><a title="Permalink" class="permalink" href="#id-1.8.4.22">#</a></h5></div><p>
   If you publish printed copies (or copies in media that commonly have printed
   covers) of the Document, numbering more than 100, and the Document's license
   notice requires Cover Texts, you must enclose the copies in covers that
@@ -1188,9 +1376,9 @@ hljs.configure({
   It is requested, but not required, that you contact the authors of the
   Document well before redistributing any large number of copies, to give them
   a chance to provide you with an updated version of the Document.
- </p><div class="sect4 bridgehead"><h5 class="title legal" id="id-1.7.4.27"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="id-1.8.4.27"><span class="name">
     4. MODIFICATIONS
-  </span><a title="Permalink" class="permalink" href="#id-1.7.4.27">#</a></h5></div><p>
+  </span><a title="Permalink" class="permalink" href="#id-1.8.4.27">#</a></h5></div><p>
   You may copy and distribute a Modified Version of the Document under the
   conditions of sections 2 and 3 above, provided that you release the Modified
   Version under precisely this License, with the Modified Version filling the
@@ -1284,9 +1472,9 @@ hljs.configure({
   The author(s) and publisher(s) of the Document do not by this License give
   permission to use their names for publicity for or to assert or imply
   endorsement of any Modified Version.
- </p><div class="sect4 bridgehead"><h5 class="title legal" id="id-1.7.4.34"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="id-1.8.4.34"><span class="name">
     5. COMBINING DOCUMENTS
-  </span><a title="Permalink" class="permalink" href="#id-1.7.4.34">#</a></h5></div><p>
+  </span><a title="Permalink" class="permalink" href="#id-1.8.4.34">#</a></h5></div><p>
   You may combine the Document with other documents released under this
   License, under the terms defined in section 4 above for modified versions,
   provided that you include in the combination all of the Invariant Sections of
@@ -1307,9 +1495,9 @@ hljs.configure({
   various original documents, forming one section Entitled "History"; likewise
   combine any sections Entitled "Acknowledgements", and any sections Entitled
   "Dedications". You must delete all sections Entitled "Endorsements".
- </p><div class="sect4 bridgehead"><h5 class="title legal" id="id-1.7.4.38"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="id-1.8.4.38"><span class="name">
     6. COLLECTIONS OF DOCUMENTS
-  </span><a title="Permalink" class="permalink" href="#id-1.7.4.38">#</a></h5></div><p>
+  </span><a title="Permalink" class="permalink" href="#id-1.8.4.38">#</a></h5></div><p>
   You may make a collection consisting of the Document and other documents
   released under this License, and replace the individual copies of this
   License in the various documents with a single copy that is included in the
@@ -1320,9 +1508,9 @@ hljs.configure({
   individually under this License, provided you insert a copy of this License
   into the extracted document, and follow this License in all other respects
   regarding verbatim copying of that document.
- </p><div class="sect4 bridgehead"><h5 class="title legal" id="id-1.7.4.41"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="id-1.8.4.41"><span class="name">
     7. AGGREGATION WITH INDEPENDENT WORKS
-  </span><a title="Permalink" class="permalink" href="#id-1.7.4.41">#</a></h5></div><p>
+  </span><a title="Permalink" class="permalink" href="#id-1.8.4.41">#</a></h5></div><p>
   A compilation of the Document or its derivatives with other separate and
   independent documents or works, in or on a volume of a storage or
   distribution medium, is called an "aggregate" if the copyright resulting from
@@ -1337,9 +1525,9 @@ hljs.configure({
   the Document within the aggregate, or the electronic equivalent of covers if
   the Document is in electronic form. Otherwise they must appear on printed
   covers that bracket the whole aggregate.
- </p><div class="sect4 bridgehead"><h5 class="title legal" id="id-1.7.4.44"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="id-1.8.4.44"><span class="name">
     8. TRANSLATION
-  </span><a title="Permalink" class="permalink" href="#id-1.7.4.44">#</a></h5></div><p>
+  </span><a title="Permalink" class="permalink" href="#id-1.8.4.44">#</a></h5></div><p>
   Translation is considered a kind of modification, so you may distribute
   translations of the Document under the terms of section 4. Replacing
   Invariant Sections with translations requires special permission from their
@@ -1355,18 +1543,18 @@ hljs.configure({
   If a section in the Document is Entitled "Acknowledgements", "Dedications",
   or "History", the requirement (section 4) to Preserve its Title (section 1)
   will typically require changing the actual title.
- </p><div class="sect4 bridgehead"><h5 class="title legal" id="id-1.7.4.47"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="id-1.8.4.47"><span class="name">
     9. TERMINATION
-  </span><a title="Permalink" class="permalink" href="#id-1.7.4.47">#</a></h5></div><p>
+  </span><a title="Permalink" class="permalink" href="#id-1.8.4.47">#</a></h5></div><p>
   You may not copy, modify, sublicense, or distribute the Document except as
   expressly provided for under this License. Any other attempt to copy, modify,
   sublicense or distribute the Document is void, and will automatically
   terminate your rights under this License. However, parties who have received
   copies, or rights, from you under this License will not have their licenses
   terminated so long as such parties remain in full compliance.
- </p><div class="sect4 bridgehead"><h5 class="title legal" id="id-1.7.4.49"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="id-1.8.4.49"><span class="name">
     10. FUTURE REVISIONS OF THIS LICENSE
-  </span><a title="Permalink" class="permalink" href="#id-1.7.4.49">#</a></h5></div><p>
+  </span><a title="Permalink" class="permalink" href="#id-1.8.4.49">#</a></h5></div><p>
   The Free Software Foundation may publish new, revised versions of the GNU
   Free Documentation License from time to time. Such new versions will be
   similar in spirit to the present version, but may differ in detail to address
@@ -1380,9 +1568,9 @@ hljs.configure({
   been published (not as a draft) by the Free Software Foundation. If the
   Document does not specify a version number of this License, you may choose
   any version ever published (not as a draft) by the Free Software Foundation.
- </p><div class="sect4 bridgehead"><h5 class="title legal" id="id-1.7.4.52"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="id-1.8.4.52"><span class="name">
     ADDENDUM: How to use this License for your documents
-  </span><a title="Permalink" class="permalink" href="#id-1.7.4.52">#</a></h5></div><div class="verbatim-wrap"><pre class="screen">Copyright (c) YEAR YOUR NAME.
+  </span><a title="Permalink" class="permalink" href="#id-1.8.4.52">#</a></h5></div><div class="verbatim-wrap"><pre class="screen">Copyright (c) YEAR YOUR NAME.
 Permission is granted to copy, distribute and/or modify this document
 under the terms of the GNU Free Documentation License, Version 1.2
 or any later version published by the Free Software Foundation;
