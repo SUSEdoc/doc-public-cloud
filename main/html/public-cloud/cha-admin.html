@@ -124,14 +124,18 @@ hljs.configure({
          </p><p>
            Install <span class="package">cloud-regionsrv-client</span>. Depending on your cloud framework,
            you will need some additional packages.
-         </p><ol type="a" class="substeps"><li class="step"><p>
+         </p><ul class="stepalternatives">
+           <li class="step"><p>
                For Amazon EC2 run:
              </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">zypper</code> in cloud-regionsrv-client cloud-regionsrv-client-plugin-ec2 \
- regionServiceClientConfigEC2 regionServiceCertsEC2</pre></div></li><li class="step"><p>
+ regionServiceClientConfigEC2 regionServiceCertsEC2</pre></div></li>
+           <li class="step"><p>
                For Microsoft Azure run:
              </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">zypper</code> in cloud-regionsrv-client cloud-regionsrv-client-plugin-azure \
- regionServiceClientConfigAzure regionServiceCertsAzure</pre></div></li><li class="step"><p>For Google Compute Engine run:</p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">zypper</code> in cloud-regionsrv-client cloud-regionsrv-client-plugin-gce \
- regionServiceClientConfigGCE regionServiceCertsGCE</pre></div></li></ol></li><li class="step"><p>
+ regionServiceClientConfigAzure regionServiceCertsAzure</pre></div></li>
+           <li class="step"><p>For Google Compute Engine run:</p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">zypper</code> in cloud-regionsrv-client cloud-regionsrv-client-plugin-gce \
+ regionServiceClientConfigGCE regionServiceCertsGCE</pre></div></li>
+         </ul></li><li class="step"><p>
            Disconnect your instance from the SUSE Customer Center:
          </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">registercloudguest</code> --clean</pre></div><p>
            Do <span class="emphasis"><em>not</em></span> use <code class="command">SUSEConnect -d</code>; it will
@@ -168,11 +172,14 @@ hljs.configure({
            Clean up the registration status:
          </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">SUSEConnect</code> --cleanup --url https://scc.suse.com</pre></div></li><li class="step"><p>
            Register the instance with <code class="command">SUSEConnect</code>.
-         </p><ol type="a" class="substeps"><li class="step"><p>
+         </p><ul class="stepalternatives">
+           <li class="step"><p>
                To connect the instance to the SUSE Customer Center, run:
-             </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">SUSEConnect</code> -r <em class="replaceable">REGISTRATION_CODE</em> -e <em class="replaceable">EMAIL_ADDRESS</em></pre></div></li><li class="step"><p>
+             </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">SUSEConnect</code> -r <em class="replaceable">REGISTRATION_CODE</em> -e <em class="replaceable">EMAIL_ADDRESS</em></pre></div></li>
+           <li class="step"><p>
                To connect the instance to the your own registration server, run:
-             </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">SUSEConnect</code> -r <em class="replaceable">REGISTRATION_CODE</em> -e <em class="replaceable">EMAIL_ADDRESS</em> --url <em class="replaceable">URL</em></pre></div></li></ol></li></ol></div></div></section></section><section class="sect1" id="sec-admin-deregister" data-id-title="Deregister instances"><div class="titlepage"><div><div><div class="title-container"><h2 class="title"><span class="title-number-name"><span class="title-number">3.2 </span><span class="title-name">Deregister instances</span></span> <a title="Permalink" class="permalink" href="cha-admin.html#sec-admin-deregister">#</a></h2><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_administration.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+             </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">SUSEConnect</code> -r <em class="replaceable">REGISTRATION_CODE</em> -e <em class="replaceable">EMAIL_ADDRESS</em> --url <em class="replaceable">URL</em></pre></div></li>
+         </ul></li></ol></div></div></section></section><section class="sect1" id="sec-admin-deregister" data-id-title="Deregister instances"><div class="titlepage"><div><div><div class="title-container"><h2 class="title"><span class="title-number-name"><span class="title-number">3.2 </span><span class="title-name">Deregister instances</span></span> <a title="Permalink" class="permalink" href="cha-admin.html#sec-admin-deregister">#</a></h2><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_administration.xml" title="Edit source document"> </a></div></div></div></div></div><p>
    If you are to decommission an instance, remember to deregister it before
    termination. This will ensure that the system gets removed from the SUSE Customer Center and
    is no longer counted against your subscription.
@@ -185,16 +192,19 @@ hljs.configure({
      the system was registered with <code class="command">registercloudguest</code>.
     </p></li><li class="step"><p>
      Deregister the system:
-    </p><ol type="a" class="substeps"><li class="step"><p>
+    </p><ul class="stepalternatives">
+     <li class="step"><p>
        If a system was registered with <code class="command">registercloudguest</code>,
        run:
-      </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">registercloudguest</code> <code class="option">--clean</code></pre></div></li><li class="step"><p>
+      </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">registercloudguest</code> <code class="option">--clean</code></pre></div></li>
+     <li class="step"><p>
        If a system was registered with <code class="command">SUSEConnect</code>, run:
       </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">SUSEConnect</code> <code class="option">-d</code></pre></div><p>
        If this does not work, make sure the package
        <span class="package">cloud-regionsrv-client</span> is not installed. It may have
        been installed after the system was registered.
-      </p></li></ol></li></ol></div></div></section><section class="sect1" id="hardening" data-id-title="Hardening instances"><div class="titlepage"><div><div><div class="title-container"><h2 class="title"><span class="title-number-name"><span class="title-number">3.3 </span><span class="title-name">Hardening instances</span></span> <a title="Permalink" class="permalink" href="cha-admin.html#hardening">#</a></h2><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_administration.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+      </p></li>
+    </ul></li></ol></div></div></section><section class="sect1" id="hardening" data-id-title="Hardening instances"><div class="titlepage"><div><div><div class="title-container"><h2 class="title"><span class="title-number-name"><span class="title-number">3.3 </span><span class="title-name">Hardening instances</span></span> <a title="Permalink" class="permalink" href="cha-admin.html#hardening">#</a></h2><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_administration.xml" title="Edit source document"> </a></div></div></div></div></div><p>
    To improve overall security, SUSE provides hardened images of some
    products. The images are hardened using <span class="product">OpenSCAP</span>, a collection of open source tools that
    implement the <code class="systemitem">Security Content Automation
