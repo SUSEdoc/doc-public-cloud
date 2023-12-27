@@ -58,10 +58,14 @@ hljs.configure({
      Browse or download the documentation in various formats.
     </p><div id="id-1.2.6.3.1.2.2" data-id-title="Latest updates" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.svg"/><div class="admon-title">Note: Latest updates</div><p>
       The latest updates are usually available in the English-language version of this documentation.
-     </p></div></dd><dt id="id-1.2.6.3.2"><span class="term">Release notes</span></dt><dd><p>
+     </p></div></dd><dt id="id-1.2.6.3.2"><span class="term">SUSE Knowledgebase</span></dt><dd><p>
+     If you have run into an issue, also check out the Technical Information
+     Documents (TIDs) that are available online at <a class="link" href="https://www.suse.com/support/kb/" target="_blank">https://www.suse.com/support/kb/</a>.
+     Search the SUSE Knowledgebase for known solutions driven by customer need.
+     </p></dd><dt id="id-1.2.6.3.3"><span class="term">Release notes</span></dt><dd><p>
      For release notes, see
      <a class="link" href="https://www.suse.com/releasenotes/" target="_blank">https://www.suse.com/releasenotes/</a>.
-    </p></dd><dt id="id-1.2.6.3.3"><span class="term">In your system</span></dt><dd><p>
+    </p></dd><dt id="id-1.2.6.3.4"><span class="term">In your system</span></dt><dd><p>
       For offline use, the release notes are also available under
       <code class="filename">/usr/share/doc/release-notes</code> on your system.
       The documentation for individual packages is available at
@@ -77,7 +81,7 @@ hljs.configure({
   The following channels for giving feedback are available:
  </p><div class="variablelist"><dl class="variablelist"><dt id="id-1.2.7.4.1"><span class="term">Service requests and support</span></dt><dd><p>
      For services and support options available for your product, see
-     <a class="link" href="http://www.suse.com/support/" target="_blank">http://www.suse.com/support/</a>.
+     <a class="link" href="https://www.suse.com/support/" target="_blank">https://www.suse.com/support/</a>.
     </p><p>
      To open a service request, you need a SUSE subscription registered at
      SUSE Customer Center.
@@ -105,8 +109,7 @@ hljs.configure({
       <span class="guimenu">Report an issue</span> icons instead.
      </p></div><p>
      For more information about the documentation environment used for this
-     documentation, see the repository's README at
-     <a class="link" href="https://github.com/SUSE/doc-public-cloud" target="_blank">https://github.com/SUSE/doc-public-cloud</a>.
+     documentation, see the repository's README.
     </p></dd><dt id="id-1.2.7.4.4"><span class="term">Mail</span></dt><dd><p>
      You can also report errors and send feedback concerning the
      documentation to &lt;<a class="email" href="mailto:doc-team@suse.com">doc-team@suse.com</a>&gt;. Include the
@@ -147,31 +150,40 @@ hljs.configure({
     <em class="citetitle">Chapter 1, <span class="quote">“<span class="quote">Example chapter</span>”</span></em>:
     A cross-reference to another chapter in this guide.
    </p></li><li class="listitem"><p>
-    Commands that must be run with <code class="systemitem">root</code> privileges. Often you can also
+    Commands that must be run with <code class="systemitem">root</code> privileges. You can also
     prefix these commands with the <code class="command">sudo</code> command to run them
-    as non-privileged user.
+    as a non-privileged user:
    </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">command</code>
 <code class="prompt user">&gt; </code><code class="command">sudo</code> <code class="command">command</code></pre></div></li><li class="listitem"><p>
-    Commands that can be run by non-privileged users.
+    Commands that can be run by non-privileged users:
    </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">&gt; </code><code class="command">command</code></pre></div></li><li class="listitem"><p>
+    Commands can be split into two or multiple lines by a backslash character
+    (<code class="literal">\</code>) at the end of a line. The backslash informs the shell that
+    the command invocation will continue after the line's end:
+   </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">&gt; </code><code class="command">echo</code> a b \
+c d</pre></div></li><li class="listitem"><p>
+     A code block that shows both the command (preceded by a prompt)
+     and the respective output returned by the shell:
+    </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">&gt; </code><code class="command">command</code>
+output</pre></div></li><li class="listitem"><p>
     Notices
-   </p><div id="id-1.2.8.4.13.2" data-id-title="Warning notice" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.svg"/><div class="admon-title">Warning: Warning notice</div><p>
+   </p><div id="id-1.2.8.4.15.2" data-id-title="Warning notice" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.svg"/><div class="admon-title">Warning: Warning notice</div><p>
      Vital information you must be aware of before proceeding. Warns you about
      security issues, potential loss of data, damage to hardware, or physical
      hazards.
-    </p></div><div id="id-1.2.8.4.13.3" data-id-title="Important notice" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.svg"/><div class="admon-title">Important: Important notice</div><p>
+    </p></div><div id="id-1.2.8.4.15.3" data-id-title="Important notice" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.svg"/><div class="admon-title">Important: Important notice</div><p>
      Important information you should be aware of before proceeding.
-    </p></div><div id="id-1.2.8.4.13.4" data-id-title="Note notice" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.svg"/><div class="admon-title">Note: Note notice</div><p>
+    </p></div><div id="id-1.2.8.4.15.4" data-id-title="Note notice" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.svg"/><div class="admon-title">Note: Note notice</div><p>
      Additional information, for example about differences in software
      versions.
-    </p></div><div id="id-1.2.8.4.13.5" data-id-title="Tip notice" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.svg"/><div class="admon-title">Tip: Tip notice</div><p>
+    </p></div><div id="id-1.2.8.4.15.5" data-id-title="Tip notice" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.svg"/><div class="admon-title">Tip: Tip notice</div><p>
      Helpful information, like a guideline or a piece of practical advice.
     </p></div></li><li class="listitem"><p>
     Compact Notices
-   </p><div id="id-1.2.8.4.14.2" class="admonition note compact"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.svg"/><p>
+   </p><div id="id-1.2.8.4.16.2" class="admonition note compact"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.svg"/><p>
      Additional information, for example about differences in software
      versions.
-    </p></div><div id="id-1.2.8.4.14.3" class="admonition tip compact"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.svg"/><p>
+    </p></div><div id="id-1.2.8.4.16.3" class="admonition tip compact"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.svg"/><p>
      Helpful information, like a guideline or a piece of practical advice.
     </p></div></li></ul></div></section></section><nav class="bottom-pagination"><div><a class="pagination-link prev" href="index.html"><span class="pagination-relation">Previous</span><span class="pagination-label">Public Cloud Guide</span></a> </div><div><a class="pagination-link next" href="cha-intro.html"><span class="pagination-relation">Next</span><span class="pagination-label"><span class="title-number">Chapter 1 </span>Getting started</span></a> </div></nav></article><aside id="_side-toc-page" class="side-toc"><div class="side-title">On this page</div><div class="toc"><ul><li><span class="sect1"><a href="pre-example.html#id-1.2.6"><span class="title-name">Available documentation</span></a></span></li><li><span class="sect1"><a href="pre-example.html#id-1.2.7"><span class="title-name">Improving the documentation</span></a></span></li><li><span class="sect1"><a href="pre-example.html#id-1.2.8"><span class="title-name">Documentation conventions</span></a></span></li></ul></div><div class="side-title">Share this page</div><ul class="share"><li><a id="_share-fb" href="#" title="Facebook"> </a></li><li><a id="_share-in" href="#" title="LinkedIn"> </a></li><li><a id="_share-tw" href="#" title="Twitter/X"> </a></li><li><a id="_share-mail" href="#" title="E-Mail"> </a></li><li><a id="_print-button" href="#" title="Print this page"> </a></li></ul> </aside></main><footer id="_footer"><div class="growth-inhibitor"><div class="copy"><span class="copy__rights">© SUSE
                  2023</span></div></div></footer></body></html>
