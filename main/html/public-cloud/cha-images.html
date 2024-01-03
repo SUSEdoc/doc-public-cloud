@@ -204,9 +204,8 @@ hljs.configure({
        Date the image was deleted in the format <code class="literal">YYYYMMDD</code>
        (ISO 8601). Only shown for deleted images.
       </p></dd><dt id="id-1.4.5.5.3.14"><span class="term">Changelog</span></dt><dd><p>
-       Link to a detailed changelog that lists image configuration changes, CVE
-       fixes, package version changes, and package changelogs. For more
-       information, refer to <a class="xref" href="cha-images.html#sec-image-changeinfo" title="2.4. Change information">Section 2.4, “Change information”</a>
+       Link to a detailed changelog and a software bill of materials (SBOM).
+       For more information, refer to <a class="xref" href="cha-images.html#sec-image-changeinfo" title="2.4. Change information">Section 2.4, “Change information”</a>
       </p><p>
        Image changelogs are only available for images that replace others. For
        initial images of new product versions, refer to the product's <a class="link" href="https://www.suse.com/releasenotes" target="_blank">release notes</a>.
@@ -243,10 +242,18 @@ hljs.configure({
      </p></dd><dt id="id-1.4.6.4.3"><span class="term">Package version changes</span></dt><dd><p>
       This category lists all packages that had version changes compared to the
       previous image and the version in that image.
-     </p></dd><dt id="id-1.4.6.4.4"><span class="term">Changelog information</span></dt><dd><p>
+     </p></dd><dt id="id-1.4.6.4.4"><span class="term">Package change logs</span></dt><dd><p>
       This category shows a concatenated changelog of all packages that had
       changes.
-     </p></dd></dl></div><div id="id-1.4.6.5" data-id-title="Change information for new product versions" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.svg"/><div class="admon-title">Note: Change information for new product versions</div><p>
+     </p></dd><dt id="id-1.4.6.4.5"><span class="term">Software bill of materials (SPDX)</span></dt><dd><p>
+          This category shows an SBOM in the <code class="literal">Software Package Data Exchange</code>
+          format. <code class="literal">SPDX</code> is an open standard backed by the Linux Foundation.
+          For more information, refer to <a class="link" href="https://spdx.dev/" target="_blank">https://spdx.dev/</a>.
+        </p></dd><dt id="id-1.4.6.4.6"><span class="term">Software bill of materials (CycloneDX)</span></dt><dd><p>
+          This category shows an SBOM in the <code class="literal">CycloneDX</code> format. This format is
+          backed by the Open Worldwide Application Security Project (OWASP) foundation.
+          For more information, refer to <a class="link" href="https://cyclonedx.org/" target="_blank">https://cyclonedx.org/</a>.
+        </p></dd></dl></div><div id="id-1.4.6.5" data-id-title="Change information for new product versions" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.svg"/><div class="admon-title">Note: Change information for new product versions</div><p>
     Please note that that image change information is only available for
     <span class="emphasis"><em>updated</em></span> images, meaning for images that replace
     previous images of the same product version.
@@ -287,4 +294,4 @@ hljs.configure({
    For more information and instructions on how to harden instances with OpenSCAP, refer to
    <a class="xref" href="cha-admin.html#hardening" title="3.3. Hardening instances">Section 3.3, “Hardening instances”</a>.
   </p></section></section><nav class="bottom-pagination"><div><a class="pagination-link prev" href="cha-intro.html"><span class="pagination-relation">Previous</span><span class="pagination-label"><span class="title-number">Chapter 1 </span>Getting started</span></a> </div><div><a class="pagination-link next" href="cha-admin.html"><span class="pagination-relation">Next</span><span class="pagination-label"><span class="title-number">Chapter 3 </span>Managing cloud instances</span></a> </div></nav></article><aside id="_side-toc-page" class="side-toc"><div class="side-title">On this page</div><div class="toc"><ul><li><span class="sect1"><a href="cha-images.html#sec-image-lifecycle"><span class="title-number">2.1 </span><span class="title-name">Image lifecycle</span></a></span></li><li><span class="sect1"><a href="cha-images.html#sec-image-naming"><span class="title-number">2.2 </span><span class="title-name">Naming scheme</span></a></span></li><li><span class="sect1"><a href="cha-images.html#sec-image-pint"><span class="title-number">2.3 </span><span class="title-name">Public Cloud Information Tracker</span></a></span></li><li><span class="sect1"><a href="cha-images.html#sec-image-changeinfo"><span class="title-number">2.4 </span><span class="title-name">Change information</span></a></span></li><li><span class="sect1"><a href="cha-images.html#sec-images-hardened"><span class="title-number">2.5 </span><span class="title-name">Hardened Images</span></a></span></li></ul></div><div class="side-title">Share this page</div><ul class="share"><li><a id="_share-fb" href="#" title="Facebook"> </a></li><li><a id="_share-in" href="#" title="LinkedIn"> </a></li><li><a id="_share-tw" href="#" title="Twitter/X"> </a></li><li><a id="_share-mail" href="#" title="E-Mail"> </a></li><li><a id="_print-button" href="#" title="Print this page"> </a></li></ul> </aside></main><footer id="_footer"><div class="growth-inhibitor"><div class="copy"><span class="copy__rights">© SUSE
-                 2023</span></div></div></footer></body></html>
+                 2024</span></div></div></footer></body></html>
