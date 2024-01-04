@@ -892,7 +892,12 @@ output</pre></div></li><li class="listitem"><p>
      of Standards and Technology (NIST)</span>. <span class="product">OpenSCAP</span> supports automated configuration,
    vulnerability and patch checking, technical control compliance activities,
    and security measurement.
-  </p><section class="sect2" id="id-1.5.5.3" data-id-title="Pre-hardening"><div class="titlepage"><div><div><div class="title-container"><h3 class="title"><span class="title-number-name"><span class="title-number">3.3.1 </span><span class="title-name">Pre-hardening</span></span> <a title="Permalink" class="permalink" href="#id-1.5.5.3">#</a></h3><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_administration.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+  </p><p>
+   To harden a system, <span class="product">OpenSCAP</span> uses security
+   rules that define certain security measures. Multiple rules can be combined
+   into profiles. For more information, refer to the OpenSCAP documentation
+   at <a class="link" href="https://www.open-scap.org/resources/documentation/" target="_blank">https://www.open-scap.org/resources/documentation/</a>.
+  </p><section class="sect2" id="id-1.5.5.4" data-id-title="Pre-hardening"><div class="titlepage"><div><div><div class="title-container"><h3 class="title"><span class="title-number-name"><span class="title-number">3.3.1 </span><span class="title-name">Pre-hardening</span></span> <a title="Permalink" class="permalink" href="#id-1.5.5.4">#</a></h3><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_administration.xml" title="Edit source document"> </a></div></div></div></div></div><p>
     Hardened images are pre-hardened to the extent they can safely be hardened
     without causing problems in public cloud frameworks. Certain rules can only
     be applied after instance creation, for example:
@@ -915,21 +920,21 @@ output</pre></div></li><li class="listitem"><p>
       Rules to remove packages. SUSE's public cloud images cater to a wide range
       of use cases. Even if the number of packages is limited, it is impossible
       to determine what packages an instance requires.
-     </p></li></ul></div></section><section class="sect2" id="id-1.5.5.4" data-id-title="Avialable OpenSCAP profiles"><div class="titlepage"><div><div><div class="title-container"><h3 class="title"><span class="title-number-name"><span class="title-number">3.3.2 </span><span class="title-name">Avialable <span class="product">OpenSCAP</span> profiles </span></span> <a title="Permalink" class="permalink" href="#id-1.5.5.4">#</a></h3><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_administration.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+     </p></li></ul></div></section><section class="sect2" id="id-1.5.5.5" data-id-title="Avialable OpenSCAP profiles"><div class="titlepage"><div><div><div class="title-container"><h3 class="title"><span class="title-number-name"><span class="title-number">3.3.2 </span><span class="title-name">Avialable <span class="product">OpenSCAP</span> profiles </span></span> <a title="Permalink" class="permalink" href="#id-1.5.5.5">#</a></h3><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_administration.xml" title="Edit source document"> </a></div></div></div></div></div><p>
     After instance creation, you can use the installed
     <span class="package">openscap</span> packages to complete the hardening process using
     any of the following profiles:
-   </p><div class="variablelist"><dl class="variablelist"><dt id="id-1.5.5.4.3.1"><span class="term">Standard (<a class="link" href="https://github.com/ComplianceAsCode/content/blob/master/products/sle15/profiles/standard.profile" target="_blank"><code class="filename">standard.profile</code></a>)</span></dt><dd><p>
+   </p><div class="variablelist"><dl class="variablelist"><dt id="id-1.5.5.5.3.1"><span class="term">Standard (<a class="link" href="https://github.com/ComplianceAsCode/content/blob/master/products/sle15/profiles/standard.profile" target="_blank"><code class="filename">standard.profile</code></a>)</span></dt><dd><p>
        Basic <span class="product">OpenSCAP</span> system security
        standard.
-      </p></dd><dt id="id-1.5.5.4.3.2"><span class="term">CIS Server Level 2 (<a class="link" href="https://github.com/ComplianceAsCode/content/blob/master/products/sle15/profiles/cis.profile" target="_blank"><code class="filename">cis.profile</code></a>)</span></dt><dd><p>
+      </p></dd><dt id="id-1.5.5.5.3.2"><span class="term">CIS Server Level 2 (<a class="link" href="https://github.com/ComplianceAsCode/content/blob/master/products/sle15/profiles/cis.profile" target="_blank"><code class="filename">cis.profile</code></a>)</span></dt><dd><p>
        The <code class="systemitem">Center for Internet Security Server Level 2</code> profile is considered
        to be <span class="quote">“<span class="quote">defense in depth</span>”</span> and is intended for environments
        where security is paramount. The recommendations associated with this
        profile can have an adverse effect on your organization if not
        implemented appropriately or without due care. For more information,
        refer to <a class="link" href="https://www.cisecurity.org" target="_blank">https://www.cisecurity.org</a>.
-      </p></dd><dt id="id-1.5.5.4.3.3"><span class="term">Department of Defense STIG (<a class="link" href="https://github.com/ComplianceAsCode/content/blob/master/products/sle15/profiles/stig.profile" target="_blank"><code class="filename">stig.profile</code></a>)</span></dt><dd><p>
+      </p></dd><dt id="id-1.5.5.5.3.3"><span class="term">Department of Defense STIG (<a class="link" href="https://github.com/ComplianceAsCode/content/blob/master/products/sle15/profiles/stig.profile" target="_blank"><code class="filename">stig.profile</code></a>)</span></dt><dd><p>
        The <span class="orgname">Defense Information Systems Agency</span> publishes <em class="citetitle">Security Technical Implementation Guides
         (STIGs)</em> for the <span class="orgname">Department of Defense</span>.
        The STIG profile replaces the previous CIS Level 3 profile and
@@ -937,7 +942,7 @@ output</pre></div></li><li class="listitem"><p>
        recommendations from other profiles, i.e. CIS Level 1 and Level 2,
        are present in the STIG profile as applicable. For more information,
        refer to <a class="link" href="https://public.cyber.mil/stigs/" target="_blank">https://public.cyber.mil/stigs/</a>.
-      </p></dd><dt id="id-1.5.5.4.3.4"><span class="term">HIPAA Security Rule (<a class="link" href="https://github.com/ComplianceAsCode/content/blob/master/products/sle15/profiles/hipaa.profile" target="_blank"><code class="filename">hipaa.profile</code></a>)</span></dt><dd><p>
+      </p></dd><dt id="id-1.5.5.5.3.4"><span class="term">HIPAA Security Rule (<a class="link" href="https://github.com/ComplianceAsCode/content/blob/master/products/sle15/profiles/hipaa.profile" target="_blank"><code class="filename">hipaa.profile</code></a>)</span></dt><dd><p>
        In response to the <em class="citetitle">Health Insurance Portability and Accountability Act (HIPAA)</em> of 1996, the
        <span class="orgname">U.S. Department of Health and Human Services</span> developed
        <em class="citetitle">Security Standards for the Protection of Electronic Protected
@@ -946,7 +951,7 @@ output</pre></div></li><li class="listitem"><p>
        individuals' electronic personal health information (e-PHI) that is
        created, received, used, or maintained by a covered entity. For more
        information, refer to <a class="link" href="https://www.hhs.gov/hipaa/for-professionals/security/index.html" target="_blank">https://www.hhs.gov/hipaa/for-professionals/security/index.html</a>.
-      </p></dd><dt id="id-1.5.5.4.3.5"><span class="term">Payment Card Industry Data Security Standard (<a class="link" href="https://github.com/ComplianceAsCode/content/blob/master/products/sle15/profiles/pci-dss.profile" target="_blank"><code class="filename">pci-dss.profile</code></a>)</span></dt><dd><p>
+      </p></dd><dt id="id-1.5.5.5.3.5"><span class="term">Payment Card Industry Data Security Standard (<a class="link" href="https://github.com/ComplianceAsCode/content/blob/master/products/sle15/profiles/pci-dss.profile" target="_blank"><code class="filename">pci-dss.profile</code></a>)</span></dt><dd><p>
        The <em class="citetitle">Payment Card Industry Data Security Standard (PCI DSS)</em> is a set of requirements
        to guide merchants to protect cardholder data. It is  maintained by the
        <span class="orgname">PCI Security Standards Council (SSC)</span> that was founded
@@ -966,11 +971,11 @@ output</pre></div></li><li class="listitem"><p>
     called <a class="link" href="https://github.com/ComplianceAsCode/content/blob/master/products/sle15/profiles/pcs-hardening-sap.profile" target="_blank"><code class="filename">pcs-hardening-sap.profile</code></a>.
     Users may need to make additional modifications to the system configuration
     depending on individual application needs.
-   </p><div id="id-1.5.5.4.7" data-id-title="Recommended profiles" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.svg"/><div class="admon-title">Important: Recommended profiles</div><p>
+   </p><div id="id-1.5.5.5.7" data-id-title="Recommended profiles" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.svg"/><div class="admon-title">Important: Recommended profiles</div><p>
      SUSE recommends using either the <code class="literal">CIS</code> or the
      <code class="literal">STIG</code> profile. You can use other profiles at your own
      discretion.
-    </p></div></section><section class="sect2" id="id-1.5.5.5" data-id-title="Hardening instances with OpenSCAP"><div class="titlepage"><div><div><div class="title-container"><h3 class="title"><span class="title-number-name"><span class="title-number">3.3.3 </span><span class="title-name">Hardening instances with <span class="product">OpenSCAP</span></span></span> <a title="Permalink" class="permalink" href="#id-1.5.5.5">#</a></h3><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_administration.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+    </p></div></section><section class="sect2" id="id-1.5.5.6" data-id-title="Hardening instances with OpenSCAP"><div class="titlepage"><div><div><div class="title-container"><h3 class="title"><span class="title-number-name"><span class="title-number">3.3.3 </span><span class="title-name">Hardening instances with <span class="product">OpenSCAP</span></span></span> <a title="Permalink" class="permalink" href="#id-1.5.5.6">#</a></h3><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_administration.xml" title="Edit source document"> </a></div></div></div></div></div><p>
     To evaluate an instance, you can run:
    </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">&gt; </code><code class="command">sudo</code> <code class="command">oscap</code> xccdf eval \
     --profile <em class="replaceable">stig</em><span class="callout" id="co-eval-profile">1</span> \
@@ -1007,7 +1012,7 @@ output</pre></div></li><li class="listitem"><p>
     --results <em class="replaceable">/tmp/results.xml</em> \
     --report <em class="replaceable">/tmp/report.html</em> \
     --stig-viewer <em class="replaceable">/tmp/stigviewer.xml</em> \
-    <em class="replaceable">/usr/share/xml/scap/ssg/content/ssg-sle15-ds-1.2.xml</em></pre></div></section><section class="sect2" id="id-1.5.5.6" data-id-title="More information"><div class="titlepage"><div><div><div class="title-container"><h3 class="title"><span class="title-number-name"><span class="title-number">3.3.4 </span><span class="title-name">More information</span></span> <a title="Permalink" class="permalink" href="#id-1.5.5.6">#</a></h3><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_administration.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+    <em class="replaceable">/usr/share/xml/scap/ssg/content/ssg-sle15-ds-1.2.xml</em></pre></div></section><section class="sect2" id="id-1.5.5.7" data-id-title="More information"><div class="titlepage"><div><div><div class="title-container"><h3 class="title"><span class="title-number-name"><span class="title-number">3.3.4 </span><span class="title-name">More information</span></span> <a title="Permalink" class="permalink" href="#id-1.5.5.7">#</a></h3><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_administration.xml" title="Edit source document"> </a></div></div></div></div></div><p>
     For more information on how to harden your SUSE Linux Enterprise system with <span class="product">OpenSCAP</span>, refer to the article
     <a class="link" href="https://documentation.suse.com/compliance/all/html/SLES-openscap/article-openscap.html" target="_blank"><em class="citetitle">Hardening
      SUSE Linux Enterprise with OpenSCAP</em></a>. For general
