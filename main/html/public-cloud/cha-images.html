@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><title>SLES CSP | Public Cloud Guide | Public cloud images</title><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"/><link rel="stylesheet" type="text/css" href="static/css/style.css"/>
+<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"/><link rel="schema.DCTERMS" href="http://purl.org/dc/terms/"/>
+<meta name="title" content="Public cloud images | SLES CSP"/>
+<meta name="description" content="SUSE offers a variety of different product images for different use cases in partner cloud provider frameworks. Learn how to find the image that meet…"/>
+<meta name="product-name" content="SUSE Linux Enterprise"/>
+<meta name="book-title" content="Public Cloud Guide"/>
+<meta name="chapter-title" content="Chapter 2. Public cloud images"/>
+<meta name="tracker-url" content="https://bugzilla.suse.com/enter_bug.cgi"/>
+<meta name="tracker-type" content="bsc"/>
+<meta name="tracker-bsc-assignee" content="cwickert@suse.com"/>
+<meta name="tracker-bsc-component" content="Public Cloud"/>
+<meta name="tracker-bsc-product" content="Documentation"/>
+<meta name="publisher" content="SUSE"/><meta property="og:title" content="Public cloud images | SLES CSP"/>
+<meta property="og:description" content="SUSE offers a variety of different product images for diffe…"/>
+<meta property="og:type" content="article"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Public cloud images | SLES CSP"/>
+<meta name="twitter:description" content="SUSE offers a variety of different product images for diffe…"/>
+<script type="application/ld+json">{
+    "@context": "http://schema.org",
+    "@type": ["TechArticle"],
+    "image": "https://www.suse.com/assets/img/suse-white-logo-green.svg",
+    
+     "isPartOf": {
+      "@type": "CreativeWorkSeries",
+      "name": "Product &amp; Solutions"
+    },
+    
+    "inLanguage": "en",
+    
+
+    "headline": "Public cloud images",
+  
+    "description": "SUSE offers a variety of different product images for different use cases in partner cloud provider frameworks. Learn how to find the image that meet…",
+      
+    "author": [
+      {
+        "@type": "Corporation",
+        "name": "SUSE Product &amp; Solution Documentation Team",
+        "url": "https://www.suse.com/assets/img/suse-white-logo-green.svg"
+      }
+    ],
+      
+
+    "about": [
+      
+    ],
+  
+    "sameAs": [
+          "https://www.facebook.com/SUSEWorldwide/about",
+          "https://www.youtube.com/channel/UCHTfqIzPKz4f_dri36lAQGA",
+          "https://twitter.com/SUSE",
+          "https://www.linkedin.com/company/suse"
+    ],
+    "publisher": {
+      "@type": "Corporation",
+      "name": "SUSE",
+      "url": "https://documentation.suse.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.suse.com/assets/img/suse-white-logo-green.svg"
+      }
+    }
+  }</script>
+<link rel="prev" href="cha-intro.html" title="Chapter 1. Getting started"/><link rel="next" href="cha-admin.html" title="Chapter 3. Managing cloud instances"/><script type="text/javascript">
+
+if ( window.location.protocol.toLowerCase() != 'file:' ) {
+  document.write('<link rel="stylesheet" type="text/css" href="https://documentation.suse.com/docserv/res/fonts/poppins/poppins.css"></link>');
+};
+
+</script><noscript><link rel="stylesheet" type="text/css" href="https://documentation.suse.com/docserv/res/fonts/poppins/poppins.css"/></noscript><script src="static/js/script-purejs.js" type="text/javascript"> </script><script src="static/js/highlight.min.js" type="text/javascript"> </script><script>
+
+$(document).ready(function() {
+  $('.verbatim-wrap.highlight').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+});
+hljs.configure({
+  useBR: false
+});
+
+</script><meta name="edit-url" content="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_images.xml"/></head><body class="draft wide offline js-off" onload="$('#betawarn-button-wrap').toggle();if (document.cookie.length > 0) {if (document.cookie.indexOf('betawarn=closed') != -1){$('#betawarn').toggle()}};"><div id="betawarn" style="position:fixed;bottom:0;z-index:9025;background-color:#FDE8E8;padding:1em;margin-left:10%;margin-right:10%;display:block;border-top:.75em solid #E11;width:80%"><p style="color:#333;margin:1em 0;padding:0;">This is a draft document that was built and uploaded automatically. It may document beta software and be incomplete or even incorrect. <strong>Use this document at your own risk.</strong></p> <div id="betawarn-button-wrap" style="display:none;margin:0;padding:0;"><a href="#" onclick="$('#betawarn').toggle();var d=new Date();d.setTime(d.getTime()+(0.5*24*60*60*1000));document.cookie='betawarn=closed; expires='+d.toUTCString()+'; path=/'; return false;" style="color:#333;text-decoration:underline;float:left;margin-top:.5em;padding:1em;display:block;background-color:#FABEBE;">I understand this is a draft</a></div></div><div class="bypass-block"><a href="#_content">Jump to content</a><a href="#_bottom-pagination">Jump to page navigation: previous page [access key p]/next page [access key n]</a></div><header id="_mainnav"><div class="growth-inhibitor"><img src="static/images/logo.svg" alt="Logo" class="logo"/></div></header><div class="crumbs"><div class="growth-inhibitor"><a class="crumb" href="index.html">Public Cloud Guide</a><span> / </span><a class="crumb" href="cha-images.html">Public cloud images</a></div></div><main id="_content"><nav id="_side-toc-overall" class="side-toc"><div class="side-title">Public Cloud Guide</div><ol><li><a href="pre-public-cloud.html" class=" "><span class="title-number"> </span><span class="title-name">About this guide</span></a></li><li><a href="cha-intro.html" class=" "><span class="title-number">1 </span><span class="title-name">Getting started</span></a></li><li><a href="cha-images.html" class=" you-are-here"><span class="title-number">2 </span><span class="title-name">Public cloud images</span></a></li><li><a href="cha-admin.html" class=" "><span class="title-number">3 </span><span class="title-name">Managing cloud instances</span></a></li><li><a href="app-public-cloud-support.html" class=" "><span class="title-number">A </span><span class="title-name">Support</span></a></li><li><a href="countrylist.html" class=" "><span class="title-number">B </span><span class="title-name">Geographical availability</span></a></li><li><a href="apc.html" class=" "><span class="title-number">C </span><span class="title-name">GNU licenses</span></a></li> </ol> </nav><button id="_open-side-toc-overall" title="Contents"> </button><article class="documentation"><button id="_unfold-side-toc-page">On this page</button><section xml:lang="en" class="chapter" id="cha-images" data-id-title="Public cloud images"><div class="titlepage"><div><div class="version-info">Applies to  <span class="productname">SUSE Linux Enterprise</span></div><div><div class="title-container"><h1 class="title"><span class="title-number-name"><span class="title-number">2 </span><span class="title-name">Public cloud images</span></span> <a title="Permalink" class="permalink" href="cha-images.html#">#</a></h1><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_images.xml" title="Edit source document"> </a></div></div></div><div><div class="abstract"><p>
+    SUSE offers a variety of different product
+ images for different use cases in partner cloud provider frameworks. Learn how
+ to find the image that meets your use case.
+   </p></div></div></div></div><section class="sect1" id="sec-image-lifecycle" data-id-title="Image lifecycle"><div class="titlepage"><div><div><div class="title-container"><h2 class="title"><span class="title-number-name"><span class="title-number">2.1 </span><span class="title-name">Image lifecycle</span></span> <a title="Permalink" class="permalink" href="cha-images.html#sec-image-lifecycle">#</a></h2><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_images.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+   All SUSE public cloud images follow a refresh cycle up to the point of
+   deletion. The refresh cycle follows a 'rolling' three month time frame. What
+   this means:
+  </p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
+     Images in an <code class="literal">active</code> state are refreshed every three
+     months. Replaced images are moved to the <code class="literal">deprecated</code>
+     state.
+    </p></li><li class="listitem"><p>
+     If a critical security vulnerability occurs, images in
+     <code class="literal">active</code> and <code class="literal">inactive</code> states are
+     updated as soon as possible once the fix for the affected code is
+     available. For images in <code class="literal">active</code> state the three month
+     timer restarts with this forced replacement.
+    </p><p>
+     SUSE is committed to address all security vulnerabilities disclosed
+     through the <code class="literal">Common Vulnerabilities and Exposures process</code>
+     (CVE) and a score of 9.0 or greater in the <code class="literal">Common Vulnerability
+      Scoring System</code> (CVSS). For more information about the effects and
+     rating of CVEs, refer to the <a class="link" href="https://www.suse.com/security/cve/" target="_blank">SUSE CVE database</a>.
+    </p></li></ul></div><p>
+   The life cycle of an image consists of four different states:
+  </p><div class="variablelist"><div class="title-container"><div class="variablelist-title-wrap"><div class="variablelist-title"><span class="title-number-name"><span class="title-name">SUSE public cloud image states </span></span><a title="Permalink" class="permalink" href="cha-images.html#id-1.4.3.5">#</a></div></div><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_images.xml" title="Edit source document"> </a></div></div><dl class="variablelist"><dt id="id-1.4.3.5.2"><span class="term">Active</span></dt><dd><p>
+      Active images are fully supported and refreshed at least every three
+      months. The duration lasts until the image is replaced by a newer image
+      version.
+     </p></dd><dt id="id-1.4.3.5.3"><span class="term">Inactive</span></dt><dd><p>
+      Inactive images are supported following the rules of LTSS or ESPOS and
+      will only get refreshed for critical security updates. The duration term
+      is defined by the product. For more information, refer to <a class="link" href="https://www.suse.com/de-de/support/policy-products/#cloud" target="_blank">https://www.suse.com/de-de/support/policy-products/#cloud</a>
+     </p></dd><dt id="id-1.4.3.5.4"><span class="term">Deprecated</span></dt><dd><p>
+      Deprecated images may no longer be supported. The status of support
+      depends on the support status of the product in the image. Deprecated
+      images do not get refreshed and are not made available in regions added
+      after an image has been set to <code class="literal">deprecated</code>. At the end
+      of the six month deprecation period, images are subject to deletion. It
+      is strongly discouraged to use deprecated images to create new instances.
+     </p></dd><dt id="id-1.4.3.5.5"><span class="term">Deleted</span></dt><dd><p>
+      Deleted images are no longer supported or available for instance creation.
+     </p></dd></dl></div><div id="id-1.4.3.6" data-id-title="Only use active images for new instances" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.svg"/><div class="admon-title">Important: Only use <code class="literal">active</code> images for new instances</div><p>
+    It is strongly recommended to only use <code class="literal">active</code> images to
+    launch instances for new deployments.
+   </p></div></section><section class="sect1" id="sec-image-naming" data-id-title="Naming scheme"><div class="titlepage"><div><div><div class="title-container"><h2 class="title"><span class="title-number-name"><span class="title-number">2.2 </span><span class="title-name">Naming scheme</span></span> <a title="Permalink" class="permalink" href="cha-images.html#sec-image-naming">#</a></h2><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_images.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+   Names for SUSE's public cloud images consist of multiple parts
+   that contain information about the product, its version, a time stamp
+   indicating the release date of the image, and more. The general naming
+   scheme for SUSE's public cloud images is as follows:
+  </p><p>
+    <code class="literal"><em class="replaceable">PRODUCT</em></code>-<code class="literal"><em class="replaceable">FLAVOR</em></code>-<code class="literal">v<em class="replaceable">VERSION</em></code>-<code class="literal"><em class="replaceable">VIRTUALIZATION</em></code>-<code class="literal"><em class="replaceable">STORAGE</em></code>-<code class="literal"><em class="replaceable">ARCHITECTURE</em></code>-<code class="literal"><em class="replaceable">TAXID</em></code>-<code class="literal"><em class="replaceable">GEN</em></code>
+  </p><p>
+   Not all components of this naming scheme are used in all frameworks.
+  </p><div class="variablelist"><div class="title-container"><div class="variablelist-title-wrap"><div class="variablelist-title"><span class="title-number-name"><span class="title-name">SUSE public cloud image naming scheme </span></span><a title="Permalink" class="permalink" href="cha-images.html#id-1.4.4.5">#</a></div></div><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_images.xml" title="Edit source document"> </a></div></div><dl class="variablelist"><dt id="id-1.4.4.5.2"><span class="term"><code class="literal">PRODUCT</code></span></dt><dd><p>
+      Abbreviated name of the product in lower case letters, e.g.
+      <code class="literal">suse-sles-15-sp3</code> or
+      <code class="literal">suse-manager-4-1-proxy</code>. This part may also be
+      <span class="quote">“<span class="quote">search-optimized</span>”</span> per cloud framework. For example the
+      prefix <code class="literal">suse-</code> helps when searching for SUSE in the
+      general catalog in Amazon Web Services.
+     </p></dd><dt id="id-1.4.4.5.3"><span class="term"><code class="literal">FLAVOR</code></span></dt><dd><p>
+      Images can have different flavors such as <code class="literal">chost</code> or
+      <code class="literal">byos</code>. If it is the default image of a product, this
+      part will be omitted. Multiple <code class="literal">FLAVOR</code> attributes may be
+      combined in an image name. For example
+      <code class="literal">sles-15-sp3-chost-byos</code> is an image build based on
+      SUSE Linux Enterprise Server 15 SP3 build as a container host using a BYOS (Bring Your Own
+      Subscription) billing model. Images without <code class="literal">byos</code> in the
+      name are set up the image is set up for PAYG (Pay As You Go) billing. For
+      more information about the different billing models, refer to <a class="xref" href="cha-intro.html#sec-intro-plans" title="1.3. Plans">Section 1.3, “Plans”</a>.
+     </p><div class="itemizedlist"><div class="title-container"><div class="itemizedlist-title-wrap"><div class="itemizedlist-title"><span class="title-number-name"><span class="title-name">SUSE Linux Enterprise flavors </span></span><a title="Permalink" class="permalink" href="cha-images.html#id-1.4.4.5.3.2.2">#</a></div></div><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_images.xml" title="Edit source document"> </a></div></div><ul class="itemizedlist"><li class="listitem"><p>
+        <code class="literal">byos</code>: Bring your own subscription (BYOS) image
+       </p></li><li class="listitem"><p>
+        <code class="literal">chost</code>: Minimal container host image
+       </p></li><li class="listitem"><p>
+        <code class="literal">hardened</code>: Pre-hardened images, see <a class="xref" href="cha-images.html#sec-images-hardened" title="2.5. Hardened Images">Section 2.5, “Hardened Images”</a>
+       </p></li><li class="listitem"><p>
+        <code class="literal">hpc</code>: SUSE Linux Enterprise High Performance Computing image
+       </p></li><li class="listitem"><p>
+        <code class="literal">sap</code>: SUSE Linux Enterprise Server for SAP Applications image
+       </p></li><li class="listitem"><p>
+        <code class="literal">sapcal</code>: SAP Cloud Application Library image
+       </p></li></ul></div><p>
+      Not all flavors are available for all cloud frameworks; some are
+      provider-specific.
+     </p><div class="itemizedlist"><div class="title-container"><div class="itemizedlist-title-wrap"><div class="itemizedlist-title"><span class="title-number-name"><span class="title-name">Amazon Web Services flavors </span></span><a title="Permalink" class="permalink" href="cha-images.html#id-1.4.4.5.3.2.4">#</a></div></div><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_images.xml" title="Edit source document"> </a></div></div><ul class="itemizedlist"><li class="listitem"><p>
+        <code class="literal">ecs</code>: Amazon Elastic Container Service image
+       </p></li></ul></div><div class="itemizedlist"><div class="title-container"><div class="itemizedlist-title-wrap"><div class="itemizedlist-title"><span class="title-number-name"><span class="title-name">Microsoft Azure flavors </span></span><a title="Permalink" class="permalink" href="cha-images.html#id-1.4.4.5.3.2.5">#</a></div></div><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_images.xml" title="Edit source document"> </a></div></div><ul class="itemizedlist"><li class="listitem"><p>
+        <code class="literal">basic</code>: PAYG image that only includes updates but no
+        support
+       </p></li><li class="listitem"><p>
+        <code class="literal">standard</code>: Fully supported PAYG image
+       </p></li></ul></div></dd><dt id="id-1.4.4.5.4"><span class="term"><code class="literal">VERSION</code></span></dt><dd><p>
+      Upload date of the image in the format <code class="literal">vYYYYMMDD</code>
+      (ISO 8601).
+     </p></dd><dt id="id-1.4.4.5.5"><span class="term"><code class="literal">VIRTUALIZATION</code> (AWS-only)</span></dt><dd><p>
+      SUSE no longer supports or publishes para-virtualized images. The
+      virtualization type was encoded as <code class="literal">pv</code>
+      (para-virtualized) or <code class="literal">hvm</code> (hardware-assisted virtual
+      machine). The <code class="literal">hvm</code> part of the image name has been
+      retained in an effort to not break backward compatibility.
+     </p></dd><dt id="id-1.4.4.5.6"><span class="term"><code class="literal">STORAGE</code> (AWS-only)</span></dt><dd><p>
+      SUSE no longer publishes images that are based on hard disk
+      (magnetic) backed storage. This used to be encoded as
+      <code class="literal">mag</code>. All published images are backed by SSD.
+      The <code class="literal">ssd</code>  part of the image name has been
+      retained in an effort to not break backward compatibility.
+     </p></dd><dt id="id-1.4.4.5.7"><span class="term"><code class="literal">ARCHITECTURE</code></span></dt><dd><p>
+      Either <code class="literal">x86_64</code> or <code class="literal">arm64</code>.
+      SUSE no longer supports or publishes 32 bit <code class="literal">x86</code>
+      images. Images with the <code class="literal">i386</code> identifier are visible
+      in Public Cloud Information Tracker data.
+     </p></dd><dt id="id-1.4.4.5.8"><span class="term"><code class="literal">TAXID</code></span></dt><dd><p>
+          Either <code class="literal">llc</code> or <code class="literal">ltd</code>. Only for images with SUSE
+          priority support. For more information, refer to <a class="xref" href="cha-intro.html#sec-intro-support" title="1.4. Support">Section 1.4, “Support”</a>
+        </p></dd><dt id="id-1.4.4.5.9"><span class="term"><code class="literal">GENERATION</code> (Microsoft Azure-only)</span></dt><dd><p>
+      appended as <code class="literal">gen2</code> for 2nd Generation VMs.
+     </p></dd></dl></div></section><section class="sect1" id="sec-image-pint" data-id-title="Public Cloud Information Tracker"><div class="titlepage"><div><div><div class="title-container"><h2 class="title"><span class="title-number-name"><span class="title-number">2.3 </span><span class="title-name">Public Cloud Information Tracker</span></span> <a title="Permalink" class="permalink" href="cha-images.html#sec-image-pint">#</a></h2><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_images.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+   The Public Cloud Information Tracker (PINT) provides information about the images SUSE publishes
+   and servers that are part of the SUSE operated update infrastructure.
+   PINT is available at <a class="link" href="https://pint.suse.com/" target="_blank">https://pint.suse.com/</a> and provided as an API
+   and command-line tool with the <span class="package">python3-susepubliccloudinfo</span>
+   package from the <code class="systemitem">Public Cloud Module</code> repository.
+  </p><div class="figure" id="fig-pint-images"><div class="figure-contents"><div class="mediaobject"><a href="images/pint-images.png"><img src="images/pint-images.png" alt="Screenshot of the SUSE Public Cloud Information Tracker (PINT)" title="Screenshot of the SUSE Public Cloud Information Tracker (PINT)"/></a></div></div><div class="title-container"><div class="figure-title-wrap"><div class="figure-title"><span class="title-number-name"><span class="title-number">Figure 2.1: </span><span class="title-name">Overview of SUSE Public Cloud Information Tracker (PINT) </span></span><a title="Permalink" class="permalink" href="cha-images.html#fig-pint-images">#</a></div></div><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_images.xml" title="Edit source document"> </a></div></div></div><p>
+   Use the drop-down lists to view images, servers, or both, and filter by cloud framework,
+   region, or image state. You can also search for strings and adjust the columns and the number of
+   results per page.
+  </p><section class="sect2" id="sec-pint-images" data-id-title="Images view"><div class="titlepage"><div><div><div class="title-container"><h3 class="title"><span class="title-number-name"><span class="title-number">2.3.1 </span><span class="title-name"><code class="literal">Images</code> view</span></span> <a title="Permalink" class="permalink" href="cha-images.html#sec-pint-images">#</a></h3><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_images.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+    The following columns are shown in the <code class="literal">Images</code> view. Some columns depend on
+    the the cloud frameworks.
+   </p><div class="variablelist" id="var-pint" data-id-title="Columns in the Images view"><div class="title-container"><div class="variablelist-title-wrap"><div class="variablelist-title"><span class="title-number-name"><span class="title-name">Columns in the <code class="literal">Images</code> view </span></span><a title="Permalink" class="permalink" href="cha-images.html#var-pint">#</a></div></div><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_images.xml" title="Edit source document"> </a></div></div><dl class="variablelist"><dt id="id-1.4.5.5.3.2"><span class="term">Name</span></dt><dd><p>
+       Name of the image. For more information about the image naming scheme,
+       refer to <a class="xref" href="cha-images.html#sec-image-naming" title="2.2. Naming scheme">Section 2.2, “Naming scheme”</a>.
+      </p></dd><dt id="id-1.4.5.5.3.3"><span class="term">State</span></dt><dd><p>
+       State of the image. Can be one of <code class="literal">All states</code>, <code class="literal">active</code>,
+       <code class="literal">inactive</code>, <code class="literal">deprecated</code>, or <code class="literal">deleted</code>.
+       Note that <code class="literal">All States</code> excludes images in the <code class="literal">deleted</code>
+       state. Deleted images may be viewed by explicitly selecting <code class="literal">deleted</code> as the
+       image state. For more information information about image stated, refer to <a class="xref" href="cha-images.html#sec-image-lifecycle" title="2.1. Image lifecycle">Section 2.1, “Image lifecycle”</a>.
+      </p></dd><dt id="id-1.4.5.5.3.4"><span class="term">Replacement</span></dt><dd><p>
+       Name of the image that replaces another.
+      </p></dd><dt id="id-1.4.5.5.3.5"><span class="term">Replacement ID</span></dt><dd><p>
+       ID of the image that replaces another. Only shown for Amazon, Oracle,
+       and Alibaba; images on Google and Microsoft do not have IDs.
+      </p></dd><dt id="id-1.4.5.5.3.6"><span class="term">Published Date</span></dt><dd><p>
+       Publication date of the image. Displayed in the format
+       <code class="literal">YYYYMMDD</code> (ISO 8601).
+      </p></dd><dt id="id-1.4.5.5.3.7"><span class="term">Deprecated Date</span></dt><dd><p>
+       Date the image was deprecated by a newer one. Displayed in the format
+       <code class="literal">YYYYMMDD</code> (ISO 8601). Only shown for deprecated or
+       deleted images.
+      </p></dd><dt id="id-1.4.5.5.3.8"><span class="term">Project</span></dt><dd><p>
+       Project of the image. Projects are used to organize Google Cloud Platform resources. Only
+       shown for Google Cloud Platform.
+      </p></dd><dt id="id-1.4.5.5.3.9"><span class="term">Region</span></dt><dd><p>
+       Region of the image.
+      </p></dd><dt id="id-1.4.5.5.3.10"><span class="term">Environment</span></dt><dd><p>
+       Environment of the image. Only shown for Microsoft Azure.
+      </p></dd><dt id="id-1.4.5.5.3.11"><span class="term">ID</span></dt><dd><p>
+       Unique identifier of the image. While the <code class="literal">Name</code> of an
+       image is the same across different regions, the <span class="guimenu">ID</span> is
+       unique.
+      </p></dd><dt id="id-1.4.5.5.3.12"><span class="term">URN</span></dt><dd><p>
+       Uniform Resource Name of an image. While the <span class="guimenu">Name</span> of
+       an image is different across the environments, the <code class="literal">URN</code>
+       is the same. Only shown for Microsoft Azure.
+      </p></dd><dt id="id-1.4.5.5.3.13"><span class="term">Deleted on</span></dt><dd><p>
+       Date the image was deleted in the format <code class="literal">YYYYMMDD</code>
+       (ISO 8601). Only shown for deleted images.
+      </p></dd><dt id="id-1.4.5.5.3.14"><span class="term">Changelog</span></dt><dd><p>
+       Link to a detailed changelog and a software bill of materials (SBOM).
+       For more information, refer to <a class="xref" href="cha-images.html#sec-image-changeinfo" title="2.4. Change information">Section 2.4, “Change information”</a>
+      </p><p>
+       Image changelogs are only available for images that replace others. For
+       initial images of new product versions, refer to the product's <a class="link" href="https://www.suse.com/releasenotes" target="_blank">release notes</a>.
+      </p></dd></dl></div></section><section class="sect2" id="sec-pint-servers" data-id-title="Servers view"><div class="titlepage"><div><div><div class="title-container"><h3 class="title"><span class="title-number-name"><span class="title-number">2.3.2 </span><span class="title-name"><code class="literal">Servers</code> view</span></span> <a title="Permalink" class="permalink" href="cha-images.html#sec-pint-servers">#</a></h3><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_images.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+    The following columns are shown in the <code class="literal">Servers</code> view:
+   </p><div class="variablelist"><div class="title-container"><div class="variablelist-title-wrap"><div class="variablelist-title"><span class="title-number-name"><span class="title-name">Columns in the <code class="literal">Servers</code> view </span></span><a title="Permalink" class="permalink" href="cha-images.html#id-1.4.5.6.3">#</a></div></div><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_images.xml" title="Edit source document"> </a></div></div><dl class="variablelist"><dt id="id-1.4.5.6.3.2"><span class="term">Name</span></dt><dd><p>
+       Host name of the server. Region servers do not have host names.
+       Host names are not DNS resolvable.
+      </p></dd><dt id="id-1.4.5.6.3.3"><span class="term">IP</span></dt><dd><p>
+       IP address of the server.
+      </p></dd><dt id="id-1.4.5.6.3.4"><span class="term">Region</span></dt><dd><p>
+       Region of the server. For optimal performance SUSE provides servers in
+       most regions of a cloud framework.
+      </p></dd><dt id="id-1.4.5.6.3.5"><span class="term">Type</span></dt><dd><p>
+       One of <code class="literal">regionserver-sles</code>, <code class="literal">regionserver-sap</code>, or
+       <code class="literal">smt</code>. In every framework where SUSE operates an update
+       infrastructure, the <code class="literal">regionserver</code> systems are randomly distributed across
+       regions and the <code class="literal">smt</code> servers are available in most
+       regions. Every region has <code class="literal">update</code> servers assigned.
+      </p></dd></dl></div></section></section><section class="sect1" id="sec-image-changeinfo" data-id-title="Change information"><div class="titlepage"><div><div><div class="title-container"><h2 class="title"><span class="title-number-name"><span class="title-number">2.4 </span><span class="title-name">Change information</span></span> <a title="Permalink" class="permalink" href="cha-images.html#sec-image-changeinfo">#</a></h2><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_images.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+   Whenever a new image gets released, you can review changes compared to the
+   previously released image. Search for an image in <a class="link" href="https://pint.suse.com/" target="_blank">PINT</a> and click on its entry in the
+   <span class="guimenu">Changelog</span> column.
+  </p><p>
+   Image change information is divided into different categories:
+  </p><div class="variablelist"><dl class="variablelist"><dt id="id-1.4.6.4.1"><span class="term">Image configuration changes</span></dt><dd><p>
+      This category describes changes in the image setup; for example, if a new
+      service was enabled, kernel parameters were changed, or if packages were
+      added or removed.
+     </p></dd><dt id="id-1.4.6.4.2"><span class="term">CVE fixes</span></dt><dd><p>
+      This category lists security fixes in the image. Entries are cross linked
+      to the <a class="link" href="https://www.suse.com/security/cve/" target="_blank">SUSE CVE
+      database</a>. For more information, refer to <a class="xref" href="cha-images.html#sec-image-lifecycle" title="2.1. Image lifecycle">Section 2.1, “Image lifecycle”</a>.
+     </p></dd><dt id="id-1.4.6.4.3"><span class="term">Package version changes</span></dt><dd><p>
+      This category lists all packages that had version changes compared to the
+      previous image and the version in that image.
+     </p></dd><dt id="id-1.4.6.4.4"><span class="term">Package change logs</span></dt><dd><p>
+      This category shows a concatenated changelog of all packages that had
+      changes.
+     </p></dd><dt id="id-1.4.6.4.5"><span class="term">Software bill of materials (SPDX)</span></dt><dd><p>
+          This category shows an SBOM in the <code class="literal">Software Package Data Exchange</code>
+          format. <code class="literal">SPDX</code> is an open standard backed by the Linux Foundation.
+          For more information, refer to <a class="link" href="https://spdx.dev/" target="_blank">https://spdx.dev/</a>.
+        </p></dd><dt id="id-1.4.6.4.6"><span class="term">Software bill of materials (CycloneDX)</span></dt><dd><p>
+          This category shows an SBOM in the <code class="literal">CycloneDX</code> format. This format is
+          backed by the Open Worldwide Application Security Project (OWASP) foundation.
+          For more information, refer to <a class="link" href="https://cyclonedx.org/" target="_blank">https://cyclonedx.org/</a>.
+        </p></dd></dl></div><div id="id-1.4.6.5" data-id-title="Change information for new product versions" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.svg"/><div class="admon-title">Note: Change information for new product versions</div><p>
+    Please note that that image change information is only available for
+    <span class="emphasis"><em>updated</em></span> images, meaning for images that replace
+    previous images of the same product version.
+   </p><p>
+    For initial images of new product versions, refer to the product's release
+    notes at <a class="link" href="https://www.suse.com/releasenotes" target="_blank">https://www.suse.com/releasenotes</a>.
+   </p></div><p>
+   To allow for automatic retrieval of image change information, all URLs follow
+   the schema:
+  </p><p>
+   <code class="uri">https://publiccloudimagechangeinfo.suse.com/<em class="replaceable">FRAMEWORK</em>/<em class="replaceable">IMAGE</em>/<em class="replaceable">CHANGES</em>.html</code>
+  </p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
+     <em class="replaceable">FRAMEWORK</em> is the cloud framework as used in
+     the <code class="command">pint</code> command-line tool; i.e. one of
+     <code class="literal">alibaba</code>,
+     <code class="literal">amazon</code>,
+     <code class="literal">google</code>,
+     <code class="literal">microsoft</code>, or
+     <code class="literal">oracle</code>.
+    </p></li><li class="listitem"><p>
+     <em class="replaceable">IMAGE</em> is the name of the image as shown by
+     PINT, e.g. <code class="literal">suse-sles-15-sp3-byos-v20220127-hvm-ssd-x86_64</code>.
+    </p></li><li class="listitem"><p>
+     <em class="replaceable">CHANGES</em> is the category of the changes, i. e.
+     one of
+     <code class="literal">cve_fixes</code>,
+     <code class="literal">image_changes</code>,
+     <code class="literal">package_changelogs</code>, or
+     <code class="literal">package_version_changes</code>.
+     Do not forget the <code class="filename">.html</code> extension to
+     complete the URL.
+    </p></li></ul></div></section><section class="sect1" id="sec-images-hardened" data-id-title="Hardened Images"><div class="titlepage"><div><div><div class="title-container"><h2 class="title"><span class="title-number-name"><span class="title-number">2.5 </span><span class="title-name">Hardened Images</span></span> <a title="Permalink" class="permalink" href="cha-images.html#sec-images-hardened">#</a></h2><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_images.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+   To improve overall security, SUSE provides hardened images of some
+   products. The images are hardened using <span class="product">OpenSCAP</span>, a collection of open source tools that
+   implement the <code class="systemitem">Security Content Automation
+    Protocol (SCAP)</code>.
+  </p><p>
+   For more information and instructions on how to harden instances with OpenSCAP, refer to
+   <a class="xref" href="cha-admin.html#hardening" title="3.3. Hardening instances">Section 3.3, “Hardening instances”</a>.
+  </p></section></section><nav class="bottom-pagination"><div><a class="pagination-link prev" href="cha-intro.html"><span class="pagination-relation">Previous</span><span class="pagination-label"><span class="title-number">Chapter 1 </span>Getting started</span></a> </div><div><a class="pagination-link next" href="cha-admin.html"><span class="pagination-relation">Next</span><span class="pagination-label"><span class="title-number">Chapter 3 </span>Managing cloud instances</span></a> </div></nav></article><aside id="_side-toc-page" class="side-toc"><div class="side-title">On this page</div><div class="toc"><ul><li><span class="sect1"><a href="cha-images.html#sec-image-lifecycle"><span class="title-number">2.1 </span><span class="title-name">Image lifecycle</span></a></span></li><li><span class="sect1"><a href="cha-images.html#sec-image-naming"><span class="title-number">2.2 </span><span class="title-name">Naming scheme</span></a></span></li><li><span class="sect1"><a href="cha-images.html#sec-image-pint"><span class="title-number">2.3 </span><span class="title-name">Public Cloud Information Tracker</span></a></span></li><li><span class="sect1"><a href="cha-images.html#sec-image-changeinfo"><span class="title-number">2.4 </span><span class="title-name">Change information</span></a></span></li><li><span class="sect1"><a href="cha-images.html#sec-images-hardened"><span class="title-number">2.5 </span><span class="title-name">Hardened Images</span></a></span></li></ul></div><div class="side-title">Share this page</div><ul class="share"><li><a id="_share-fb" href="#" title="Facebook"> </a></li><li><a id="_share-in" href="#" title="LinkedIn"> </a></li><li><a id="_share-tw" href="#" title="Twitter/X"> </a></li><li><a id="_share-mail" href="#" title="E-Mail"> </a></li><li><a id="_print-button" href="#" title="Print this page"> </a></li></ul> </aside></main><footer id="_footer"><div class="growth-inhibitor"><div class="copy"><span class="copy__rights">© SUSE
+                 2024</span></div></div></footer></body></html>

@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><title>SLES CSP | Public Cloud Guide | Getting started</title><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"/><link rel="stylesheet" type="text/css" href="static/css/style.css"/>
+<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"/><link rel="schema.DCTERMS" href="http://purl.org/dc/terms/"/>
+<meta name="title" content="Getting started | SLES CSP"/>
+<meta name="description" content="SUSE—together with the cloud service providers—offers different products and plans to cater to a variety of use cases. Find out which works best for …"/>
+<meta name="product-name" content="SUSE Linux Enterprise"/>
+<meta name="book-title" content="Public Cloud Guide"/>
+<meta name="chapter-title" content="Chapter 1. Getting started"/>
+<meta name="tracker-url" content="https://bugzilla.suse.com/enter_bug.cgi"/>
+<meta name="tracker-type" content="bsc"/>
+<meta name="tracker-bsc-assignee" content="cwickert@suse.com"/>
+<meta name="tracker-bsc-component" content="Public Cloud"/>
+<meta name="tracker-bsc-product" content="Documentation"/>
+<meta name="publisher" content="SUSE"/><meta property="og:title" content="Getting started | SLES CSP"/>
+<meta property="og:description" content="SUSE—together with the cloud service providers—offers diffe…"/>
+<meta property="og:type" content="article"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Getting started | SLES CSP"/>
+<meta name="twitter:description" content="SUSE—together with the cloud service providers—offers diffe…"/>
+<script type="application/ld+json">{
+    "@context": "http://schema.org",
+    "@type": ["TechArticle"],
+    "image": "https://www.suse.com/assets/img/suse-white-logo-green.svg",
+    
+     "isPartOf": {
+      "@type": "CreativeWorkSeries",
+      "name": "Product &amp; Solutions"
+    },
+    
+    "inLanguage": "en",
+    
+
+    "headline": "Getting started",
+  
+    "description": "SUSE—together with the cloud service providers—offers different products and plans to cater to a variety of use cases. Find out which works best for …",
+      
+    "author": [
+      {
+        "@type": "Corporation",
+        "name": "SUSE Product &amp; Solution Documentation Team",
+        "url": "https://www.suse.com/assets/img/suse-white-logo-green.svg"
+      }
+    ],
+      
+
+    "about": [
+      
+    ],
+  
+    "sameAs": [
+          "https://www.facebook.com/SUSEWorldwide/about",
+          "https://www.youtube.com/channel/UCHTfqIzPKz4f_dri36lAQGA",
+          "https://twitter.com/SUSE",
+          "https://www.linkedin.com/company/suse"
+    ],
+    "publisher": {
+      "@type": "Corporation",
+      "name": "SUSE",
+      "url": "https://documentation.suse.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.suse.com/assets/img/suse-white-logo-green.svg"
+      }
+    }
+  }</script>
+<link rel="prev" href="pre-public-cloud.html" title="About this guide"/><link rel="next" href="cha-images.html" title="Chapter 2. Public cloud images"/><script type="text/javascript">
+
+if ( window.location.protocol.toLowerCase() != 'file:' ) {
+  document.write('<link rel="stylesheet" type="text/css" href="https://documentation.suse.com/docserv/res/fonts/poppins/poppins.css"></link>');
+};
+
+</script><noscript><link rel="stylesheet" type="text/css" href="https://documentation.suse.com/docserv/res/fonts/poppins/poppins.css"/></noscript><script src="static/js/script-purejs.js" type="text/javascript"> </script><script src="static/js/highlight.min.js" type="text/javascript"> </script><script>
+
+$(document).ready(function() {
+  $('.verbatim-wrap.highlight').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+});
+hljs.configure({
+  useBR: false
+});
+
+</script><meta name="edit-url" content="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_introduction.xml"/></head><body class="draft wide offline js-off" onload="$('#betawarn-button-wrap').toggle();if (document.cookie.length > 0) {if (document.cookie.indexOf('betawarn=closed') != -1){$('#betawarn').toggle()}};"><div id="betawarn" style="position:fixed;bottom:0;z-index:9025;background-color:#FDE8E8;padding:1em;margin-left:10%;margin-right:10%;display:block;border-top:.75em solid #E11;width:80%"><p style="color:#333;margin:1em 0;padding:0;">This is a draft document that was built and uploaded automatically. It may document beta software and be incomplete or even incorrect. <strong>Use this document at your own risk.</strong></p> <div id="betawarn-button-wrap" style="display:none;margin:0;padding:0;"><a href="#" onclick="$('#betawarn').toggle();var d=new Date();d.setTime(d.getTime()+(0.5*24*60*60*1000));document.cookie='betawarn=closed; expires='+d.toUTCString()+'; path=/'; return false;" style="color:#333;text-decoration:underline;float:left;margin-top:.5em;padding:1em;display:block;background-color:#FABEBE;">I understand this is a draft</a></div></div><div class="bypass-block"><a href="#_content">Jump to content</a><a href="#_bottom-pagination">Jump to page navigation: previous page [access key p]/next page [access key n]</a></div><header id="_mainnav"><div class="growth-inhibitor"><img src="static/images/logo.svg" alt="Logo" class="logo"/></div></header><div class="crumbs"><div class="growth-inhibitor"><a class="crumb" href="index.html">Public Cloud Guide</a><span> / </span><a class="crumb" href="cha-intro.html">Getting started</a></div></div><main id="_content"><nav id="_side-toc-overall" class="side-toc"><div class="side-title">Public Cloud Guide</div><ol><li><a href="pre-public-cloud.html" class=" "><span class="title-number"> </span><span class="title-name">About this guide</span></a></li><li><a href="cha-intro.html" class=" you-are-here"><span class="title-number">1 </span><span class="title-name">Getting started</span></a></li><li><a href="cha-images.html" class=" "><span class="title-number">2 </span><span class="title-name">Public cloud images</span></a></li><li><a href="cha-admin.html" class=" "><span class="title-number">3 </span><span class="title-name">Managing cloud instances</span></a></li><li><a href="app-public-cloud-support.html" class=" "><span class="title-number">A </span><span class="title-name">Support</span></a></li><li><a href="countrylist.html" class=" "><span class="title-number">B </span><span class="title-name">Geographical availability</span></a></li><li><a href="apc.html" class=" "><span class="title-number">C </span><span class="title-name">GNU licenses</span></a></li> </ol> </nav><button id="_open-side-toc-overall" title="Contents"> </button><article class="documentation"><button id="_unfold-side-toc-page">On this page</button><section xml:lang="en" class="chapter" id="cha-intro" data-id-title="Getting started"><div class="titlepage"><div><div class="version-info">Applies to  <span class="productname">SUSE Linux Enterprise</span></div><div><div class="title-container"><h1 class="title"><span class="title-number-name"><span class="title-number">1 </span><span class="title-name">Getting started</span></span> <a title="Permalink" class="permalink" href="cha-intro.html#">#</a></h1><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_introduction.xml" title="Edit source document"> </a></div></div></div><div><div class="abstract"><p>
+    SUSE—together with the cloud service
+ providers—offers different products and plans to cater to a variety of
+ use cases. Find out which works best for you.
+   </p></div></div></div></div><section class="sect1" id="sec-intro-products" data-id-title="Products"><div class="titlepage"><div><div><div class="title-container"><h2 class="title"><span class="title-number-name"><span class="title-number">1.1 </span><span class="title-name">Products</span></span> <a title="Permalink" class="permalink" href="cha-intro.html#sec-intro-products">#</a></h2><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_introduction.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+   The following SUSE products are available for public cloud:
+  </p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
+         <a class="link" href="https://www.suse.com/products/server/" target="_blank">SUSE Linux Enterprise Server (SLE)</a>
+       </p></li><li class="listitem"><p>
+         <a class="link" href="https://www.suse.com/products/micro/" target="_blank">SUSE Linux Enterprise Micro</a>
+       </p></li><li class="listitem"><p>
+         <a class="link" href="https://www.suse.com/products/sles-for-sap/" target="_blank">SUSE Linux Enterprise Server for SAP Applications</a>
+       </p></li><li class="listitem"><p>
+         <a class="link" href="https://www.suse.com/products/suse-manager/" target="_blank">SUSE Manager</a>
+       </p></li><li class="listitem"><p>
+         <a class="link" href="https://www.suse.com/products/suse-liberty-linux/" target="_blank">SUSE Liberty Linux</a>
+       </p></li><li class="listitem"><p>
+         <a class="link" href="https://www.rancher.com/products/rancher-platform" target="_blank">Rancher Prime</a>
+       </p></li><li class="listitem"><p>
+         <a class="link" href="https://www.suse.com/products/neuvector/" target="_blank">NeuVector Prime</a>
+       </p></li><li class="listitem"><p>
+         <a class="link" href="https://get.opensuse.org/leap/" target="_blank">openSUSE Leap</a>
+       </p></li></ul></div><div id="id-1.3.3.4" class="admonition note compact"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.svg"/><p>
+    To constantly adjust and improve SUSE's offerings, availability of
+    products and versions is subject to change and may differ between cloud
+    frameworks.
+   </p></div></section><section class="sect1" id="sec-intro-providers" data-id-title="Cloud service providers"><div class="titlepage"><div><div><div class="title-container"><h2 class="title"><span class="title-number-name"><span class="title-number">1.2 </span><span class="title-name">Cloud service providers</span></span> <a title="Permalink" class="permalink" href="cha-intro.html#sec-intro-providers">#</a></h2><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_introduction.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+   SUSE publishes product images in the following cloud service provider (CSP)
+   frameworks:
+  </p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
+     Amazon Web Services
+    </p></li><li class="listitem"><p>
+     Microsoft Azure
+    </p></li><li class="listitem"><p>
+     Google Cloud
+    </p></li></ul></div><div id="id-1.3.4.4" class="admonition tip compact"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.svg"/><p>
+    SUSE images are also available in other providers' frameworks. These images are generally
+    created and published by the provider.
+   </p><p>
+    Please note that this list may change. If you are interested in becoming a
+    SUSE partner, visit
+    <a class="link" href="https://www.suse.com/partners/cloud-service-providers/" target="_blank">https://www.suse.com/partners/cloud-service-providers/</a>
+    for more information.
+   </p></div></section><section class="sect1" id="sec-intro-plans" data-id-title="Plans"><div class="titlepage"><div><div><div class="title-container"><h2 class="title"><span class="title-number-name"><span class="title-number">1.3 </span><span class="title-name">Plans</span></span> <a title="Permalink" class="permalink" href="cha-intro.html#sec-intro-plans">#</a></h2><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_introduction.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+   SUSE—together with the cloud service providers—offers
+   different plans to cater to a variety of use cases. While details differ
+   depending on the cloud framework, usually there are two types of
+   subscriptions.
+  </p><div class="variablelist"><dl class="variablelist"><dt id="id-1.3.5.3.1"><span class="term">Bring your own subscription (BYOS)</span></dt><dd><p>
+      <code class="literal">Bring your own subscription</code> (BYOS) images are useful if
+      you already have a support contract with SUSE and want to move your
+      workloads to the public cloud. An instance launched from a BYOS image is
+      equivalent to a physical machine that just received a SUSE Linux Enterprise Server installation
+      from the SLES installation image. After creation, use 
+      <code class="command">registercloudguest</code> to register the instance with the
+      SUSE-operated update infrastructure in the cloud framework or use the
+      <code class="command">SUSEConnect</code> to register the system with SUSE Customer Center using
+      the entitlements you already have. Connect your system to your own
+      running RMT or SUSE Manager infrastructure in the same way you connect
+      systems in your data center.
+     </p><p>
+      BYOS instances make it easier to manage extensions such as LTSS or kernel
+      live-patching. Extensions for PAYG instances can only be used in
+      conjunction with SUSE Manager.
+     </p></dd><dt id="id-1.3.5.3.2"><span class="term">Pay as you go (PAYG)</span></dt><dd><p>
+      <code class="literal">Pay as you go</code> (PAYG) images are used to create
+      on-demand instances. When an instance is first booted, it automatically
+      registers with a local update server. Once the system finishes booting,
+      it is ready to use.
+     </p><p>
+      Create an instance when you need it and delete it when you are
+      done. While in use, you have access to updates from SUSE through the
+      automatically configured repositories. You only pay for the resources
+      you use. Upcharges over the basic cloud prices may apply, depending on
+      the image and framework.
+     </p><p>
+      PAYG instances include support through the cloud service provider or priority support from
+      SUSE For details, refer to <a class="xref" href="cha-intro.html#sec-intro-support" title="1.4. Support">Section 1.4, “Support”</a>.
+    </p></dd></dl></div><p>
+   In summary, if you already have a direct relationship with SUSE you
+   generally want to start out with BYOS. You can still use PAYG for on-demand
+   excess capacity.
+  </p><div class="table" id="id-1.3.5.5" data-id-title="Feature comparison"><div class="title-container"><div class="table-title-wrap"><div class="table-title"><span class="title-number-name"><span class="title-number">Table 1.1: </span><span class="title-name">Feature comparison </span></span><a title="Permalink" class="permalink" href="cha-intro.html#id-1.3.5.5">#</a></div></div><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_introduction.xml" title="Edit source document"> </a></div></div><div class="table-contents"><table style="border-collapse: collapse; border-top: 1px solid ; border-bottom: 1px solid ; border-left: 1px solid ; border-right: 1px solid ; "><colgroup><col class="feature"/><col class="byos"/><col class="payg"/></colgroup><thead><tr><th style="border-right: 1px solid ; border-bottom: 1px solid ; ">
+       <p>
+        Plan
+       </p>
+      </th><th style="border-right: 1px solid ; border-bottom: 1px solid ; ">
+       <p>
+        Bring your own subscription (BYOS)
+       </p>
+      </th><th style="border-bottom: 1px solid ; ">
+       <p>
+        Pay as you go (PAYG)
+       </p>
+      </th></tr></thead><tbody><tr><td style="border-right: 1px solid ; border-bottom: 1px solid ; ">
+       <p>
+        Customer relationship
+       </p>
+      </td><td style="border-right: 1px solid ; border-bottom: 1px solid ; ">
+       <p>
+        with CSP and SUSE
+       </p>
+      </td><td style="border-bottom: 1px solid ; ">
+       <p>
+        with CSP
+       </p>
+      </td></tr><tr><td style="border-right: 1px solid ; border-bottom: 1px solid ; ">
+       <p>
+        Pricing
+       </p>
+      </td><td style="border-right: 1px solid ; border-bottom: 1px solid ; ">
+       <p>
+        per instance and license
+       </p>
+      </td><td style="border-bottom: 1px solid ; ">
+       <p>
+        per use
+       </p>
+      </td></tr><tr><td style="border-right: 1px solid ; border-bottom: 1px solid ; ">
+       <p>
+        Registration
+       </p>
+      </td><td style="border-right: 1px solid ; border-bottom: 1px solid ; ">
+       <p>
+        with a local update server, your RMT or SUSE Manager infrastructure, or
+        directly with the SUSE Customer Center
+       </p>
+      </td><td style="border-bottom: 1px solid ; ">
+       <p>
+        with a local update server upon instance creation
+       </p>
+      </td></tr><tr><td style="border-right: 1px solid ; border-bottom: 1px solid ; ">
+      <p>Support</p>
+      </td><td style="border-right: 1px solid ; border-bottom: 1px solid ; ">
+       <p>
+        full support by SUSE
+       </p>
+      </td><td style="border-bottom: 1px solid ; ">
+       <p>
+        by CSP; by SUSE only with priority support
+       </p>
+      </td></tr><tr><td style="border-right: 1px solid ; border-bottom: 1px solid ; ">
+       <p>
+        Extended ESPOS<sup>1</sup> or LTSS<sup>2</sup> support
+       </p>
+      </td><td style="border-right: 1px solid ; border-bottom: 1px solid ; ">
+       <p>
+        available
+       </p>
+      </td><td style="border-bottom: 1px solid ; ">
+       <p>
+        only if included in image base product
+       </p>
+      </td></tr><tr><td style="border-right: 1px solid ; ">
+       <p>Extensions</p>
+      </td><td style="border-right: 1px solid ; ">
+       <p>
+        no limitations
+       </p>
+      </td><td>
+       <p>
+        only with SUSE Manager
+       </p>
+      </td></tr></tbody></table></div></div><table style="border: 0; " class="simplelist"><tr><td>
+    <sup>1</sup> ESPOS: <a class="link" href="https://www.suse.com/support/policy-products/#hpc" target="_blank">Extended Service Pack Overlay Support</a>
+   </td></tr><tr><td>
+    <sup>2</sup> LTSS: <a class="link" href="https://www.suse.com/products/long-term-service-pack-support/" target="_blank">Long-Term Service Pack Support</a>
+   </td></tr></table><div id="id-1.3.5.7" data-id-title="Switching plans" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.svg"/><div class="admon-title">Important: Switching plans</div><p>
+    Switching from BYOS to PAYG or vice-versa is only possible on Microsoft Azure
+    through the <code class="literal">Hybrid Benefit</code> program. For all other cloud
+    providers, you remain on the plan you initially selected for as long as the
+    instance is running. The only way to switch plans is to start with the
+    other image and rebuild your system.
+   </p><p>
+    For more information on the Microsoft Azure Hybrid Benefit program, refer to
+    <a class="link" href="https://azure.microsoft.com/pricing/hybrid-benefit/" target="_blank">https://azure.microsoft.com/pricing/hybrid-benefit/</a>.
+   </p></div><div id="id-1.3.5.8" data-id-title="Do not register PAYG instances with the SUSE Customer Center" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.svg"/><div class="admon-title">Important: Do not register PAYG instances with the SUSE Customer Center</div><p>
+    Registering PAYG instances with the SUSE Customer Center or your own RMT server will
+    create conflicts that are not easily solved. Only register BYOS instances.
+    PAYG instances are automatically registered against the correct update
+    server.
+   </p></div></section><section class="sect1" id="sec-intro-support" data-id-title="Support"><div class="titlepage"><div><div><div class="title-container"><h2 class="title"><span class="title-number-name"><span class="title-number">1.4 </span><span class="title-name">Support</span></span> <a title="Permalink" class="permalink" href="cha-intro.html#sec-intro-support">#</a></h2><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_introduction.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+   Regardless of the public cloud you use and the plan you choose, SUSE has
+   you covered with support. Support is dependent on whether you "bring
+   your own subscription" (BYOS) or you use SUSE Linux Enterprise "on-demand"
+   (PAYG). For more information about BYOS and PAYG, refer to
+   <a class="xref" href="cha-intro.html#sec-intro-plans" title="1.3. Plans">Section 1.3, “Plans”</a>.
+  </p><div class="variablelist"><dl class="variablelist"><dt id="id-1.3.6.3.1"><span class="term">BYOS</span></dt><dd><p>
+      BYOS instances are supported by SUSE under the terms of your SUSE
+      subscription. For an overview of SUSE's support subscriptions, refer to
+      <a class="link" href="https://www.suse.com/support/" target="_blank">https://www.suse.com/support/</a>.
+     </p></dd><dt id="id-1.3.6.3.2"><span class="term">PAYG</span></dt><dd><p>
+      Regular PAYG instances include support through the cloud service provider which
+      in turn is supported by SUSE. If you have a problem, <span class="emphasis"><em>always contact
+       your CSP for assistance</em></span>. They provide 1st and 2nd level support, and will
+      work with SUSE for L3 support as required.
+     </p><div id="id-1.3.6.3.2.2.2" data-id-title="Microsoft Azure basic images" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.svg"/><div class="admon-title">Important: Microsoft Azure basic images</div><p>
+       Microsoft Azure also offers a basic PAYG image that only includes updates.
+       Instances created from this image are <span class="emphasis"><em>not eligible for support</em></span>.
+      </p></div></dd><dt id="id-1.3.6.3.3"><span class="term">PAYG with SUSE Priority Support</span></dt><dd><p>
+      SUSE offers 24x7 priority support for the PAYG versions of the following products:
+     </p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
+        SUSE Linux Enterprise Micro
+      </p></li><li class="listitem"><p>
+        SUSE Manager
+      </p></li><li class="listitem"><p>
+        Rancher Prime
+      </p></li><li class="listitem"><p>
+        NeuVector Prime
+      </p></li></ul></div><p>
+      You can transact priority support through the Amazon Web Services and Microsoft Azure marketplaces, where you
+      will see two different listings: A global one and one for <code class="literal">EMEA Orders Only</code>.
+      Two listings are needed as there are different regulations to comply
+      with, but the images and the support offering are identical. Select the correct listing for
+      your organization's CSP account:
+     </p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
+        For Amazon Web Services, it depends on the <code class="literal">tax address</code> of the account, see
+        <a class="link" href="https://aws.amazon.com/tax-help/location" target="_blank">https://aws.amazon.com/tax-help/location</a>.
+       </p></li><li class="listitem"><p>
+        For Microsoft Azure, it depends on the <code class="literal">sold to</code> address of the account, see
+        <a class="link" href="https://learn.microsoft.com/azure/cost-management-billing/manage/change-azure-account-profile" target="_blank">https://learn.microsoft.com/azure/cost-management-billing/manage/change-azure-account-profile</a>.
+       </p></li><li class="listitem"><p>
+        For Google Cloud, it depends on the <code class="literal">billing country</code> of the account, see
+        <a class="link" href="https://support.google.com/cloudidentity/answer/3530790" target="_blank">https://support.google.com/cloudidentity/answer/3530790</a>.
+       </p></li></ul></div><p>
+      For a complete list of countries that are eligble to transact priority support through the
+      CSP's marketplaces, and the correct listing for each country, refer to
+      <a class="xref" href="countrylist.html" title="Appendix B. Geographical availability">Appendix B, <em>Geographical availability</em></a>.
+     </p><div id="id-1.3.6.3.3.2.6" data-id-title="Other countries" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.svg"/><div class="admon-title">Important: Other countries</div><p>
+       If the billing or tax address of your organization's CSP account is located in a country not
+       listed in <a class="xref" href="countrylist.html" title="Appendix B. Geographical availability">Appendix B, <em>Geographical availability</em></a>, you currently cannot transact priority support
+       through the CSP's marketplaces.
+      </p><p>
+       SUSE is committed to making priority support available in more countries. In the meantime,
+       you can still use SUSE PAYG products with regular support from the CSP. If you want support
+       by SUSE, use a BYOS version.
+      </p></div></dd></dl></div><p>
+   For more information, refer to the <a class="link" href="https://www.suse.com/support/policy/" target="_blank">SUSE Technical Support
+    Policy</a> and the support statement for SUSE Linux Enterprise in <a class="xref" href="app-public-cloud-support.html" title="Appendix A. Support">Appendix A, <em>Support</em></a>.
+  </p><p>
+   For information on how to contact the SUSE support team and report
+   problems, refer to the <a class="link" href="https://www.suse.com/support/handbook/" target="_blank">SUSE Technical Support
+    Guide</a>.
+  </p></section><section class="sect1" id="sec-intro-instance-types" data-id-title="Supported instance types"><div class="titlepage"><div><div><div class="title-container"><h2 class="title"><span class="title-number-name"><span class="title-number">1.5 </span><span class="title-name">Supported instance types</span></span> <a title="Permalink" class="permalink" href="cha-intro.html#sec-intro-instance-types">#</a></h2><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_introduction.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+   To find out what types of instances are supported by each provider, refer to
+   the <a class="link" href="https://www.suse.com/support/public-cloud-support/" target="_blank">SUSE
+    Public Cloud Instance Support Matrix</a>. Select your SUSE Linux Enterprise product and
+   your cloud provider to see a list of supported instance types.
+  </p></section></section><nav class="bottom-pagination"><div><a class="pagination-link prev" href="pre-public-cloud.html"><span class="pagination-relation">Previous</span><span class="pagination-label">About this guide</span></a> </div><div><a class="pagination-link next" href="cha-images.html"><span class="pagination-relation">Next</span><span class="pagination-label"><span class="title-number">Chapter 2 </span>Public cloud images</span></a> </div></nav></article><aside id="_side-toc-page" class="side-toc"><div class="side-title">On this page</div><div class="toc"><ul><li><span class="sect1"><a href="cha-intro.html#sec-intro-products"><span class="title-number">1.1 </span><span class="title-name">Products</span></a></span></li><li><span class="sect1"><a href="cha-intro.html#sec-intro-providers"><span class="title-number">1.2 </span><span class="title-name">Cloud service providers</span></a></span></li><li><span class="sect1"><a href="cha-intro.html#sec-intro-plans"><span class="title-number">1.3 </span><span class="title-name">Plans</span></a></span></li><li><span class="sect1"><a href="cha-intro.html#sec-intro-support"><span class="title-number">1.4 </span><span class="title-name">Support</span></a></span></li><li><span class="sect1"><a href="cha-intro.html#sec-intro-instance-types"><span class="title-number">1.5 </span><span class="title-name">Supported instance types</span></a></span></li></ul></div><div class="side-title">Share this page</div><ul class="share"><li><a id="_share-fb" href="#" title="Facebook"> </a></li><li><a id="_share-in" href="#" title="LinkedIn"> </a></li><li><a id="_share-tw" href="#" title="Twitter/X"> </a></li><li><a id="_share-mail" href="#" title="E-Mail"> </a></li><li><a id="_print-button" href="#" title="Print this page"> </a></li></ul> </aside></main><footer id="_footer"><div class="growth-inhibitor"><div class="copy"><span class="copy__rights">© SUSE
+                 2024</span></div></div></footer></body></html>
