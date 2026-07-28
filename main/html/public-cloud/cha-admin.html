@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><title>Managing cloud instances | Public Cloud Guide | SLES CSP</title><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"/><link rel="stylesheet" type="text/css" href="static/css/style-new.css"/>
+<link rel="schema.dc" href="http://purl.org/dc/elements/1.1/"/><link rel="schema.dcterms" href="http://purl.org/dc/terms/"/>
+<meta name="dcterms.created" content="2026-05-26"/>
+<meta name="dcterms.modified" content="2026-05-26"/>
+<meta name="dcterms.dateSubmitted" content="2026-07-28"/>
+<meta name="title" content="Managing cloud instances | SLES CSP"/>
+<meta name="description" content="SUSE Linux Enterprise in public clouds is managed almost like on bare metal or in virtual environments. Learn about what is different in the cloud."/>
+<meta name="product-name" content="SUSE Linux Enterprise"/>
+<meta name="book-title" content="Public Cloud Guide"/>
+<meta name="chapter-title" content="Chapter 3. Managing cloud instances"/>
+<meta name="tracker-url" content="https://bugzilla.suse.com/enter_bug.cgi"/>
+<meta name="tracker-type" content="bsc"/>
+<meta name="tracker-bsc-assignee" content="cwickert@suse.com"/>
+<meta name="tracker-bsc-component" content="Public Cloud"/>
+<meta name="tracker-bsc-product" content="Documentation"/>
+<meta name="publisher" content="SUSE"/><meta property="og:title" content="Public Cloud Guide"/>
+<meta property="og:description" content="Use SUSE Linux Enterprise in public clouds"/>
+<meta property="og:type" content="article"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Public Cloud Guide"/>
+<meta name="twitter:description" content="Use SUSE Linux Enterprise in public clouds"/>
+<script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": ["TechArticle"],
+    "image": "https://www.suse.com/assets/img/suse-white-logo-green.svg",
+    "name": "Managing cloud instances | SLES CSP",
+    "isPartOf": {
+      "@type": "CreativeWorkSeries",
+      "name": "Products &amp; Solutions"
+    },
+    "inLanguage": "en",
+    "headline": "Managing cloud instances",
+    "description": "SUSE Linux Enterprise in public clouds is managed almost like on bare metal or in virtual environments. Learn about what is different in the cloud.",
+    "author": [
+      {
+        "@type": "Corporation",
+        "name": "SUSE Product &amp; Solution Documentation Team",
+        "url": "https://documentation.suse.com"
+      }
+    ],
+    "dateCreated": "2026-05-26T00:00+02:00",
+    "dateModified": "2026-05-26T00:00+02:00",
+    "datePublished": "2026-07-28T12:39+02:00",
+    "about": [
+
+    ],
+    "mentions": [
+      { "@type": "SoftwareApplication",
+        "name": "SLES CSP",
+        "applicationCategory": "Operating System",
+        "operatingSystem": "Linux"
+      }
+    ],
+    "sameAs": [
+          "https://www.facebook.com/SUSEWorldwide/about",
+          "https://www.youtube.com/channel/UCHTfqIzPKz4f_dri36lAQGA",
+          "https://twitter.com/SUSE",
+          "https://www.linkedin.com/company/suse"
+    ],
+    "publisher": {
+      "@type": "Corporation",
+      "name": "SUSE",
+      "url": "https://documentation.suse.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.suse.com/assets/img/suse-white-logo-green.svg"
+      }
+    }
+  }</script>
+<link rel="prev" href="cha-images.html" title="Chapter 2. Public cloud images"/><link rel="next" href="app-public-cloud-support.html" title="Appendix A. Support"/><link type="text/css" rel="preload" as="style" onload="this.rel='stylesheet'" href="https://documentation.suse.com/docserv/res/fonts/suse/suse.css"/><script src="static/js/script-purejs.js" type="text/javascript"></script><script src="static/js/highlight.js" type="text/javascript"></script><script>hljs.highlightAll();</script><script src="static/js/ui-modifiers.js" type="text/javascript"></script><meta name="edit-url" content="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_administration.xml"/></head><body class="draft wide offline js-off" onload="$('#betawarn-button-wrap').toggle();if (document.cookie.length > 0) {if (document.cookie.indexOf('betawarn=closed') != -1){$('#betawarn').toggle()}};"><div id="betawarn" style="position:fixed;bottom:0;z-index:9025;background-color:#FDE8E8;padding:1em;margin-left:10%;margin-right:10%;display:block;border-top:.75em solid #E11;width:80%"><p style="color:#333;margin:1em 0;padding:0;">This is a draft document that was built and uploaded automatically. It may document beta software and be incomplete or even incorrect. <strong>Use this document at your own risk.</strong></p> <div id="betawarn-button-wrap" style="display:none;margin:0;padding:0;"><a href="#" onclick="$('#betawarn').toggle();var d=new Date();d.setTime(d.getTime()+(0.5*24*60*60*1000));document.cookie='betawarn=closed; expires='+d.toUTCString()+'; path=/'; return false;" style="color:#333;text-decoration:underline;float:left;margin-top:.5em;padding:1em;display:block;background-color:#FABEBE;">I understand this is a draft</a></div></div><div class="bypass-block"><a href="#_content">Jump to content</a><a href="#_bottom-pagination">Jump to page navigation: previous page [access key p]/next page [access key n]</a></div><header id="_mainnav"><div class="growth-inhibitor"><img src="static/images/logo.svg" alt="Logo" class="logo"/></div></header><div class="crumbs"><div class="growth-inhibitor"><a class="crumb" href="index.html">Public Cloud Guide</a><span class="sep">|</span><a class="crumb" href="cha-admin.html">Managing cloud instances</a></div></div><main id="_content"><nav id="_side-toc-overall" tabindex="0" class="side-toc"><div class="side-title">Public Cloud Guide</div><ol role="list"><li role="listitem"><a href="pre-public-cloud.html" class=" "><span class="title-number"> </span><span class="title-name">About this guide</span></a></li><li role="listitem"><a href="cha-intro.html" class=" "><span class="title-number">1 </span><span class="title-name">Getting started</span></a></li><li role="listitem"><a href="cha-images.html" class=" "><span class="title-number">2 </span><span class="title-name">Public cloud images</span></a></li><li role="listitem"><a href="cha-admin.html" class=" you-are-here"><span class="title-number">3 </span><span class="title-name">Managing cloud instances</span></a></li><li role="listitem"><a href="app-public-cloud-support.html" class=" "><span class="title-number">A </span><span class="title-name">Support</span></a></li><li role="listitem"><a href="countrylist.html" class=" "><span class="title-number">B </span><span class="title-name">Geographical availability</span></a></li><li role="listitem"><a href="apc.html" class=" "><span class="title-number">C </span><span class="title-name">GNU licenses</span></a></li> </ol> </nav><button id="_open-side-toc-overall" title="Contents"> </button><article class="documentation"><button id="_unfold-side-toc-page">On this page</button><section xml:lang="en" class="chapter" id="cha-admin" data-id-title="Managing cloud instances"><div class="titlepage"><div><div class="version-info">Applies to  <span class="productname"><span class="productname">SUSE Linux Enterprise</span></span></div><div><div class="title-container"><h1 class="title"><span class="title-number-name"><span class="title-number">3 </span><span class="title-name">Managing cloud instances</span></span> <a title="Permalink" class="permalink" href="cha-admin.html#">#</a></h1><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_administration.xml" title="Edit source document"> </a></div></div></div><div><div class="titlepage-revhistory"><a aria-label="Revision History: Public Cloud Guide" hreflang="en" href="rh-cha-admin.html" target="_blank">Revision History: Public Cloud Guide</a></div></div><div><div class="abstract"><p>
+    SUSE Linux Enterprise in public clouds is managed almost like on
+ bare metal or in virtual environments. Learn about what is different in the
+ cloud.
+   </p></div></div></div></div><section class="sect1" id="sec-admin-register" data-id-title="Registering instances"><div class="titlepage"><div><div><div class="title-container"><h2 class="title"><span class="title-number-name"><span class="title-number">3.1 </span><span class="title-name">Registering instances</span></span> <a title="Permalink" class="permalink" href="cha-admin.html#sec-admin-register">#</a></h2><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_administration.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+   Like other SUSE products, SUSE Linux Enterprise in public clouds has to be registered to
+   receive updates. There are different ways to register, depending on the
+   image flavor chosen for the instance.
+  </p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
+     PAYG instances are registered automatically against the SUSE-operated
+     update infrastructure in the cloud framework region, or a
+     geographically close region. The
+     <code class="systemitem">guestregister.service</code> manages
+     the registration on first boot.
+    </p><div id="id-1.5.3.3.1.2" data-id-title="Do not register PAYG instances with the SUSE Customer Center" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.svg"/><div class="admon-title">Important: Do not register PAYG instances with the SUSE Customer Center</div><p>
+         Registering PAYG instances with the SUSE Customer Center or your own RMT server will
+         create conflicts that are not easily solved. Only register BYOS instances.
+         PAYG instances are automatically registered against the correct update
+         server.
+       </p></div></li><li class="listitem"><p>
+     BYOS instances have to be registered manually with your SUSE registration
+     key. You can register with the cloud framework's SUSE update servers, the
+     SUSE Customer Center, or your own SUSE Multi-Linux Manager or RMT infrastructure.
+    </p></li></ul></div><p>
+     There are two different ways to register BYOS instances:
+   </p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>
+         Any BYOS instance can be registered with the SUSE Customer Center or your own SUSE Multi-Linux Manager or RMT
+         infrastructure using <code class="command">SUSEConnect</code>. Refer to <a class="xref" href="cha-admin.html#sec-admin-suseconnect" title="3.1.2. Register with SUSEConnect">Section 3.1.2, “Register with <code class="command">SUSEConnect</code>”</a> for instructions.
+       </p></li><li class="listitem"><p>
+         BYOS instances with <span class="package">cloud-regionsrv-client</span> version 9.3.0 or higher can
+         be registered with the cloud framework's SUSE update servers using
+         <code class="command">registercloudguest</code>. Using the cloud framework's update servers will
+         result in faster package downloads. Registrations are forwarded from the update server to
+         the SUSE Customer Center, so your cloud instances show up in your SUSE account and count against the
+         system count of your subscription. Refer to
+         <a class="xref" href="cha-admin.html#sec-admin-registercloudguest" title="3.1.1. Register with registercloudguest">Section 3.1.1, “Register with <code class="command">registercloudguest</code>”</a> for instructions.
+       </p><div id="id-1.5.3.5.2.2" data-id-title="registercloudguest limitations" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.svg"/><div class="admon-title">Important: <code class="command">registercloudguest</code> limitations</div><p>
+           Not all products and flavors can be registered with
+           <code class="command">registercloudguest</code>.
+         </p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
+               Container host (<code class="literal">chost</code>) images are optimized for
+               container workloads and contain only a few packages outside of the bare
+               minimum to make containers run. These images do not contain
+               <code class="command">registercloudguest</code>, but you can register instances with
+               the SUSE Customer Center first, install the necessary packages and then register with the
+               SUSE-operated update infrastructure in the cloud framework region. Refer
+               to <a class="xref" href="cha-admin.html#pro-admin-registercloudguest" title="Switching from SUSEConnect to registercloudguest">Procedure 3.1, “Switching from <code class="command">SUSEConnect</code> to <code class="command">registercloudguest</code>”</a> for instructions.
+             </p></li><li class="listitem"><p>
+               SUSE Linux Enterprise Micro (<code class="literal">sle-micro</code>) 5.1 and 5.2 images do not contain
+               <code class="command">registercloudguest</code>. To register an instance, use the command
+               <code class="command">transactional-update register</code>. Refer to the <a class="link" href="https://documentation.suse.com/sle-micro/html/Micro-transactional-updates/index.html#transactional-update-registering-product" target="_blank"><em class="citetitle">Administering SUSE Linux Enterprise Micro Using <code class="command">transactional-update</code></em></a>
+               for more information. Images of SLE Micro 5.3 and later versions include
+               <code class="command">registercloudguest</code> and can be registered as described in
+               <a class="xref" href="cha-admin.html#sec-admin-registercloudguest" title="3.1.1. Register with registercloudguest">Section 3.1.1, “Register with <code class="command">registercloudguest</code>”</a>.
+             </p></li><li class="listitem"><p>
+               SUSE Multi-Linux Manager (<code class="literal">suse-multi-linux-manager</code>) can only be registered with
+               the SUSE Customer Center.
+             </p></li></ul></div></div></li></ol></div><p>
+     In summary, use <code class="command">registercloudguest</code> to register with the
+     local cloud update infrastructure to benefit from faster downloads. Use
+     <code class="command">SUSEConnect</code> to register with SUSE Customer Center or your own
+     SUSE Multi-Linux Manager or RMT infrastructure.
+   </p><section class="sect2" id="sec-admin-registercloudguest" data-id-title="Register with registercloudguest"><div class="titlepage"><div><div><div class="title-container"><h3 class="title"><span class="title-number-name"><span class="title-number">3.1.1 </span><span class="title-name">Register with <code class="command">registercloudguest</code></span></span> <a title="Permalink" class="permalink" href="cha-admin.html#sec-admin-registercloudguest">#</a></h3><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_administration.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+      To register a BYOS instance with <code class="command">registercloudguest</code>, run:
+    </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">registercloudguest</code> -r <em class="replaceable">REGISTRATION_CODE </em> -e <em class="replaceable">EMAIL_ADDRESS</em></pre></div><p>
+      Replace <em class="replaceable">REGISTRATION_CODE</em> with a valid
+      registration code. Replace <em class="replaceable">EMAIL_ADDRESS</em> with the
+      e-mail address associated with the SUSE account you or your organization
+      uses to manage subscriptions.
+    </p><p>
+      BYOS instances created from images with a datestamp of
+      <code class="literal">20220103</code> or <span><em class="emphasis">later</em></span> contain all
+      required packages. For BYOS instances created from images with a date stamp
+      <span><em class="emphasis">prior</em></span> to <code class="literal">20220103</code>, perform the following steps:
+     </p><div class="procedure" id="pro-admin-registercloudguest" data-id-title="Switching from SUSEConnect to registercloudguest"><div class="title-container"><div class="procedure-title-wrap"><div class="procedure-title"><span class="title-number-name"><span class="title-number">Procedure 3.1: </span><span class="title-name">Switching from <code class="command">SUSEConnect</code> to <code class="command">registercloudguest</code> </span></span><a title="Permalink" class="permalink" href="cha-admin.html#pro-admin-registercloudguest">#</a></div></div><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_administration.xml" title="Edit source document"> </a></div></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step"><p>
+           Check if the <span class="package">cloud-regionsrv-client</span> package is
+           installed:
+         </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">rpm</code> -q cloud-regionsrv-client</pre></div><p>
+           If the package is not installed or older than version 9.3.0, install or
+           update it.
+         </p><p>
+           For instances created from images with a date stamp prior to <code class="literal">20220103</code>,
+           you first have to enable the <code class="literal">Public Cloud Module</code>. For SUSE Linux Enterprise 15 SP4,
+           run:
+         </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">SUSEConnect</code> -p sle-module-public-cloud/15.4/x86_64</pre></div><p>
+           For other versions or a complete list of modules and their product
+           identifiers, run <code class="command">SUSEConnect --list-extensions</code>.
+         </p><p>
+           Install <span class="package">cloud-regionsrv-client</span>. Depending on your cloud framework,
+           you will need some additional packages.
+         </p><ul class="stepalternatives">
+           <li class="step"><p>
+               For Amazon EC2 run:
+             </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">zypper</code> in cloud-regionsrv-client cloud-regionsrv-client-plugin-ec2 \
+ regionServiceClientConfigEC2</pre></div></li>
+           <li class="step"><p>
+               For Microsoft Azure run:
+             </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">zypper</code> in cloud-regionsrv-client cloud-regionsrv-client-plugin-azure \
+ regionServiceClientConfigAzure</pre></div></li>
+           <li class="step"><p>For Google Compute Engine run:</p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">zypper</code> in cloud-regionsrv-client cloud-regionsrv-client-plugin-gce \
+ regionServiceClientConfigGCE</pre></div></li>
+         </ul></li><li class="step"><p>
+           Disconnect your instance from the SUSE Customer Center:
+         </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">registercloudguest</code> --clean</pre></div><p>
+           Do <span><em class="emphasis">not</em></span> use <code class="command">SUSEConnect -d</code>; it will
+           no longer work.
+         </p></li><li class="step"><p>
+           Connect the instance to the SUSE update infrastructure in the
+           public cloud. Replace <em class="replaceable">REGISTRATION_CODE</em> with a
+           valid registration code. Replace <em class="replaceable">EMAIL_ADDRESS</em>
+           with the e-mail address associated with the SUSE account you or your
+           organization uses to manage subscriptions.
+         </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">registercloudguest</code> -r <em class="replaceable">REGISTRATION_CODE </em> -e <em class="replaceable">EMAIL_ADDRESS</em></pre></div><p>
+           This will only register the base product and any recommended products.
+           For instances created from images with a datestamp later than
+           <code class="literal">20220103</code>, it will also set up the repositories for the
+           <code class="literal">Public Cloud Module</code>.
+         </p></li></ol></div></div></section><section class="sect2" id="sec-admin-suseconnect" data-id-title="Register with SUSEConnect"><div class="titlepage"><div><div><div class="title-container"><h3 class="title"><span class="title-number-name"><span class="title-number">3.1.2 </span><span class="title-name">Register with <code class="command">SUSEConnect</code></span></span> <a title="Permalink" class="permalink" href="cha-admin.html#sec-admin-suseconnect">#</a></h3><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_administration.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+    To register a BYOS instance with <code class="command">SUSEConnect</code>, run:
+   </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">SUSEConnect</code> -r <em class="replaceable">REGISTRATION_CODE</em> -e <em class="replaceable">EMAIL_ADDRESS</em></pre></div><p>
+    Replace <em class="replaceable">REGISTRATION_CODE</em> with a valid
+    registration code. Replace <em class="replaceable">EMAIL_ADDRESS</em> with the
+    e-mail address associated with the SUSE account you or your organization
+    uses to manage subscriptions.
+   </p><p>
+    To register with your own registration server, also provide its URL:
+   </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">SUSEConnect</code> -r <em class="replaceable">REGISTRATION_CODE</em> -e <em class="replaceable">EMAIL_ADDRESS</em> --url <em class="replaceable">URL</em></pre></div><p>
+      If the instance was already registered with <code class="command">registercloudguest</code>, perform the
+      following steps:
+    </p><div class="procedure" id="pro-admin-suseconnect" data-id-title="Switching from registercloudguest to SUSEConnect"><div class="title-container"><div class="procedure-title-wrap"><div class="procedure-title"><span class="title-number-name"><span class="title-number">Procedure 3.2: </span><span class="title-name">Switching from <code class="command">registercloudguest</code> to <code class="command">SUSEConnect</code> </span></span><a title="Permalink" class="permalink" href="cha-admin.html#pro-admin-suseconnect">#</a></div></div><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_administration.xml" title="Edit source document"> </a></div></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step"><p>
+           Disconnect your instance from the SUSE-operated update infrastructure in the cloud
+           framework:
+         </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">registercloudguest</code> --clean</pre></div></li><li class="step"><p>
+           Uninstall the <span class="package">cloud-regionsrv-client</span> package and its dependencies:
+         </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">zypper</code> rm -u cloud-regionsrv-client</pre></div></li><li class="step"><p>
+           Clean up the registration status:
+         </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">SUSEConnect</code> --cleanup --url https://scc.suse.com</pre></div></li><li class="step"><p>
+           Register the instance with <code class="command">SUSEConnect</code>.
+         </p><ul class="stepalternatives">
+           <li class="step"><p>
+               To connect the instance to the SUSE Customer Center, run:
+             </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">SUSEConnect</code> -r <em class="replaceable">REGISTRATION_CODE</em> -e <em class="replaceable">EMAIL_ADDRESS</em></pre></div></li>
+           <li class="step"><p>
+               To connect the instance to the your own registration server, run:
+             </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">SUSEConnect</code> -r <em class="replaceable">REGISTRATION_CODE</em> -e <em class="replaceable">EMAIL_ADDRESS</em> --url <em class="replaceable">URL</em></pre></div></li>
+         </ul></li></ol></div></div></section></section><section class="sect1" id="sec-admin-deregister" data-id-title="Deregister instances"><div class="titlepage"><div><div><div class="title-container"><h2 class="title"><span class="title-number-name"><span class="title-number">3.2 </span><span class="title-name">Deregister instances</span></span> <a title="Permalink" class="permalink" href="cha-admin.html#sec-admin-deregister">#</a></h2><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_administration.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+   If you are to decommission an instance, remember to deregister it before
+   termination. This will ensure that the system gets removed from the SUSE Customer Center and
+   is no longer counted against your subscription.
+  </p><div class="procedure"><div class="procedure-contents"><ol class="procedure" type="1"><li class="step"><p>
+     Run <code class="command">SUSEConnect --status-text</code> to check the registration
+     status.
+    </p></li><li class="step"><p>
+     If the system is registered, check if the file
+     <code class="filename">/var/log/cloudregister</code> exists. This usually indicates
+     the system was registered with <code class="command">registercloudguest</code>.
+    </p></li><li class="step"><p>
+     Deregister the system:
+    </p><ul class="stepalternatives">
+     <li class="step"><p>
+       If a system was registered with <code class="command">registercloudguest</code>,
+       run:
+      </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">registercloudguest</code> <code class="option">--clean</code></pre></div></li>
+     <li class="step"><p>
+       If a system was registered with <code class="command">SUSEConnect</code>, run:
+      </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root"># </code><code class="command">SUSEConnect</code> <code class="option">-d</code></pre></div><p>
+       If this does not work, make sure the package
+       <span class="package">cloud-regionsrv-client</span> is not installed. It may have
+       been installed after the system was registered.
+      </p></li>
+    </ul></li></ol></div></div></section><section class="sect1" id="ltss" data-id-title="Enabling LTSS"><div class="titlepage"><div><div><div class="title-container"><h2 class="title"><span class="title-number-name"><span class="title-number">3.3 </span><span class="title-name">Enabling LTSS</span></span> <a title="Permalink" class="permalink" href="cha-admin.html#ltss">#</a></h2><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_administration.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+      <code class="literal">Long Term Service Pack Support</code> (LTSS) extends the lifecycle of
+      <span class="productname">SUSE Linux Enterprise</span>. It is available as an extension. For more information about LTSS, refer to
+      <a class="link" href="https://www.suse.com/products/long-term-service-pack-support/" target="_blank">https://www.suse.com/products/long-term-service-pack-support/</a>.
+    </p><div id="id-1.5.5.3" data-id-title="LTSS subscriptions are version-specific" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.svg"/><div class="admon-title">Note: LTSS subscriptions are version-specific</div><p>
+        LTSS subscriptions are version-specific. If you have a subscription for
+        SLES 15 SP4, you cannot use that registration code to register LTSS on a
+        15 SP3 image. Make sure to use the correct registration code for your instance
+        and upgrade it if necessary.
+      </p></div><div id="id-1.5.5.4" data-id-title="Microsoft Azure basic images are not eligible for LTSS" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.svg"/><div class="admon-title">Note: Microsoft Azure basic images are not eligible for LTSS</div><p>
+       Microsoft Azure also offers a basic PAYG image that only includes updates.
+       Instances created from this image are <span><em class="emphasis">not eligible for LTSS</em></span>.
+      </p></div><section class="sect2" id="ltss-byos" data-id-title="LTSS on BYOS"><div class="titlepage"><div><div><div class="title-container"><h3 class="title"><span class="title-number-name"><span class="title-number">3.3.1 </span><span class="title-name">LTSS on BYOS</span></span> <a title="Permalink" class="permalink" href="cha-admin.html#ltss-byos">#</a></h3><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_administration.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+        If you do not have an LTSS subscription for your BYOS instance, contact a SUSE
+        representative or visit <a class="link" href="https://www.suse.com/how-to-buy" target="_blank">https://www.suse.com/how-to-buy</a> for purchase
+        options.
+      </p><div class="procedure"><div class="procedure-contents"><p>
+          To enable the LTSS extension, perform the following steps:
+        </p><ol class="procedure" type="1"><li class="step"><p>
+            Log in to the <a class="link" href="https://scc.suse.com/" target="_blank">SUSE Customer Center</a> to look up your LTSS registration
+            code.
+          </p></li><li class="step"><p>
+            Log in to your instance and make sure your system is registered:
+          </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">&gt; </code><code class="command">sudo</code> <code class="command">SUSEConnect --status-text</code></pre></div><p>
+            If the system is not yet registered, register it (see <a class="xref" href="cha-admin.html#sec-admin-register" title="3.1. Registering instances">Section 3.1, “Registering instances”</a>).
+          </p></li><li class="step"><p>
+            Check if the LTSS extension is available for your system. For SUSE Linux Enterprise 15 SP3, it looks
+            like this:
+          </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">&gt; </code><code class="command">sudo</code> <code class="command">SUSEConnect --list-extensions | grep LTSS</code>
+      SUSE Linux Enterprise Server LTSS 15 SP3 x86_64
+      Activate with: SUSEConnect -p SLES-LTSS/15.3/x86_64 -r ADDITIONAL REGCODE</pre></div></li><li class="step"><p>
+            Activate the module as instructed:
+          </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">&gt; </code><code class="command">sudo</code> <code class="command">SUSEConnect -p SLES-LTSS/<em class="replaceable">15.3</em>/<em class="replaceable">x86_64</em> -r <em class="replaceable">LTSS_REGISTRATION_CODE</em></code></pre></div></li></ol></div></div></section><section class="sect2" id="ltss-payg" data-id-title="LTSS on PAYG"><div class="titlepage"><div><div><div class="title-container"><h3 class="title"><span class="title-number-name"><span class="title-number">3.3.2 </span><span class="title-name">LTSS on PAYG</span></span> <a title="Permalink" class="permalink" href="cha-admin.html#ltss-payg">#</a></h3><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_administration.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+        LTSS subscriptions for PAYG can be transacted through a private offer on the CSPs market
+        place or via direct transaction with SUSE. Reach out to <a class="link" href="mailto:cloudsales@suse.com" target="_blank">cloudsales@suse.com</a> to work out the
+        commercial details.  You will receive a subscription and access to the <a class="link" href="https://scc.suse.com/" target="_blank">SUSE Customer Center</a>). With your subscription, you can activate a
+        registration code for LTSS.
+      </p><div id="id-1.5.5.6.3" data-id-title="Existing LTSS subscriptions" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.svg"/><div class="admon-title">Tip: Existing LTSS subscriptions</div><p>
+          If you already have an LTSS subscription that you are using in your data center, it will
+          work in the cloud just fine. You can deregister a system in your data center and move that
+          use of your LTSS subscription to an instance in the cloud.
+        </p></div><div class="procedure"><div class="procedure-contents"><p>
+          To enable the LTSS extension, perform the following steps:
+        </p><ol class="procedure" type="1"><li class="step"><p>
+            Log in to the <a class="link" href="https://scc.suse.com/" target="_blank">SUSE Customer Center</a> to activate a registration code.
+            Note that LTSS subscriptions are version-specific. If you have a subscription for
+            SLES 15 SP4, you cannot use that registration code to register LTSS on a
+            15 SP3 image. <span><em class="emphasis">Make sure to activate the LTSS registration code for
+            the correct version and service pack (SP) of your instance!</em></span>
+          </p></li><li class="step"><p>
+            Log in to your instance and make sure your system is registered with a subscription that
+            is eligible for LTSS. If the system is not yet registered, register it
+            (see <a class="xref" href="cha-admin.html#sec-admin-register" title="3.1. Registering instances">Section 3.1, “Registering instances”</a>).
+          </p></li><li class="step"><p>
+            Update <span class="package">cloud-regionsrv-client</span>:
+          </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">&gt; </code><code class="command">sudo</code> <code class="command">zypper up cloud-regionsrv-client</code></pre></div><p>
+            You need at least version 10.3.4 of the package.
+          </p></li><li class="step"><p>
+            Register the LTSS extension with the registration code you activated in the SUSE Customer Center:
+          </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">&gt; </code><code class="command">sudo</code> <code class="command">registercloudguset -r <em class="replaceable">LTSS_REGISTRATION_CODE</em></code>
+Running LTSS registration...this takes a little longer
+LTSS registration succeeded</pre></div></li></ol></div></div></section></section><section class="sect1" id="hardening" data-id-title="Hardening instances"><div class="titlepage"><div><div><div class="title-container"><h2 class="title"><span class="title-number-name"><span class="title-number">3.4 </span><span class="title-name">Hardening instances</span></span> <a title="Permalink" class="permalink" href="cha-admin.html#hardening">#</a></h2><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_administration.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+      To improve overall security, SUSE provides hardened images of some products.
+      The images are hardened using <span class="product">OpenSCAP</span>, a collection of open
+      source tools that implement the <code class="systemitem">Security Content Automation
+        Protocol (SCAP)</code> maintained by the <span class="orgname">National Institute
+        of Standards and Technology (NIST)</span>. <span class="product">OpenSCAP</span>
+      supports automated configuration, vulnerability and patch checking, technical control
+      compliance activities, and security measurement.
+    </p><p>
+      To harden a system, <span class="product">OpenSCAP</span> uses security rules that define
+      certain security measures. Multiple rules can be combined into profiles.
+      For more information, refer to the OpenSCAP documentation at <a class="link" href="https://www.open-scap.org/resources/documentation/" target="_blank">https://www.open-scap.org/resources/documentation/</a>.
+    </p><section class="sect2" id="id-1.5.6.4" data-id-title="Pre-hardening"><div class="titlepage"><div><div><div class="title-container"><h3 class="title"><span class="title-number-name"><span class="title-number">3.4.1 </span><span class="title-name">Pre-hardening</span></span> <a title="Permalink" class="permalink" href="cha-admin.html#id-1.5.6.4">#</a></h3><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_administration.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+        Hardened images are pre-hardened to the extent they can safely be hardened without causing
+        problems in public cloud frameworks. Certain rules can only be applied after instance
+        creation, for example:
+      </p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
+            Rules that require having passwords set up. Passwords would have to be public if
+            configured during the image build. This would defeat the purpose of a secret password.
+          </p></li><li class="listitem"><p>
+            Rules that affect the network configuration. Networking is set up during instance
+            creation, therefore it is not possible to limit access during image build.
+          </p></li><li class="listitem"><p>
+            Rules for custom partitioning. SUSE's public cloud images are partitioned to meet the
+            requirements of the framework in which they are released.
+            If your system needs to meet standards that require separate file systems for given
+            directories, we recommend that you build your own images and use LVM or move those
+            directories onto attached disks to get the strictest data separation possible.
+          </p></li><li class="listitem"><p>
+            Rules to remove packages. SUSE's public cloud images cater to a wide range of use
+            cases.
+            Even if the number of packages is limited, it is impossible to determine what packages
+            an instance requires.
+          </p></li></ul></div></section><section class="sect2" id="id-1.5.6.5" data-id-title="Available OpenSCAP profiles"><div class="titlepage"><div><div><div class="title-container"><h3 class="title"><span class="title-number-name"><span class="title-number">3.4.2 </span><span class="title-name">Available <span class="product">OpenSCAP</span> profiles </span></span> <a title="Permalink" class="permalink" href="cha-admin.html#id-1.5.6.5">#</a></h3><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_administration.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+        After instance creation, you can use the installed <span class="package">openscap</span> packages to
+        complete the hardening process using any of the following profiles:
+      </p><div class="variablelist"><dl class="variablelist"><dt id="id-1.5.6.5.3.1"><span class="term">Standard (<a class="link" href="https://github.com/ComplianceAsCode/content/blob/master/products/sle15/profiles/standard.profile" target="_blank"><code class="filename">standard.profile</code></a>)</span></dt><dd><p>
+              Basic <span class="product">OpenSCAP</span> system security standard.
+            </p></dd><dt id="id-1.5.6.5.3.2"><span class="term">CIS Server Level 2 (<a class="link" href="https://github.com/ComplianceAsCode/content/blob/master/products/sle15/profiles/cis.profile" target="_blank"><code class="filename">cis.profile</code></a>)</span></dt><dd><p>
+              The <code class="systemitem">Center for Internet Security Server Level 2</code> profile is considered to be
+              <span class="quote">“<span class="quote">defense in depth</span>”</span> and is intended for environments where security is
+              paramount.
+              The recommendations associated with this profile can have an adverse effect on your
+              organization if not implemented appropriately or without due care.
+              For more information, refer to <a class="link" href="https://www.cisecurity.org" target="_blank">https://www.cisecurity.org</a>.
+            </p></dd><dt id="id-1.5.6.5.3.3"><span class="term">Department of Defense STIG (<a class="link" href="https://github.com/ComplianceAsCode/content/blob/master/products/sle15/profiles/stig.profile" target="_blank"><code class="filename">stig.profile</code></a>)</span></dt><dd><p>
+              The <span class="orgname">Defense Information Systems Agency</span> publishes <em class="citetitle">Security Technical Implementation Guides (STIGs)</em> for
+              the <span class="orgname">Department of Defense</span>.
+              The STIG profile replaces the previous CIS Level 3 profile and provides all
+              recommendations that are STIG-specific.
+              Overlap of recommendations from other profiles, i.e. CIS Level 1 and Level 2, are
+              present in the STIG profile as applicable.
+              For more information, refer to <a class="link" href="https://public.cyber.mil/stigs/" target="_blank">https://public.cyber.mil/stigs/</a>.
+            </p></dd><dt id="id-1.5.6.5.3.4"><span class="term">HIPAA Security Rule (<a class="link" href="https://github.com/ComplianceAsCode/content/blob/master/products/sle15/profiles/hipaa.profile" target="_blank"><code class="filename">hipaa.profile</code></a>)</span></dt><dd><p>
+              In response to the <em class="citetitle">Health Insurance Portability and Accountability Act (HIPAA)</em> of 1996, the
+              <span class="orgname">U.S. Department of Health and Human Services</span> developed
+              <em class="citetitle">Security Standards for the Protection of Electronic Protected
+              Health Information</em>, commonly known as the <code class="systemitem">HIPAA Security
+              Rule</code>.
+              It establishes national standards to protect individuals' electronic personal health
+              information (e-PHI) that is created, received, used, or maintained by a covered
+              entity.
+              For more information, refer to <a class="link" href="https://www.hhs.gov/hipaa/for-professionals/security/index.html" target="_blank">https://www.hhs.gov/hipaa/for-professionals/security/index.html</a>.
+            </p></dd><dt id="id-1.5.6.5.3.5"><span class="term">Payment Card Industry Data Security Standard (<a class="link" href="https://github.com/ComplianceAsCode/content/blob/master/products/sle15/profiles/pci-dss.profile" target="_blank"><code class="filename">pci-dss.profile</code></a>)</span></dt><dd><p>
+              The <em class="citetitle">Payment Card Industry Data Security Standard (PCI DSS)</em> is a set of requirements to guide
+              merchants to protect cardholder data. It is  maintained by the <span class="orgname">PCI Security
+              Standards Council (SSC)</span> that was founded by all five major credit card
+              brands Visa, MasterCard, American Express, Discover, and JCB.
+              For more information, refer to <a class="link" href="https://www.pcisecuritystandards.org/document_library" target="_blank">https://www.pcisecuritystandards.org/document_library</a>.
+            </p></dd></dl></div><p>
+        All profile files are available in the <a class="link" href="https://github.com/ComplianceAsCode/content/tree/master/products/sle15/profiles" target="_blank">ComplianceAsCode</a>
+        repository.
+      </p><p>
+        For a complete list of rules that have been applied during pre-hardening, refer to <a class="link" href="https://github.com/ComplianceAsCode/content/blob/master/products/sle15/profiles/pcs-hardening.profile" target="_blank"><code class="filename">pcs-hardening.profile</code></a>.
+        This profile is a combination of the <code class="literal">STIG</code> and
+        <code class="literal">CIS</code> profiles minus rules that can only be applied
+        after instance creation.
+      </p><p>
+        Images of SUSE Linux Enterprise Server for SAP applications are hardened using a modified version of the profile
+        called <a class="link" href="https://github.com/ComplianceAsCode/content/blob/master/products/sle15/profiles/pcs-hardening-sap.profile" target="_blank"><code class="filename">pcs-hardening-sap.profile</code></a>.
+        Users may need to make additional modifications to the system configuration
+        depending on individual application needs.
+      </p><div id="id-1.5.6.5.7" data-id-title="Recommended profiles" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.svg"/><div class="admon-title">Important: Recommended profiles</div><p>
+          SUSE recommends using either the <code class="literal">CIS</code> or the
+          <code class="literal">STIG</code> profile. You can use other profiles at your own
+          discretion.
+        </p></div></section><section class="sect2" id="id-1.5.6.6" data-id-title="Hardening instances with OpenSCAP"><div class="titlepage"><div><div><div class="title-container"><h3 class="title"><span class="title-number-name"><span class="title-number">3.4.3 </span><span class="title-name">Hardening instances with <span class="product">OpenSCAP</span></span></span> <a title="Permalink" class="permalink" href="cha-admin.html#id-1.5.6.6">#</a></h3><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_administration.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+        To evaluate an instance, you can run:
+      </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">&gt; </code><code class="command">sudo</code> <code class="command">oscap</code> xccdf eval \
+--profile <em class="replaceable">stig</em><span class="callout" id="co-eval-profile">1</span> \
+--results <em class="replaceable">/tmp/results.xml</em><span class="callout" id="co-eval-results">2</span> \
+--report <em class="replaceable">/tmp/report.html</em><span class="callout" id="co-eval-report">3</span> \
+--stig-viewer <em class="replaceable">/tmp/stigviewer.xml</em><span class="callout" id="co-eval-viewer">4</span> \
+<em class="replaceable">/usr/share/xml/scap/ssg/content/ssg-sle15-ds-1.2.xml</em><span class="callout" id="co-eval-ssg">5</span></pre></div><div class="calloutlist"><table style="border: 0; "><tr><td style="width: 5%; vertical-align: top; text-align: left; "><p><a href="#co-eval-profile"><span class="callout">1</span></a> </p></td><td style="vertical-align: top; text-align: left; "><p>
+            Specifies the profile to use, e.g. <code class="literal">stig</code> or
+            <code class="literal">cis</code>.
+          </p></td></tr><tr><td style="width: 5%; vertical-align: top; text-align: left; "><p><a href="#co-eval-results"><span class="callout">2</span></a> </p></td><td style="vertical-align: top; text-align: left; "><p>
+            Saves the results of the evaluation to <code class="filename">/tmp/results.xml</code>
+          </p></td></tr><tr><td style="width: 5%; vertical-align: top; text-align: left; "><p><a href="#co-eval-report"><span class="callout">3</span></a> </p></td><td style="vertical-align: top; text-align: left; "><p>
+            Generates a HTML report called <code class="filename">/tmp/report.html</code> in
+            addition to the results in XML.
+          </p></td></tr><tr><td style="width: 5%; vertical-align: top; text-align: left; "><p><a href="#co-eval-viewer"><span class="callout">4</span></a> </p></td><td style="vertical-align: top; text-align: left; "><p>
+            Saves the results to <code class="filename">/tmp/stigviewer.xml</code>, which can
+            be imported into the <code class="literal">DISA STIG Viewer</code>. Refer to <a class="link" href="https://public.cyber.mil/stigs/srg-stig-tools/" target="_blank">https://public.cyber.mil/stigs/srg-stig-tools/</a> for
+            information about DISA STIG Viewer.
+          </p></td></tr><tr><td style="width: 5%; vertical-align: top; text-align: left; "><p><a href="#co-eval-ssg"><span class="callout">5</span></a> </p></td><td style="vertical-align: top; text-align: left; "><p>
+            <code class="literal">Scap Security Guide</code> (SSG) policy file in the
+            <code class="literal">datastream</code> (ds) format. Make sure to select the correct
+            version for your instance. To list all available policies, run:
+            <code class="command">ls -1 /usr/share/xml/scap/ssg/content/ssg-*-ds.xml</code>.For
+            more information about a particular policy, run
+            <code class="command">oscap info</code> on the file.
+          </p></td></tr></table></div><p>
+        The evaluation process usually takes a few minutes, depending on the number
+        of selected rules.
+      </p><p>
+        To remediate an instance, add the <em class="parameter">--remediate</em>
+        parameter:
+      </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">&gt; </code><code class="command">sudo</code> <code class="command">oscap</code> xccdf eval --remediate\
+--profile <em class="replaceable">stig</em> \
+--results <em class="replaceable">/tmp/results.xml</em> \
+--report <em class="replaceable">/tmp/report.html</em> \
+--stig-viewer <em class="replaceable">/tmp/stigviewer.xml</em> \
+<em class="replaceable">/usr/share/xml/scap/ssg/content/ssg-sle15-ds-1.2.xml</em></pre></div></section><section class="sect2" id="id-1.5.6.7" data-id-title="More information"><div class="titlepage"><div><div><div class="title-container"><h3 class="title"><span class="title-number-name"><span class="title-number">3.4.4 </span><span class="title-name">More information</span></span> <a title="Permalink" class="permalink" href="cha-admin.html#id-1.5.6.7">#</a></h3><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_administration.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+        For more information on how to harden your SUSE Linux Enterprise system with <span class="product">OpenSCAP</span>, refer to the article
+        <a class="link" href="https://documentation.suse.com/compliance/all/html/SLES-openscap/article-openscap.html" target="_blank"><em class="citetitle">Hardening
+          SUSE Linux Enterprise with OpenSCAP</em></a>. For general
+        information on <span class="product">OpenSCAP</span>, refer to the <a class="link" href="https://www.open-scap.org/security-policies/scap-security-guide/" target="_blank"><em class="citetitle">SCAP
+            Security Guide</em></a>.
+      </p></section></section><section class="sect1" id="confidential-computing-aws" data-id-title="Confidential computing on AWS"><div class="titlepage"><div><div><div class="title-container"><h2 class="title"><span class="title-number-name"><span class="title-number">3.5 </span><span class="title-name">Confidential computing on AWS</span></span> <a title="Permalink" class="permalink" href="cha-admin.html#confidential-computing-aws">#</a></h2><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_administration.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+       Confidential computing is a security technology that protects data
+       while it is actively being processed, or in use. It addresses the <span class="quote">“<span class="quote">data in use</span>”</span>
+       gap in traditional security models, which typically focus on <span class="quote">“<span class="quote">data at rest</span>”</span>
+       (encryption on disk) and <span class="quote">“<span class="quote">data in transit</span>”</span> (encryption over the network).
+     </p><p>
+       In conventional environments, data in use can be exposed to threats
+       from privileged insiders, compromised hypervisors, or advanced malware
+       capable of reading system memory. Confidential computing addresses this
+       attack vector by placing workloads inside a hardware-protected Trusted
+       Execution Environment (TEE). The memory part of the TEE is encrypted
+       and strictly access controlled ensuring that neither cloud service providers,
+       system administrators, or system-level software can view or modify
+       data in use.
+     </p><section class="sect2" id="trusted-execution-environment-tee" data-id-title="Trusted Execution Environment (TEE)"><div class="titlepage"><div><div><div class="title-container"><h3 class="title"><span class="title-number-name"><span class="title-number">3.5.1 </span><span class="title-name">Trusted Execution Environment (TEE)</span></span> <a title="Permalink" class="permalink" href="cha-admin.html#trusted-execution-environment-tee">#</a></h3><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_administration.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+         At the heart of confidential computing is the trusted execution environment (TEE).
+         A TEE is defined by three core technological pillars:
+       </p><div class="variablelist"><dl class="variablelist"><dt id="id-1.5.7.4.3.1"><span class="term">Isolation</span></dt><dd><p>
+               A hardware-based, isolated area within a processor. It ensures that only
+               authorized code can access the data inside, protecting it from other processes,
+               the operating system, and the hypervisor.
+             </p></dd><dt id="id-1.5.7.4.3.2"><span class="term">Invisibility</span></dt><dd><p>
+               Data remains encrypted in memory and is only decrypted inside the
+               CPU's TEE. Even with physical access to the memory, the data is unreadable.
+             </p></dd><dt id="id-1.5.7.4.3.3"><span class="term">Attestation</span></dt><dd><p>
+               A cryptographic proof that verifies the hardware and software are genuine
+               and correctly configured before any data is released to the environment.
+             </p></dd></dl></div></section><section class="sect2" id="key-concepts-on-aws" data-id-title="Implementation on AWS"><div class="titlepage"><div><div><div class="title-container"><h3 class="title"><span class="title-number-name"><span class="title-number">3.5.2 </span><span class="title-name">Implementation on AWS</span></span> <a title="Permalink" class="permalink" href="cha-admin.html#key-concepts-on-aws">#</a></h3><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_administration.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+         AWS implements the TEE concepts through a combination of Nitro
+         Trusted Platform Module (NitroTPM) technology, specialized OS images,
+         and Nitro Enclaves.
+       </p><div class="variablelist"><dl class="variablelist"><dt id="id-1.5.7.5.3.1"><span class="term">Isolation on AWS</span></dt><dd><p>
+                Isolation is achieved using images that provide an overlay-based read-only system.
+                This system is verified at boot time by <code class="literal">dm-verity</code>, which checks
+                all rootfs blocks. In production, instances from these images are not expected to be
+                remotely accessible to minimize the attack surface.
+              </p></dd><dt id="id-1.5.7.5.3.2"><span class="term">Invisibility on AWS</span></dt><dd><p>
+              While the base instance runs in overlayfs mode (writing to memory only), this memory
+              area is not encrypted. To ensure application memory cannot be accessed, the workload
+              must run as a <span><em class="emphasis">Nitro Enclave</em></span>.
+            </p><p>
+              Nitro Enclaves protect and encrypt the memory area, making it invisible to the host OS
+              and hypervisor. Communication with the enclave is strictly limited to a local
+              <code class="literal">vsock</code> connection.
+            </p></dd><dt id="id-1.5.7.5.3.3"><span class="term">Attestation on AWS</span></dt><dd><p>
+              The image boots via a PCR-measured Unified Kernel Image (UKI) containing the kernel,
+              initrd, and bootloader. The Platform Configuration Register (PCR) values can be:
+            </p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>Checked against an attestation document.</p></li><li class="listitem"><p>
+                  Used as an AWS Key Management Service (KMS) key policy to block operations if
+                  there is a key mismatch, ensuring only "known good" software can run.
+                </p></li></ul></div></dd></dl></div></section><section class="sect2" id="deploying-attestable-images" data-id-title="Deploying attestable images"><div class="titlepage"><div><div><div class="title-container"><h3 class="title"><span class="title-number-name"><span class="title-number">3.5.3 </span><span class="title-name">Deploying attestable images</span></span> <a title="Permalink" class="permalink" href="cha-admin.html#deploying-attestable-images">#</a></h3><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_administration.xml" title="Edit source document"> </a></div></div></div></div></div><div class="procedure"><div class="procedure-contents"><ol class="procedure" type="1"><li class="step"><p>
+            To start, you need an attestable image. SUSE provides a SUSE Linux Enterprise Server (SLES) image for
+            AWS for demonstration purposes. This image contains the necessary configurations for
+            Nitro TPM and an example enclave. You can download the image from the Open Build Service at
+            <a class="link" href="https://download.opensuse.org/repositories/Virtualization:/Appliances:/Images:/Testing_x86:/leap/images_sles/kiwi-test-image-aws-isolated-compute.x86_64.raw.xz" target="_blank">https://download.opensuse.org/repositories/Virtualization:/Appliances:/Images:/Testing_x86:/leap/images_sles/kiwi-test-image-aws-isolated-compute.x86_64.raw.xz</a>.
+          </p><p>
+            The image is built with KIWI NG. To build your own attestable image, refer to <a class="link" href="https://documentation.suse.com/appliance/kiwi-9/html/kiwi/index.html" target="_blank"><em class="citetitle">Building Linux System Appliances</em></a>
+            and the image description files of the demonstration image at <a class="link" href="https://github.com/OSInside/kiwi/tree/main/build-tests/x86/leap/test-image-aws-isolated-compute" target="_blank">https://github.com/OSInside/kiwi/tree/main/build-tests/x86/leap/test-image-aws-isolated-compute</a>.
+          </p></li><li class="step"><p>
+            Upload the attestable image to Amazon EC2 with <code class="command">ec2uploadimg</code> or a custom
+            upload script. <code class="command">ec2uploadimg</code> is available from the Open Build Service at
+            <a class="link" href="https://build.opensuse.org/projects/Virtualization:Appliances:Images:Testing_x86:leap/packages/test-image-aws-isolated-compute/files/ec2-upload" target="_blank">https://build.opensuse.org/projects/Virtualization:Appliances:Images:Testing_x86:leap/packages/test-image-aws-isolated-compute/files/ec2-upload</a>.
+          </p><div id="id-1.5.7.6.2.2.2" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.svg"/><div class="admon-title">Important</div><p>
+              When uploading the AMI, you must enable TPM 2.0 support and set the EFI boot mode to UEFI.
+            </p></div></li><li class="step"><p>
+           Before launching the instance, download the precomputed PCR measurements from
+           <a class="link" href="https://download.opensuse.org/repositories/Virtualization:/Appliances:/Images:/Testing_x86:/leap/images_sles/pcr_measurements.json" target="_blank">https://download.opensuse.org/repositories/Virtualization:/Appliances:/Images:/Testing_x86:/leap/images_sles/pcr_measurements.json</a>.
+          </p><p>
+            In this file, you will find the expected NitroTPM PCR 4, 7, and 12 values based on the
+            UKI. They serve as the baseline for verifying the integrity of your instance.
+          </p></li><li class="step"><p>
+            In the EC2 launch wizard, select an instance type that supports Nitro TPM and Enclaves
+            such as <code class="literal">m5.xlarge</code>. In the <code class="literal">Advanced Details</code>
+            section, ensure that <code class="literal">Enclave support</code> is explicitly enabled.
+         </p></li><li class="step"><p>
+            Log in to the instance and generate an attestation document
+          </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">&gt; </code><code class="command">nitro-tpm-attest</code> &gt; <code class="filename">/tmp/nitro.attest.cbor</code></pre></div><p>
+            View the attestation document with:
+          </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">&gt; </code><code class="command">show-nitrotpm-pcrs</code></pre></div><p>
+            Compare the values match <code class="literal">pcr_measurements.json</code>.
+          </p></li><div class="result"><div class="result-title"/>
+          <p>
+            If the values match, you have verified that:
+         </p>
+         <div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
+                The TEE matches the expected image uploaded to EC2.
+              </p></li><li class="listitem"><p>
+                The rootfs is clean, immutable, and verified by <code class="literal">dm-verity</code>.
+                </p></li></ul></div>
+        </div></ol></div></div></section><section class="sect2" id="managing-the-enclave-workload" data-id-title="Managing the enclave workload"><div class="titlepage"><div><div><div class="title-container"><h3 class="title"><span class="title-number-name"><span class="title-number">3.5.4 </span><span class="title-name">Managing the enclave workload</span></span> <a title="Permalink" class="permalink" href="cha-admin.html#managing-the-enclave-workload">#</a></h3><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_administration.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+         Enclaves are packaged as AWS enclave image files (<code class="literal">.eif</code>).
+         The example enclave is stored in the TEE's <code class="filename">/data</code> directory and is
+         designed to return the PCR values from the attestation
+         document when queried via <code class="literal">vsock</code>. This allows you to verify
+         that the enclave's integrity matches the expected values. This workload in itself
+         is not meant to be a real-world application but serves as a demonstration of how
+         to build and run an enclave that can attest its integrity.
+       </p><p>
+         Just like attestable images, enclaves can be built with KIWI NG. To build your own enclave,
+         refer to the image description files of the example at <a class="link" href="https://github.com/OSInside/kiwi/tree/main/build-tests/x86/leap/test-image-nitro-enclave" target="_blank">https://github.com/OSInside/kiwi/tree/main/build-tests/x86/leap/test-image-nitro-enclave</a>
+         and the build configuration in the Open Build Service at <a class="link" href="https://build.opensuse.org/package/show/Virtualization:Appliances:Images:Testing_x86:leap/test-image-nitro-enclave" target="_blank">https://build.opensuse.org/package/show/Virtualization:Appliances:Images:Testing_x86:leap/test-image-nitro-enclave</a>.
+       </p><section class="sect3" id="running-the-enclave" data-id-title="Running the enclave"><div class="titlepage"><div><div><div class="title-container"><h4 class="title"><span class="title-number-name"><span class="title-number">3.5.4.1 </span><span class="title-name">Running the enclave</span></span> <a title="Permalink" class="permalink" href="cha-admin.html#running-the-enclave">#</a></h4><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_administration.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+           Use the <code class="command">nitro-cli</code> tool to launch your workload:
+         </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">&gt; </code><code class="command">pushd</code> /data
+<code class="prompt user">&gt; </code><code class="command">nitro-cli</code> run-enclave \
+  --eif-path <code class="filename">kiwi-test-image-nitro-enclave.x86_64-1.1.1.eif </code> \
+  --cpu-count 2 \
+  --memory 2048
+<code class="prompt user">&gt; </code><code class="command">nitro-cli</code> describe-enclaves</pre></div></section><section class="sect3" id="enclave-attestation" data-id-title="Enclave attestation"><div class="titlepage"><div><div><div class="title-container"><h4 class="title"><span class="title-number-name"><span class="title-number">3.5.4.2 </span><span class="title-name">Enclave attestation</span></span> <a title="Permalink" class="permalink" href="cha-admin.html#enclave-attestation">#</a></h4><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_administration.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+           To verify the enclave's integrity, connect to it via <code class="literal">vsock</code> and
+           instruct it to return the PCRs from the enclave's attestation document:
+         </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">&gt; </code>vsock_client Enclave-CID</pre></div><p>
+           Matching the enclave's PCRs with the output of
+           <code class="command">describe-enclaves</code> confirms:
+         </p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>The enclave integrity matches the image.</p></li><li class="listitem"><p>All memory used by the enclave is encrypted and isolated.</p></li></ul></div></section></section></section></section><nav class="bottom-pagination"><div><a class="pagination-link prev" href="cha-images.html"><span class="pagination-relation">Previous</span><span class="pagination-label"><span class="title-number">Chapter 2 </span>Public cloud images</span></a> </div><div><a class="pagination-link next" href="app-public-cloud-support.html"><span class="pagination-relation">Next</span><span class="pagination-label"><span class="title-number">Appendix A </span>Support</span></a> </div></nav></article><aside id="_side-toc-page" class="side-toc"><div class="side-title">On this page</div><div class="toc"><ul><li><span class="sect1"><a href="cha-admin.html#sec-admin-register"><span class="title-number">3.1 </span><span class="title-name">Registering instances</span></a></span></li><li><span class="sect1"><a href="cha-admin.html#sec-admin-deregister"><span class="title-number">3.2 </span><span class="title-name">Deregister instances</span></a></span></li><li><span class="sect1"><a href="cha-admin.html#ltss"><span class="title-number">3.3 </span><span class="title-name">Enabling LTSS</span></a></span></li><li><span class="sect1"><a href="cha-admin.html#hardening"><span class="title-number">3.4 </span><span class="title-name">Hardening instances</span></a></span></li><li><span class="sect1"><a href="cha-admin.html#confidential-computing-aws"><span class="title-number">3.5 </span><span class="title-name">Confidential computing on AWS</span></a></span></li></ul></div><div class="side-title">Share this page</div><ul class="share"><li><a id="_share-mail" href="#" title="E-Mail"> </a></li><li><a id="_print-button" href="#" title="Print this page"> </a></li></ul> </aside></main><footer id="_footer"><div class="growth-inhibitor"><div class="copy"><span class="copy__rights">© SUSE  2026</span></div></div></footer>
+<script type="text/javascript" src="static/js/language-switcher.js"> </script></body></html>
