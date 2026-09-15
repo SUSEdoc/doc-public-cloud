@@ -2,8 +2,8 @@
 <!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><title>Public cloud images | Public Cloud Guide | SLES CSP</title><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"/><link rel="stylesheet" type="text/css" href="static/css/style-new.css"/>
 <link rel="schema.dc" href="http://purl.org/dc/elements/1.1/"/><link rel="schema.dcterms" href="http://purl.org/dc/terms/"/>
 <meta name="dcterms.created" content="2025-01-17"/>
-<meta name="dcterms.modified" content="2026-06-03"/>
-<meta name="dcterms.dateSubmitted" content="2026-07-28"/>
+<meta name="dcterms.modified" content="2026-09-15"/>
+<meta name="dcterms.dateSubmitted" content="2026-09-15"/>
 <meta name="title" content="Public cloud images | SLES CSP"/>
 <meta name="description" content="SUSE offers a variety of different product images for different use cases in partner cloud provider frameworks. Learn how to find the image that meets you…"/>
 <meta name="product-name" content="SUSE Linux Enterprise"/>
@@ -40,8 +40,8 @@
       }
     ],
     "dateCreated": "2025-01-17T00:00+02:00",
-    "dateModified": "2026-06-03T00:00+02:00",
-    "datePublished": "2026-07-28T12:39+02:00",
+    "dateModified": "2026-09-15T00:00+02:00",
+    "datePublished": "2026-09-15T14:15+02:00",
     "about": [
 
     ],
@@ -100,7 +100,7 @@
       months. The duration lasts until the image is replaced by a newer image
       version.
      </p></dd><dt id="id-1.4.3.5.3"><span class="term">Inactive</span></dt><dd><p>
-      Inactive images are supported following the rules of LTSS or ESPOS and
+      Inactive images are supported following the rules of LTS(S) or ESPOS and
       will get refreshed at least every three months. The duration term
       is defined by the product. For more information, refer to <a class="link" href="https://www.suse.com/de-de/support/policy-products/#cloud" target="_blank">https://www.suse.com/de-de/support/policy-products/#cloud</a>
      </p></dd><dt id="id-1.4.3.5.4"><span class="term">Deprecated</span></dt><dd><p>
@@ -142,7 +142,7 @@
       name are set up the image is set up for PAYG (Pay As You Go) billing. For
       more information about the different billing models, refer to <a class="xref" href="cha-intro.html#sec-intro-plans" title="1.3. Plans">Section 1.3, “Plans”</a>.
      </p><div class="variablelist"><div class="title-container"><div class="variablelist-title-wrap"><div class="variablelist-title"><span class="title-number-name"><span class="title-name">SUSE Linux Enterprise flavors </span></span><a title="Permalink" class="permalink" href="cha-images.html#id-1.4.4.5.3.2.2">#</a></div></div><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_images.xml" title="Edit source document"> </a></div></div><dl class="variablelist"><dt id="id-1.4.4.5.3.2.2.2"><span class="term"><code class="literal">basic</code> (Azure-only)</span></dt><dd><p>
-            PAYG image that only includes updates but is not eligible for support (see <a class="xref" href="cha-intro.html#sec-intro-support" title="1.4. Support">Section 1.4, “Support”</a>) or LTSS (see <a class="xref" href="cha-admin.html#ltss" title="3.3. Enabling LTSS">Section 3.3, “Enabling LTSS”</a>).
+            PAYG image that only includes updates but is not eligible for support (see <a class="xref" href="cha-intro.html#sec-intro-support" title="1.4. Support">Section 1.4, “Support”</a>) or LTS(S) (see <a class="xref" href="cha-admin.html#ltss" title="3.3. Enabling LTSS">Section 3.3, “Enabling LTSS”</a>).
           </p></dd><dt id="id-1.4.4.5.3.2.2.3"><span class="term"><code class="literal">byos</code></span></dt><dd><p>
             Bring your own subscription (BYOS) image
           </p></dd><dt id="id-1.4.4.5.3.2.2.4"><span class="term"><code class="literal">chost</code></span></dt><dd><p>
@@ -150,7 +150,7 @@
           </p></dd><dt id="id-1.4.4.5.3.2.2.5"><span class="term"><code class="literal">ecs</code> (AWS-only)</span></dt><dd><p>
             Amazon Elastic Container Service image
           </p></dd><dt id="id-1.4.4.5.3.2.2.6"><span class="term"><code class="literal">hardened</code></span></dt><dd><p>
-            Pre-hardened images, see <a class="xref" href="cha-images.html#sec-images-hardened" title="2.5. Hardened Images">Section 2.5, “Hardened Images”</a>
+            Pre-hardened images, see <a class="xref" href="cha-images.html#sec-images-hardened" title="2.6. Hardened Images">Section 2.6, “Hardened Images”</a>
           </p></dd><dt id="id-1.4.4.5.3.2.2.7"><span class="term"><code class="literal">hpc</code></span></dt><dd><p>
             SUSE Linux Enterprise High Performance Computing image
           </p></dd><dt id="id-1.4.4.5.3.2.2.8"><span class="term"><code class="literal">sap</code></span></dt><dd><p>
@@ -313,7 +313,27 @@
      <code class="literal">package_version_changes</code>.
      Do not forget the <code class="filename">.html</code> extension to
      complete the URL.
-    </p></li></ul></div></section><section class="sect1" id="sec-images-hardened" data-id-title="Hardened Images"><div class="titlepage"><div><div><div class="title-container"><h2 class="title"><span class="title-number-name"><span class="title-number">2.5 </span><span class="title-name">Hardened Images</span></span> <a title="Permalink" class="permalink" href="cha-images.html#sec-images-hardened">#</a></h2><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_images.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+    </p></li></ul></div></section><section class="sect1" id="sec-images-content" data-id-title="Image content"><div class="titlepage"><div><div><div class="title-container"><h2 class="title"><span class="title-number-name"><span class="title-number">2.5 </span><span class="title-name">Image content</span></span> <a title="Permalink" class="permalink" href="cha-images.html#sec-images-content">#</a></h2><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_images.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+     The content of the SUSE-published images may change between image updates. Any changes are
+     captured in the published changelog (<a class="xref" href="cha-images.html#sec-image-changeinfo" title="2.4. Change information">Section 2.4, “Change information”</a>).
+     The content of the images consists of basic utilities and applications
+     considered generally useful or used often. If you have specific package
+     requirements, please ensure that the packages required for your purposes
+     get installed or remove packages you may not need.
+   </p><p>
+     SUSE Linux Enterprise Server and SUSE Linux Enterprise Server-basic images in Microsoft Azure contain the
+     <span class="package">kernel-azure</span> flavor build. This kernel does not receive
+     LTS(S) support and therefore will get replaced by
+     <code class="literal">kernel-default</code> upon image refresh when the distribution
+     enters the LTS(S) period and the image changes state to
+     <code class="literal">inactive</code>. The <code class="literal">kernel-azure</code> flavor
+     does not have the same kABI (kernel Application Binary Interface)
+     guarantees as the <code class="literal">kernel-default</code>, meaning the kABI of
+     <span class="package">kernel-azure</span> may change within a given Service Pack (SP)
+     or minor release. <code class="literal">kernel-azure</code> is not supported for
+     SAP applications. If you need a stable kABI in your SUSE Linux Enterprise Server or
+     SUSE Linux Enterprise Server-basic instance, install <span class="package">kernel-default</span> instead.
+   </p></section><section class="sect1" id="sec-images-hardened" data-id-title="Hardened Images"><div class="titlepage"><div><div><div class="title-container"><h2 class="title"><span class="title-number-name"><span class="title-number">2.6 </span><span class="title-name">Hardened Images</span></span> <a title="Permalink" class="permalink" href="cha-images.html#sec-images-hardened">#</a></h2><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_images.xml" title="Edit source document"> </a></div></div></div></div></div><p>
    To improve overall security, SUSE provides hardened images of some
    products. The images are hardened using <span class="product">OpenSCAP</span>, a collection of open source tools that
    implement the <code class="systemitem">Security Content Automation
@@ -321,5 +341,5 @@
   </p><p>
    For more information and instructions on how to harden instances with OpenSCAP, refer to
    <a class="xref" href="cha-admin.html#hardening" title="3.4. Hardening instances">Section 3.4, “Hardening instances”</a>.
-  </p></section></section><nav class="bottom-pagination"><div><a class="pagination-link prev" href="cha-intro.html"><span class="pagination-relation">Previous</span><span class="pagination-label"><span class="title-number">Chapter 1 </span>Getting started</span></a> </div><div><a class="pagination-link next" href="cha-admin.html"><span class="pagination-relation">Next</span><span class="pagination-label"><span class="title-number">Chapter 3 </span>Managing cloud instances</span></a> </div></nav></article><aside id="_side-toc-page" class="side-toc"><div class="side-title">On this page</div><div class="toc"><ul><li><span class="sect1"><a href="cha-images.html#sec-image-lifecycle"><span class="title-number">2.1 </span><span class="title-name">Image lifecycle</span></a></span></li><li><span class="sect1"><a href="cha-images.html#sec-image-naming"><span class="title-number">2.2 </span><span class="title-name">Naming scheme</span></a></span></li><li><span class="sect1"><a href="cha-images.html#sec-image-pint"><span class="title-number">2.3 </span><span class="title-name">Public Cloud Information Tracker</span></a></span></li><li><span class="sect1"><a href="cha-images.html#sec-image-changeinfo"><span class="title-number">2.4 </span><span class="title-name">Change information</span></a></span></li><li><span class="sect1"><a href="cha-images.html#sec-images-hardened"><span class="title-number">2.5 </span><span class="title-name">Hardened Images</span></a></span></li></ul></div><div class="side-title">Share this page</div><ul class="share"><li><a id="_share-mail" href="#" title="E-Mail"> </a></li><li><a id="_print-button" href="#" title="Print this page"> </a></li></ul> </aside></main><footer id="_footer"><div class="growth-inhibitor"><div class="copy"><span class="copy__rights">© SUSE  2026</span></div></div></footer>
+  </p></section></section><nav class="bottom-pagination"><div><a class="pagination-link prev" href="cha-intro.html"><span class="pagination-relation">Previous</span><span class="pagination-label"><span class="title-number">Chapter 1 </span>Getting started</span></a> </div><div><a class="pagination-link next" href="cha-admin.html"><span class="pagination-relation">Next</span><span class="pagination-label"><span class="title-number">Chapter 3 </span>Managing cloud instances</span></a> </div></nav></article><aside id="_side-toc-page" class="side-toc"><div class="side-title">On this page</div><div class="toc"><ul><li><span class="sect1"><a href="cha-images.html#sec-image-lifecycle"><span class="title-number">2.1 </span><span class="title-name">Image lifecycle</span></a></span></li><li><span class="sect1"><a href="cha-images.html#sec-image-naming"><span class="title-number">2.2 </span><span class="title-name">Naming scheme</span></a></span></li><li><span class="sect1"><a href="cha-images.html#sec-image-pint"><span class="title-number">2.3 </span><span class="title-name">Public Cloud Information Tracker</span></a></span></li><li><span class="sect1"><a href="cha-images.html#sec-image-changeinfo"><span class="title-number">2.4 </span><span class="title-name">Change information</span></a></span></li><li><span class="sect1"><a href="cha-images.html#sec-images-content"><span class="title-number">2.5 </span><span class="title-name">Image content</span></a></span></li><li><span class="sect1"><a href="cha-images.html#sec-images-hardened"><span class="title-number">2.6 </span><span class="title-name">Hardened Images</span></a></span></li></ul></div><div class="side-title">Share this page</div><ul class="share"><li><a id="_share-mail" href="#" title="E-Mail"> </a></li><li><a id="_print-button" href="#" title="Print this page"> </a></li></ul> </aside></main><footer id="_footer"><div class="growth-inhibitor"><div class="copy"><span class="copy__rights">© SUSE  2026</span></div></div></footer>
 <script type="text/javascript" src="static/js/language-switcher.js"> </script></body></html>
