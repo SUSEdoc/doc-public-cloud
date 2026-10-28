@@ -3,7 +3,7 @@
 <link rel="schema.dc" href="http://purl.org/dc/elements/1.1/"/><link rel="schema.dcterms" href="http://purl.org/dc/terms/"/>
 <meta name="dcterms.created" content="2025-01-17"/>
 <meta name="dcterms.modified" content="2026-10-28"/>
-<meta name="dcterms.dateSubmitted" content="2026-10-23"/>
+<meta name="dcterms.dateSubmitted" content="2026-10-28"/>
 <meta name="title" content="Public cloud images | SLES CSP"/>
 <meta name="description" content="Discover how SUSE provides diverse product images tailored for various use cases within partner cloud provider frameworks"/>
 <meta name="product-name" content="SUSE Linux Enterprise"/>
@@ -41,7 +41,7 @@
     ],
     "dateCreated": "2025-01-17T00:00+02:00",
     "dateModified": "2026-10-28T00:00+02:00",
-    "datePublished": "2026-10-23T13:18+02:00",
+    "datePublished": "2026-10-28T13:24+02:00",
     "about": [
 
     ],
@@ -341,5 +341,175 @@
   </p><p>
    For more information and instructions on how to harden instances with OpenSCAP, refer to
    <a class="xref" href="cha-admin.html#hardening" title="3.4. Hardening instances">Section 3.4, “Hardening instances”</a>.
-  </p></section></section><nav class="bottom-pagination"><div><a class="pagination-link prev" href="cha-intro.html"><span class="pagination-relation">Previous</span><span class="pagination-label"><span class="title-number">Chapter 1 </span>Getting started</span></a> </div><div><a class="pagination-link next" href="cha-admin.html"><span class="pagination-relation">Next</span><span class="pagination-label"><span class="title-number">Chapter 3 </span>Managing cloud instances</span></a> </div></nav></article><aside id="_side-toc-page" class="side-toc"><div class="side-title">On this page</div><div class="toc"><ul><li><span class="sect1"><a href="cha-images.html#sec-image-lifecycle"><span class="title-number">2.1 </span><span class="title-name">Image lifecycle</span></a></span></li><li><span class="sect1"><a href="cha-images.html#sec-image-naming"><span class="title-number">2.2 </span><span class="title-name">Naming scheme</span></a></span></li><li><span class="sect1"><a href="cha-images.html#sec-image-pint"><span class="title-number">2.3 </span><span class="title-name">Public Cloud Information Tracker</span></a></span></li><li><span class="sect1"><a href="cha-images.html#sec-image-changeinfo"><span class="title-number">2.4 </span><span class="title-name">Change information</span></a></span></li><li><span class="sect1"><a href="cha-images.html#sec-images-content"><span class="title-number">2.5 </span><span class="title-name">Image content</span></a></span></li><li><span class="sect1"><a href="cha-images.html#sec-images-hardened"><span class="title-number">2.6 </span><span class="title-name">Hardened Images</span></a></span></li></ul></div><div class="side-title">Share this page</div><ul class="share"><li><a id="_share-mail" href="#" title="E-Mail"> </a></li><li><a id="_print-button" href="#" title="Print this page"> </a></li></ul> </aside></main><footer id="_footer"><div class="growth-inhibitor"><div class="copy"><span class="copy__rights">© SUSE  2026</span></div></div></footer>
+  </p></section><section class="sect1" id="sec-images-google-sovereign-cloud" data-id-title="Google Sovereign Cloud Images"><div class="titlepage"><div><div><div class="title-container"><h2 class="title"><span class="title-number-name"><span class="title-number">2.7 </span><span class="title-name">Google Sovereign Cloud Images</span></span> <a title="Permalink" class="permalink" href="cha-images.html#sec-images-google-sovereign-cloud">#</a></h2><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_images.xml" title="Edit source document"> </a></div></div></div></div></div><p>
+      This section describes how to create instances from a SUSE image file in Google Sovereign
+      Cloud. The procedure creates a storage bucket, uploads the image file, creates a compute image
+      from it and creates an instance. Except for the image creation step, these steps can be
+      performed with the Google Cloud Console or with <code class="command">gcloud</code>. The procedure that follows
+      covers the relevant <code class="command">gcloud</code> commands only.
+    </p><div id="id-1.4.9.3" data-id-title="Image creation" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.svg"/><div class="admon-title">Important: Image creation</div><p>
+        Image creation requires <code class="command">gcloud</code>. The Google Cloud Console cannot set the guest
+        operating system features that the image requires. All other steps can also be
+        performed in the Google Cloud Console. For more information about the guest operating system
+        features, see
+        <a class="link" href="https://docs.cloud.google.com/compute/docs/images/create-custom#guest-os-features" target="_blank">https://docs.cloud.google.com/compute/docs/images/create-custom#guest-os-features</a>.
+      </p></div><p>
+      Before you start, make sure that:
+    </p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
+          The <code class="command">gcloud</code> command-line tool is installed and authenticated. For more
+          information about installing and setting up <code class="command">gcloud</code>, see
+          <a class="link" href="https://docs.cloud.google.com/sdk/docs/install-sdk" target="_blank">https://docs.cloud.google.com/sdk/docs/install-sdk</a>. Note that
+          authentication to the Google Sovereign Cloud region requires different credentials
+          than the public Google Cloud Platform endpoint.
+        </p></li><li class="listitem"><p>
+          You have a Google Sovereign Cloud project with the Compute Engine API enabled.
+        </p></li><li class="listitem"><p>
+          Your account has the permissions to create storage buckets, upload objects, create images
+          and create instances in the project.
+        </p></li></ul></div><p>
+      The commands in this section use the following placeholders. Replace them with your values:
+    </p><div class="variablelist"><dl class="variablelist"><dt id="id-1.4.9.7.1"><span class="term"><em class="replaceable">PROJECT_ID</em></span></dt><dd><p>
+            The ID of your Google Sovereign Cloud project. Use the same project ID in all
+            commands.
+          </p></dd><dt id="id-1.4.9.7.2"><span class="term"><em class="replaceable">LOCATION</em></span></dt><dd><p>
+            The region or multi-region in which to create the bucket and store the image.
+          </p></dd><dt id="id-1.4.9.7.3"><span class="term"><em class="replaceable">BUCKET_NAME</em></span></dt><dd><p>
+            The name of the storage bucket that holds the image file. The bucket name must be
+            globally unique. Use the same bucket name in all commands.
+          </p></dd></dl></div><div class="procedure" id="pro-images-google-sovereign-cloud" data-id-title="Creating instances from a SUSE image file"><div class="title-container"><div class="procedure-title-wrap"><div class="procedure-title"><span class="title-number-name"><span class="title-number">Procedure 2.1: </span><span class="title-name">Creating instances from a SUSE image file </span></span><a title="Permalink" class="permalink" href="cha-images.html#pro-images-google-sovereign-cloud">#</a></div></div><div class="icons"><a target="_blank" class="icon-reportbug" title="Report an issue"> </a><a target="_blank" class="icon-editsource" href="https://github.com/SUSE/doc-public-cloud/edit/main/xml/cha_images.xml" title="Edit source document"> </a></div></div><div class="procedure-contents"><p>
+        To create instances from an image file, perform the following steps.
+      </p><ol class="procedure" type="1"><li class="step"><p>
+          Create a storage bucket:
+        </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">&gt; </code><code class="command">gcloud</code> storage buckets create gs://<em class="replaceable">BUCKET_NAME</em> \
+ --project=<em class="replaceable">PROJECT_ID</em> \
+ --location=<em class="replaceable">LOCATION</em></pre></div></li><li class="step"><p>
+          Download the image file from the SUSE download site:
+        </p><ol type="a" class="substeps"><li class="step"><p>
+              In a web browser, open <a class="link" href="https://suse.com/products/" target="_blank">https://suse.com/products/</a>.
+            </p></li><li class="step"><p>
+              Click <span class="guimenu">Account</span> to log in with your SUSE account, or to create an
+              account if you do not have one.
+            </p></li><li class="step"><p>
+              In the <span class="guimenu">Linux</span> section, select the product whose image you want
+              to use: SUSE Linux Enterprise Server or SUSE Linux Enterprise Server for SAP applications and click <span class="guimenu">Download</span>.
+            </p></li><li class="step"><p>
+              Select the release. Supported releases are <span class="guimenu">16.0</span> and
+              <span class="guimenu">15 SP7</span>.
+            </p></li><li class="step"><p>
+              Select the architecture of your instance. Supported architectures are
+              <span class="guimenu">AMD64/Intel 64</span> or <span class="guimenu">Arm</span>. Images of SUSE Linux Enterprise Server for SAP applications are
+              only available for <span class="guimenu">AMD64/Intel 64</span>.
+            </p></li><li class="step"><p>
+              In the list, find the Google Compute Engine image that matches the release, product and
+              architecture. The image names use the following patterns:
+            </p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
+                  SUSE Linux Enterprise Server 16.0:
+                  <code class="filename">SLES-16.0-BYOS.<em class="replaceable">ARCHITECTURE</em>-<em class="replaceable">VERSION</em>-GCE-SOV-Update-<em class="replaceable">DATE</em>.tar.gz</code>
+                </p></li><li class="listitem"><p>
+                  SUSE Linux Enterprise Server 16.0, hardened:
+                  <code class="filename">SLES-16.0-Hardened-BYOS.<em class="replaceable">ARCHITECTURE</em>-<em class="replaceable">VERSION</em>-GCE-SOV-Update-<em class="replaceable">DATE</em>.tar.gz</code>
+                </p></li><li class="listitem"><p>
+                  SUSE Linux Enterprise Server for SAP applications 16.0 (hardened by default):
+                  <code class="filename">SLES-SAP-16.0-BYOS.x86_64-<em class="replaceable">VERSION</em>-GCE-SOV-Update-<em class="replaceable">DATE</em>.tar.gz</code>
+                </p></li><li class="listitem"><p>
+                  SUSE Linux Enterprise Server 15 SP7:
+                  <code class="filename">SLES15-SP7-BYOS.<em class="replaceable">ARCHITECTURE</em>-<em class="replaceable">VERSION</em>-GCE-SOV-Update-<em class="replaceable">DATE</em>.tar.gz</code>
+                </p></li><li class="listitem"><p>
+                  SUSE Linux Enterprise Server 15 SP7, hardened:
+                  <code class="filename">SLES15-SP7-Hardened-BYOS.<em class="replaceable">ARCHITECTURE</em>-<em class="replaceable">VERSION</em>-GCE-SOV-Update-<em class="replaceable">DATE</em>.tar.gz</code>
+                </p></li><li class="listitem"><p>
+                  SUSE Linux Enterprise Server for SAP applications 15 SP7:
+                  <code class="filename">SLES15-SP7-SAP-BYOS.x86_64-<em class="replaceable">VERSION</em>-GCE-SOV-Update-<em class="replaceable">DATE</em>.tar.gz</code>
+                </p></li><li class="listitem"><p>
+                  SUSE Linux Enterprise Server for SAP applications 15 SP7, hardened:
+                  <code class="filename">SLES15-SP7-SAP-Hardened-BYOS.x86_64-<em class="replaceable">VERSION</em>-GCE-SOV-Update-<em class="replaceable">DATE</em>.tar.gz</code>
+                </p></li></ul></div><p>
+              In the file names, replace the placeholders as follows:
+            </p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
+                  <em class="replaceable">ARCHITECTURE</em> is <code class="literal">x86_64</code> for
+                  <span class="guimenu">AMD64/Intel 64</span> or <code class="literal">aarch64</code> for
+                  <span class="guimenu">Arm</span>.
+                </p></li><li class="listitem"><p>
+                  <em class="replaceable">VERSION</em> is the version of the image.
+                </p></li><li class="listitem"><p>
+                  <em class="replaceable">DATE</em> is the build date of the image in the format
+                  <code class="literal">YYYYMMDD</code>.
+                </p></li></ul></div><p>
+              Images with <code class="literal">Hardened</code> in the file name are hardened images. Images
+              of SUSE Linux Enterprise Server for SAP applications 16.0 and later are hardened by default, so their file names do not
+              contain <code class="literal">Hardened</code>. For more information about hardened images, see
+              <a class="xref" href="cha-images.html#sec-images-hardened" title="2.6. Hardened Images">Section 2.6, “Hardened Images”</a>.
+            </p></li><li class="step"><p>
+              Click <span class="guimenu">Download</span> next to the image.
+            </p></li></ol><p>
+          The following steps refer to the image file as
+          <code class="filename"><em class="replaceable">IMAGE_FILE</em>.tar.gz</code>.
+        </p></li><li class="step"><p>
+          Upload the image file to the bucket:
+        </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">&gt; </code><code class="command">gcloud</code> storage cp <em class="replaceable">IMAGE_FILE</em>.tar.gz \
+ gs://<em class="replaceable">BUCKET_NAME</em>/ \
+ --project=<em class="replaceable">PROJECT_ID</em></pre></div></li><li class="step"><p>
+          Create a compute image from the uploaded image file and set the guest operating system
+          features. This is the only step that requires <code class="command">gcloud</code>. The command
+          depends on the architecture of the image.
+        </p><p>
+          For <code class="literal">x86_64</code> images, run:
+        </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">&gt; </code><code class="command">gcloud</code> compute images create <em class="replaceable">IMAGE_NAME</em> \
+ --source-uri=gs://<em class="replaceable">BUCKET_NAME</em>/<em class="replaceable">IMAGE_FILE</em>.tar.gz \
+ --guest-os-features=UEFI_COMPATIBLE,VIRTIO_SCSI_MULTIQUEUE,SEV_CAPABLE,\
+SEV_LIVE_MIGRATABLE,SEV_LIVE_MIGRATABLE_V2,SEV_SNP_CAPABLE,TDX_CAPABLE,\
+IDPF,GVNIC \
+ --storage-location=<em class="replaceable">LOCATION</em> \
+ --architecture=X86_64 \
+ --project=<em class="replaceable">PROJECT_ID</em></pre></div><p>
+          For <code class="literal">aarch64</code> images, run:
+        </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">&gt; </code><code class="command">gcloud</code> compute images create <em class="replaceable">IMAGE_NAME</em> \
+ --source-uri=gs://<em class="replaceable">BUCKET_NAME</em>/<em class="replaceable">IMAGE_FILE</em>.tar.gz \
+ --guest-os-features=UEFI_COMPATIBLE,VIRTIO_SCSI_MULTIQUEUE,GVNIC,IDPF \
+ --storage-location=<em class="replaceable">LOCATION</em> \
+ --architecture=ARM64 \
+ --project=<em class="replaceable">PROJECT_ID</em></pre></div><p>
+          Replace <em class="replaceable">IMAGE_NAME</em> with a name for the new image.
+        </p><p>
+          For more information about the guest operating system features, see
+          <a class="link" href="https://docs.cloud.google.com/compute/docs/images/create-custom#guest-os-features" target="_blank">https://docs.cloud.google.com/compute/docs/images/create-custom#guest-os-features</a>.
+        </p></li><li class="step"><p>
+          Create an instance of the image:
+        </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">&gt; </code><code class="command">gcloud</code> compute instances create <em class="replaceable">INSTANCE_NAME</em> \
+ --image=<em class="replaceable">IMAGE_NAME</em> \
+ --image-project=<em class="replaceable">PROJECT_ID</em> \
+ --project=<em class="replaceable">PROJECT_ID</em> \
+ --zone=<em class="replaceable">ZONE</em> \
+ --machine-type=<em class="replaceable">MACHINE_TYPE</em></pre></div><p>
+          Replace <em class="replaceable">INSTANCE_NAME</em> with a name for the instance and
+          <em class="replaceable">ZONE</em> with the zone in which to create it. Replace
+          <em class="replaceable">MACHINE_TYPE</em> with the machine type to use.
+        </p><p>
+          The <code class="option">--project</code> option sets the project in which the instance is created.
+          The <code class="option">--image-project</code> option sets the project that contains the image. If
+          you share images across projects, the two values can differ.
+        </p></li><li class="step"><p>
+          Verify that the instance is running:
+        </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">&gt; </code><code class="command">gcloud</code> compute instances list \
+ --project=<em class="replaceable">PROJECT_ID</em></pre></div></li><li class="step"><p><span class="step-optional">(Optional)</span> 
+          Log in to the instance:
+        </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">&gt; </code><code class="command">gcloud</code> compute ssh <em class="replaceable">INSTANCE_NAME</em> \
+ --project=<em class="replaceable">PROJECT_ID</em> \
+ --zone=<em class="replaceable">ZONE</em></pre></div><p>
+          To log in, the instance must be on a network that is accessible from your system. The
+          instance needs an external IP address and a firewall rule that allows SSH traffic. If the
+          instance has only an internal IP address, connect from a system within the same network,
+          for example through a virtual private network (VPN) or a bastion host.
+        </p><p>
+          For more information about setting up the network, see
+          <a class="link" href="https://docs.cloud.google.com/vpc/docs/vpc" target="_blank">https://docs.cloud.google.com/vpc/docs/vpc</a>.
+        </p></li><li class="step"><p><span class="step-optional">(Optional)</span> 
+          After you create the image, you can delete the image file from the bucket
+          to avoid storage costs:
+        </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">&gt; </code><code class="command">gcloud</code> storage rm \
+ gs://<em class="replaceable">BUCKET_NAME</em>/<em class="replaceable">IMAGE_FILE</em>.tar.gz \
+ --project=<em class="replaceable">PROJECT_ID</em></pre></div></li></ol></div></div><p>
+      For more information about registering the instance with the SUSE update infrastructure,
+      see <a class="xref" href="cha-admin.html#sec-admin-register" title="3.1. Registering instances">Section 3.1, “Registering instances”</a>.
+    </p></section></section><nav class="bottom-pagination"><div><a class="pagination-link prev" href="cha-intro.html"><span class="pagination-relation">Previous</span><span class="pagination-label"><span class="title-number">Chapter 1 </span>Getting started</span></a> </div><div><a class="pagination-link next" href="cha-admin.html"><span class="pagination-relation">Next</span><span class="pagination-label"><span class="title-number">Chapter 3 </span>Managing cloud instances</span></a> </div></nav></article><aside id="_side-toc-page" class="side-toc"><div class="side-title">On this page</div><div class="toc"><ul><li><span class="sect1"><a href="cha-images.html#sec-image-lifecycle"><span class="title-number">2.1 </span><span class="title-name">Image lifecycle</span></a></span></li><li><span class="sect1"><a href="cha-images.html#sec-image-naming"><span class="title-number">2.2 </span><span class="title-name">Naming scheme</span></a></span></li><li><span class="sect1"><a href="cha-images.html#sec-image-pint"><span class="title-number">2.3 </span><span class="title-name">Public Cloud Information Tracker</span></a></span></li><li><span class="sect1"><a href="cha-images.html#sec-image-changeinfo"><span class="title-number">2.4 </span><span class="title-name">Change information</span></a></span></li><li><span class="sect1"><a href="cha-images.html#sec-images-content"><span class="title-number">2.5 </span><span class="title-name">Image content</span></a></span></li><li><span class="sect1"><a href="cha-images.html#sec-images-hardened"><span class="title-number">2.6 </span><span class="title-name">Hardened Images</span></a></span></li><li><span class="sect1"><a href="cha-images.html#sec-images-google-sovereign-cloud"><span class="title-number">2.7 </span><span class="title-name">Google Sovereign Cloud Images</span></a></span></li></ul></div><div class="side-title">Share this page</div><ul class="share"><li><a id="_share-mail" href="#" title="E-Mail"> </a></li><li><a id="_print-button" href="#" title="Print this page"> </a></li></ul> </aside></main><footer id="_footer"><div class="growth-inhibitor"><div class="copy"><span class="copy__rights">© SUSE  2026</span></div></div></footer>
 <script type="text/javascript" src="static/js/language-switcher.js"> </script></body></html>
